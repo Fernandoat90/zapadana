@@ -20,5 +20,7 @@ else{
 </head>
 <body>
      <strong><h1>Hola equipo dinamita</h1></strong>
+   <form action="logout.php"><input type=submit name=cerrar value="Cerrar Sesion"></form>
 </body>
 </html>
+

@@ -5,10 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+     <!-- Archivos de bootstrap -->
+    
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="inicio.css">
+
 </head>
 <body>
-    <ins><h1>Carrusel</h1></ins><br><br>
-    <a href="index.php?inicio" style="color:black;"><h1>ZapaDana</h1></a>
+
+
+<div class="container">
+ 
+  <div id="carrusel" class="carousel slide" data-ride="carousel">
+
+    <!-- Opcional, bullets abajo para saltar directamente a una foto (si los pones tiene q haber 1 por foto) -->
+    <ol class="carousel-indicators">
+      <li data-target="#carrusel" data-slide-to="0" class="active"></li>
+      <li data-target="#carrusel" data-slide-to="1"></li>
+      <li data-target="#carrusel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Contenedor de las fotos -->
+    <div class="carousel-inner" role="listbox">
+
+      <!-- Foto 1 -->
+      <div class="item active">
+        <img src="inicio-2.jpg">
+      </div>
+
+      <!-- Foto 2 -->
+      <div class="item">
+        <img src="https://http2.mlstatic.com/tenis-zapatillas-nike-zoom-dama-D_NQ_NP_395115-MCO25172018979_112016-F.jpg">
+      </div>
+
+      <!-- Foto 3 -->
+      <div class="item">
+        <img src="https://http2.mlstatic.com/tenis-zapatillas-zoom-dama-2017-D_NQ_NP_343815-MCO25319205999_012017-F.jpg">
+      </div>
+
+    </div>
+
+    <!-- Controles para pasar las fotos -->
+    <a class="left carousel-control" href="#carrusel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carrusel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div><br>
+
+
+    
+    <a href="index.php?inicio" style="color:black;text-align:center;"><h1>ZapaDana</h1></a>
     <!-- <form action="principal.php">
         Usuario<input type="text" name=usu ><br><br>
         Contraseña<input type="password" name=pass><br><br>

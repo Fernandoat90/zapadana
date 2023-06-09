@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="inicio.css">
 <?php
 //conexion
 function conectar(){
@@ -53,6 +54,8 @@ function loggin($usu,$contra){
 
 }//fin inicio de sesion
 
+
+
 //alta usuario
 function alta_usu($nom,$ape,$dir,$mail,$pass,$id){
     $c=conectar();
@@ -70,14 +73,27 @@ function alta_usu($nom,$ape,$dir,$mail,$pass,$id){
 //pag inicio
 function inicio(){
     ?>
-    <form>
+<div class="inicio">
+  <div class="forma">
+     <form action="index.php">
+        <div class=input>  
         Usuario<input type="text" name=usu ><br><br>
         Contraseña<input type="password" name=pass><br><br>
-        <input type="submit" name=in_sesion value="Iniciar sesion">
-    </form>
+        </div>
+        <div class="btn">
+        <input type="submit" name=in_sesion value="Iniciar sesion"></form>
+        </div>
+        <div class=btn>  
     <br>
     <a href="index.php?regis"><button >Registrarse</button></a><br><br>
+    </div>
+         <div class=rec>
     <a href=recu_pass.php>Recuperar contraseña</a>
+    </div>
+     
+ </div>
+
+</div>
     <?php
 }//fin pag inicio
 
