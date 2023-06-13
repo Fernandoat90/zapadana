@@ -13,6 +13,9 @@ create table tipos(
 tipo_id int(2) primary key,
 tipo_desc varchar(30)
 );
+
+select* from tipos;
+insert into tipos(tipo_id,tipo_desc) values (1,"deportivo"),(2,"De vestir");
 /*
 create table marcas(
 marc_id int(2) primary key,
@@ -23,6 +26,9 @@ create table colores(
 color_id int(2) primary key,
 color_nom varchar(40)
 );
+select * from colores;
+insert into colores(color_id, color_nom) values (1,"rojo"),(2,"verde"),(3,"azul");
+
 
 /*
 create table respuestas(
@@ -37,6 +43,9 @@ create table estado(
 estado_id int(1) PRIMARY KEY,
 estado_desc varchar(20)
 );
+
+select *from estado;
+insert into estado(estado_id,estado_desc) values (1,"Disponible"),(2,"No disponible");
 
 create table calzados(
 cal_id int(3) primary key,
