@@ -1,0 +1,22 @@
+<?php
+    $id=$_POST['cal_id'];
+    $tipo=$_POST['tipo_id'];
+    $marca=$_POST['cal_desc'];
+    $precio=$_POST['cal_precio'];
+    $genero=$_POST['cal_gen'];
+    function subirProductoGeneral($c,$id,$tipo,$marca,$precio,$genero){
+        $conection=$c;
+        $sql3="insert into calzados(cal_id,cal_desc,cal_precio,cal_gen,tipo_id) values($id,'$marca',$precio,'$genero',$tipo)";
+        mysqli_query($c,$sql3);
+
+        if(mysqli_affected_rows($conection)>0){
+            echo "<h2 style='color:blue;'> Calzado General Cargado</h2>";
+        }
+        else{
+        
+                echo "<h2 style='color:red;'> ERROR AL CARGAR</h2>";
+            
+        }
+    }
+
+    

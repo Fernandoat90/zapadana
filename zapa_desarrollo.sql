@@ -27,7 +27,7 @@ color_id int(2) primary key,
 color_nom varchar(40)
 );
 select * from colores;
-insert into colores(color_id, color_nom) values (1,"rojo"),(2,"verde"),(3,"azul");
+insert into colores(color_id, color_nom) values (4,"negro"),(5,"violeta"),(6,"marron");
 
 
 /*
@@ -57,11 +57,23 @@ tipo_id int(2),
 foreign key(tipo_id) references tipos(tipo_id)
 /*foreign key (marc_id) references marcas(marc_id)*/ 
 );
+drop table calzados;
 
-create table stock_masc(
+select * from colores;
+select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id;
+select * from tipos;
+select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;
+select *from calzados;
+create table stock(
+stock_id int(3) auto_increment,
+stock_img varchar(4000),
 estado_id int(1),
 cal_id int(3),
 color_id int(2),
+n_35 int(2),
+n_36 int(2),
+n_37 int(2),
+n_38 int(2),
 n_39 int(2),
 n_40 int(2),
 n_41 int(2),
@@ -69,12 +81,13 @@ n_42 int(2),
 n_43 int(2),
 n_44 int(2),
 n_45 int(2),
-primary key(cal_id,color_id),
+primary key(stock_id,cal_id,color_id),
 foreign key (cal_id)references calzados(cal_id),
 foreign key (color_id) references colores(color_id),
 foreign key(estado_id) references estado(estado_id)
 );
-
+drop table stock;
+select * from stock;
 create table stock_fem(
 estado_id int(1),
 cal_id int(3),
@@ -91,6 +104,8 @@ foreign key (cal_id)references calzados(cal_id),
 foreign key (color_id) references colores(color_id),
 foreign key(estado_id) references estado(estado_id)
 );
+
+select * from stock;
 
 create table usuarios(
 usu_id int(3) primary key AUTO_INCREMENT,
@@ -113,3 +128,7 @@ cal_id int(3),
 foreign key (usu_id) references usuarios(usu_id),
 foreign key (cal_id) references calzados(cal_id)
 );
+
+drop table reserva;
+drop table stock_fem;
+drop table stock_masc;
