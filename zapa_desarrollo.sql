@@ -43,6 +43,7 @@ create table estado(
 estado_id int(1) PRIMARY KEY,
 estado_desc varchar(20)
 );
+select * from stock;
 
 select *from estado;
 insert into estado(estado_id,estado_desc) values (1,"Disponible"),(2,"No disponible");
@@ -88,22 +89,7 @@ foreign key(estado_id) references estado(estado_id)
 );
 drop table stock;
 select * from stock;
-create table stock_fem(
-estado_id int(1),
-cal_id int(3),
-color_id int(2),
-n_35 int(2),
-n_36 int(2),
-n_37 int(2),
-n_38 int(2),
-n_39 int(2),
-n_40 int(2),
-n_41 int(2),
-primary key(cal_id,color_id),
-foreign key (cal_id)references calzados(cal_id),
-foreign key (color_id) references colores(color_id),
-foreign key(estado_id) references estado(estado_id)
-);
+
 
 select * from stock;
 

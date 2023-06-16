@@ -69,7 +69,18 @@ $tiposMartriz = mysqli_query($c, $sql);
 
         <?php
         }
+
+        if (isset($_POST['mostrarTodosLosStocks'])) {//VFBERHARGARGAGAE
+            ?>
+            
+    
+            <?php
+            }
+            
         ?>
+
+
+
     </style>
 </head>
 
@@ -117,6 +128,10 @@ $tiposMartriz = mysqli_query($c, $sql);
         <input type="text" name="subirStock" style="display: none;">
         <input formaction="admin.php" formmethod="post" type="submit" value="Subir Stock">
     </form>
+
+  <button id="botomStocks">
+            Ver todos los Stocks
+  </button>
 
 
 
@@ -206,8 +221,9 @@ $tiposMartriz = mysqli_query($c, $sql);
 
     $conexionMostrarStock= conectar();
     $sqlMostrarStock="select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id;";
-    $matrizStock=mysqli_query($conexionMostrarStock,$sqlMostrarStock);
-
+    $matrizStock=mysqli_query($conexionMostrarStock,$sqlMostrarStock); ?>
+    <div style="display: none;" id="todosLosStocks">
+    <?php
     while($stockIndividual=mysqli_fetch_assoc($matrizStock)){
         ?>
         <br><br><br><br>
@@ -260,28 +276,124 @@ $tiposMartriz = mysqli_query($c, $sql);
         <img src='<?php echo $stockIndividual['stock_img'];?>' alt="Imagen de zapatos">
 
         <h5>STOCK DISPONIBLE</h6>
-        <h5>Talle 35: <?php echo $stockIndividual['n_35']?></h6>
-        <h5>Talle 36: <?php echo $stockIndividual['n_36']?></h5>
-        <h5>Talle 37: <?php echo $stockIndividual['n_37']?></h5>
-        <h5>Talle 38: <?php echo $stockIndividual['n_38']?></h5>
-        <h5>Talle 39: <?php echo $stockIndividual['n_39']?></h5>
-        <h5>Talle 40: <?php echo $stockIndividual['n_40']?></h5>
-        <h5>Talle 41: <?php echo $stockIndividual['n_41']?></h5>
-        <h5>Talle 42: <?php echo $stockIndividual['n_42']?></h5>
-        <h5>Talle 43: <?php echo $stockIndividual['n_43']?></h5>
-        <h5>Talle 44: <?php echo $stockIndividual['n_44']?></h5>
-        <h5>Talle 45: <?php echo $stockIndividual['n_45']?></h5>
+        <?php
+            if($stockIndividual['n_35']!=0){ ?>
+                <h5>Talle 35: <?php echo $stockIndividual['n_35']?></h6>
+           <?php }
+        ?>
+        <?php
+            if($stockIndividual['n_36']!=0){ ?>
+                <h5>Talle 36: <?php echo $stockIndividual['n_36']?></h6>
+           <?php }
+        ?>
+
+
+<?php
+            if($stockIndividual['n_37']!=0){ ?>
+                <h5>Talle 37: <?php echo $stockIndividual['n_37']?></h6>
+           <?php }
+        ?>
+
+
+<?php
+            if($stockIndividual['n_38']!=0){ ?>
+                <h5>Talle 38: <?php echo $stockIndividual['n_38']?></h6>
+           <?php }
+        ?>
+        
+        <?php
+            if($stockIndividual['n_39']!=0){ ?>
+                <h5>Talle 39: <?php echo $stockIndividual['n_39']?></h6>
+           <?php }
+        ?>
+
+
+<?php
+            if($stockIndividual['n_40']!=0){ ?>
+                <h5>Talle 40: <?php echo $stockIndividual['n_40']?></h6>
+           <?php }
+        ?>
+
+<?php
+            if($stockIndividual['n_41']!=0){ ?>
+                <h5>Talle 41: <?php echo $stockIndividual['n_41']?></h6>
+           <?php }
+        ?>
+
+<?php
+            if($stockIndividual['n_42']!=0){ ?>
+                <h5>Talle 42: <?php echo $stockIndividual['n_42']?></h6>
+           <?php }
+        ?>
+
+
+<?php
+            if($stockIndividual['n_43']!=0){ ?>
+                <h5>Talle 43: <?php echo $stockIndividual['n_43']?></h6>
+           <?php }
+        ?>
+
+
+<?php
+            if($stockIndividual['n_44']!=0){ ?>
+                <h5>Talle 44: <?php echo $stockIndividual['n_44']?></h6>
+           <?php }
+        ?>
+
+<?php
+            if($stockIndividual['n_45']!=0){ ?>
+                <h5>Talle 45: <?php echo $stockIndividual['n_45']?></h6>
+           <?php }
+        ?>
+
+        <form >
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['stock_id'] ?>" name="stock_id">
+
+            <input style="display: none;" type="text" value="<?php echo $stockIndividual['stock_img'] ?>" name="stock_img">
+
+            <input style="display: none;" type="text" value="<?php echo $stockIndividual['estado_id'] ?>" name="estado_id">
+
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['cal_id'] ?>" name="cal_id">
+
+            <input style="display: none;" type="text" name="enviarAFormStock">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['color_id'] ?>" name="color_id">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_35'] ?>" name="n_35">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_36'] ?>" name="n_36">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_37'] ?>" name="n_37">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_38'] ?>" name="n_38">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_39'] ?>" name="n_39">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_40'] ?>" name="n_40">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_41'] ?>" name="n_41">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_42'] ?>" name="n_42">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_43'] ?>" name="n_43">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_44'] ?>" name="n_44">
+            
+            <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_45'] ?>" name="n_45">
+            
+            <input class="stockEsconder" type="submit"  formaction="./admin2.php" formmethod="post"  value="Editar Stock">
+        </form>
 
         <?php 
-    }   
+    } 
     ?>
-
+</div>
 
     
 
 
 
-
+<script src="./../js/admin.js"></script>
 
 
 </body>
