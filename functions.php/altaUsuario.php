@@ -6,7 +6,7 @@ $ape=$_POST['ape'];
 $dir=$_POST['dir'];
 $mail=$_POST['mail'];
 $pass=$_POST['password'];
-$id=1;
+$id=2;
 function alta_usu($nom,$ape,$dir,$mail,$pass,$id){
     $c=conectar();
     $sql="INSERT INTO usuarios (usu_nombre,usu_apellido,usu_dir,usu_mail,usu_pass,rol_id)
