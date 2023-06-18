@@ -27,8 +27,8 @@ color_id int(2) primary key,
 color_nom varchar(40)
 );
 select * from colores;
+insert into colores(color_id, color_nom) values (1,"rojo"),(2,"verde"),(3,"azul");
 insert into colores(color_id, color_nom) values (4,"negro"),(5,"violeta"),(6,"marron");
-
 
 /*
 create table respuestas(
