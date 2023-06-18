@@ -17,6 +17,24 @@
     
 }
 
+    /* Para el ancho y alto de las imagenes. Modificalo a gusto =)  */
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        width: 1366px ;
+        height: 200px;
+        margin: auto;
+    }
+    /* Para los margenes del contendor de las fotos. Podes cambiarle el ancho a gusto tambien! */
+    .carousel-control {
+        width: 5%;
+    }
+    .container,.carousel{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      
+    }
+
 #todoElRegistrase{
     background-image: url( https://img1.wallspic.com/crops/1/3/6/8/4/148631/148631-calzado_deportivo-zapatos_al_aire_libre-zapatillas_de_baloncesto-3840x2160.jpg ); 
     background-size: 100% 80%; 
