@@ -1,3 +1,7 @@
+<?php
+$mail=$_GET['mail'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,43 +61,46 @@
     </a>
   </div>
 </div>
+
     <div id="main" >
         <div id="todoElRegistrase">
-
-
+            
             <div id="registro" class="container">
 
                     <form id="contenedorForm">
-             <img id="logo" src="./img/prueba-logo4.png" alt="Logo de la página" style="width:170px;height:40%;margin:auto;">
+        <img id="logo" src="./img/prueba-logo4.png" alt="Logo de la página" style="width:170px;height:40%;margin:auto;">
                         <div id="formR">
-                        <?php if(isset($_GET['env'])){
-                            echo"<strong style=color:green;>El Mail fue enviado con exito</strong>";
-                        }
+                            
+                            <?php
+                            if (isset($_GET['errorAlActualizar'])){
+                            
+                                echo "<h4 style='color:red;padding-left:5%;'><strong>Error al Actualizar</strong></h4>";
+                            
+                            }
                         
+                            if (isset($_GET['contrasenasNoIguales'])){
+                            
+                                echo "<h4 style='color:red;padding-left:5%;'><strong>Las Contraseñas no coinciden</strong></h4>";
+                            
+                            }
                         ?>
                             <div id="inputTextos" style="justify-content: center;">
-                                    <input placeholder="Correo" name="mail" type="text">
-                                    <input style="display:none; margin-top:10px ;" name="pass" placeholder="Contraseña" type="text">
-                                    <input style="display:none; margin-top:10px ;" name="pass2" placeholder="Reintroducir Contraseña" type="text">
-                                    <a style="display:none; 
-                                    position: relative;top:10%;" href="">¿Olvidaste tu Contraseña?</a>
+                                    <input style="display:none; margin-top:10px ;" placeholder="Correo" value="<?php echo $mail?>" name="mail" type="text">
+                                    <input  name="pass" placeholder="Contraseña" type="text">
+                                    <input  name="pass2" placeholder="Confirmar Contraseña" type="text">
+                                    
                             </div>
 
                             <div id="inputSubmit">
-                            <input id="botomRegistrarse" type="submit" value="Restablecer Contraseña" formaction="./functions.php/mandarCorreo.php" formmethod="post">
-                            </div>                    
-                            <?php if(isset($_GET['sin'])){
-                            echo"<strong style=color:red;> No existe el mail ingresado </strong>";
-                        }
-                        
-                        ?>
+                            <input id="botomRegistrarse" type="submit" value="Restablecer Contraseña" formaction="./functions.php/actualizarContrasena.php" formmethod="post">
+                            </div>
                         </div>
                         <div id="yaTenesCuenta">
 
                                 <a id="linkLoggin" href="login.php">Iniciar Sesion</a>
 
                         </div>
-
+                        
                     </form>
             </div>
         
@@ -119,7 +126,6 @@
                             </div>
 
                     </div>
-
 
             </div>
 

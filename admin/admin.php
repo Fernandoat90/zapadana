@@ -113,8 +113,9 @@ $tiposMartriz = mysqli_query($c, $sql);
         <input formaction="admin.php" formmethod="post" type="submit" value="Subir Calzado General">
     </form> <?php
             if (isset($_POST['cal_id'])) {
+                
                 require '../functions.php/subirProductoGeneral.php';
-                subirProductoGeneral(conectar(), $id, $tipo, $marca, $precio, $genero);
+                subirProductoGeneral(conectar(),$id, $tipo, $marca, $precio, $genero);
             }
 
             ?>

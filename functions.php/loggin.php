@@ -13,7 +13,6 @@ function loggin($mail,$contra){
  if(mysqli_affected_rows($c)>0){
 
     if($contra==$registro['usu_pass']){
-      echo "iniciar sesion";
       session_start();
       $_SESSION['id']=$registro['usu_id'];
       $_SESSION['nombre']=$registro['usu_nombre'];
@@ -21,10 +20,10 @@ function loggin($mail,$contra){
   
       switch($registro['rol_id']){
         case 1:
-          header("Location:./../admin/admin.php");
+          header("Location:/admin/admin.php");
           break;
         case 2:
-          header("Location:./../filtro.php");
+          header("Location:/filtro.php");
           break;
         default:
         break;          
@@ -39,7 +38,7 @@ function loggin($mail,$contra){
   }
   else {
       echo "<h1>No existe el usuario $mail<br><br></h1>";
-      echo "<br><br><h2><a href=index.php><button>Iniciar sesion</button></a></h2>";
+      echo "<br><br><h2><a href=https://equipodinamita23.000webhostapp.com/login.php><button>Iniciar sesion</button></a></h2>";
   }
 
 }//fin inicio de sesion
