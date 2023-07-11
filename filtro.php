@@ -133,29 +133,7 @@
 
                     </div>
 
-                    <div class="containersInfo" id="Paises">
-                        <div class="nombres">
-
-                            <h2 style="visibility: visible;">Paises</h2>
-                            
-
-                        </div>
-
-                        <div id="paises">
-                            <form>
-                                <select id="selectPaises">
-                                    <option value="">Argentina</option>
-                                    <option value="">Bolivia</option>
-                                    <option value="">Paraguay</option>
-                                    <option value="">Brasil</option>
-                                    <option value="">Perú</option>
-                                </select>
-                            </form>
-
-
-                        </div>
-
-                    </div>
+                    
 
             </div>
 
