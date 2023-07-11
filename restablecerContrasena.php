@@ -64,7 +64,8 @@
             <div id="registro" class="container">
 
                     <form id="contenedorForm">
-             <img id="logo" src="./img/prueba-logo4.png" alt="Logo de la página" style="width:170px;height:40%;margin:auto;">
+                        <br>
+             <img id="logo" src="./img/Logo2.png" alt="Logo de la página" style="width:170px;height:40%;margin:auto;">
                         <div id="formR">
                         <?php if(isset($_GET['env'])){
                             echo"<strong style=color:green;>El Mail fue enviado con exito</strong>";
@@ -72,7 +73,7 @@
                         
                         ?>
                             <div id="inputTextos" style="justify-content: center;">
-                                    <input placeholder="Correo" name="mail" type="text">
+                                    <input style="height:30px" placeholder="Correo" name="mail" type="text">
                                     <input style="display:none; margin-top:10px ;" name="pass" placeholder="Contraseña" type="text">
                                     <input style="display:none; margin-top:10px ;" name="pass2" placeholder="Reintroducir Contraseña" type="text">
                                     <a style="display:none; 

@@ -36,7 +36,8 @@
     }
 
 #todoElRegistrase{
-    background-image: url( https://img1.wallspic.com/crops/1/3/6/8/4/148631/148631-calzado_deportivo-zapatos_al_aire_libre-zapatillas_de_baloncesto-3840x2160.jpg ); 
+    /*background-image: url( https://img1.wallspic.com/crops/1/3/6/8/4/148631/148631-calzado_deportivo-zapatos_al_aire_libre-zapatillas_de_baloncesto-3840x2160.jpg ); */
+    background-image: url("./../img/fondo.png");
     background-size: 100% 80%; 
     background-repeat: no-repeat;
     width: 100%;
@@ -90,8 +91,8 @@ color:#fdfdfdd0;
     display: flex;
     flex-direction: column;
     border-radius: 25px;
-    background-color: #faab2bd0;
-    opacity: 100%;
+    background-color:rgba(224, 140, 30, 0.83);
+    opacity: 0.83;
     margin-top: 7%;
     
 }
@@ -117,7 +118,7 @@ align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height:445px ;
+    height:545px ;
     align-items: center;
 
     

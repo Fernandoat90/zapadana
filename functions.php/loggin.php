@@ -32,7 +32,7 @@ function loggin($mail,$contra){
   
       else {
           echo "La contraseña es incorrecta <br><br>";
-          echo "<br><br><h2><a href=index.php><button>Iniciar sesion</button></a></h2>";
+          echo "<br><br><h2><a href=./../login.php><button>Iniciar sesion</button></a></h2>";
       }
   
   }

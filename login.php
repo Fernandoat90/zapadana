@@ -15,7 +15,7 @@
 <body style="background-color: black;margin:0;padding:0;">
 
 <!-- carrusel -->
-<div class="container" style="width:100%">
+<div class="container" style="width:100vw">
  
   <div id="carrusel" class="carousel slide" data-ride="carousel" >
 
@@ -66,11 +66,12 @@
                 
 
                 <form style="height:100%;" id="contenedorForm">
-                    <img id="logo" src="./img/prueba-logo4.png" alt="Logo de la página" style="width:170px;height:40%;margin:auto;">
+                    <br>
+                    <img id="logo" src="./img/Logo2.png" alt="Logo de la página" style="width:130px;height:25%;margin:auto;">
                     <div id="formR">
                         <div id="inputTextos" style="justify-content: center;">
                             <input id="email" placeholder="Correo" style="height:30px;" name="mail" type="text">
-                            <input style="height:30px;" style="margin-top:10px ;" name="pass" placeholder="Contraseña" type="text">
+                            <input style="height:30px;" style="margin-top:10px ;" name="pass" placeholder="Contraseña" type="password">
                             <input style="display:none;" id="email2" placeholder="Correo2" style="height:30px;" name="mail2" type="text">
                             <input id="pass2" style="display:none;height:30px;" style="margin-top:10px ;" name="pass2" placeholder="Contraseña2" type="text">
                             <a style="position: relative;top:10%;" href="restablecerContrasena.php">¿Olvidaste tu Contraseña?</a>

@@ -116,24 +116,9 @@
 
                     </div>
 
-                    <div class="containersInfo" id="uneteFlashi">
-
-                        <div class="nombres">
-                            <h2>Unete a Flashi</h2>
-
-                        </div>
-
-                        <div .links>
-                                <a class="items" href="">Registra tu Restaurante</a><br>
-                                <a class="items" href="">Trabaja con Nosotros</a> <br>
-                                <a class="items" href="">Conviertete en Flashienvio</a>
-
-
-                        </div>
-
-                    </div>
-
                     
+
+                   
 
             </div>
 

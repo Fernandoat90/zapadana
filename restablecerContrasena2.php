@@ -86,8 +86,8 @@ $mail=$_GET['mail'];
                         ?>
                             <div id="inputTextos" style="justify-content: center;">
                                     <input style="display:none; margin-top:10px ;" placeholder="Correo" value="<?php echo $mail?>" name="mail" type="text">
-                                    <input  name="pass" placeholder="Contraseña" type="text">
-                                    <input  name="pass2" placeholder="Confirmar Contraseña" type="text">
+                                    <input  name="pass" placeholder="Contraseña" type="password">
+                                    <input  name="pass2" placeholder="Confirmar Contraseña" type="password">
                                     
                             </div>
 

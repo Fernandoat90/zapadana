@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script>
+        $(function(){
+            $("body").hide().fadeIn(3500);
+        });
+    </script>
 </head>
 
 <body style="background-color: black;margin:0;padding:0;">
@@ -60,7 +66,7 @@
     <div id="main"> 
    
         <div id="todoElRegistrase" >
-       <br><br><br><h3 style="color:white;text-align:center;">Haz click en el logo para Ingresar</h3> 
+       <br><br><br><h3 style="color:white;text-align:center">Haz click en el logo para Ingresar</h3> 
        <div style="text-align:center;">
 <a href=login.php><button style="background-color:rgba(224, 140, 30, 0.83);border-radius:25px;"><img src="./img/logo-ini.png" alt="logo" ></button></a>
 </div>
