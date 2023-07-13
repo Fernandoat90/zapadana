@@ -52,7 +52,7 @@
                             </div>
 
                             <div id="inputSubmit" style="display: flex; justify-content:center; align-items:center;">
-                            <input id="botomRegistrarse" type="submit" value="" formaction="./productos.php" formmethod="post">
+                            <input id="botomRegistrarse" type="submit" value="" formaction="./showShoes.php" formmethod="post">
                             </div>
                         </div>
                         
@@ -76,7 +76,7 @@
 
                             <div id="inputSubmit">
                             <input id="botomRegistrarse" style="background-image: url('img/mujer.png');
-                            background-size: 100% 100%" type="submit" value="" formaction="./productos.php" formmethod="post">
+                            background-size: 100% 100%" type="submit" value="" formaction="./showShoes.php" formmethod="post">
                             </div>
                         </div>
                         

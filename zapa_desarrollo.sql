@@ -1,6 +1,10 @@
 /*drop database zapa_desarrollo;*/
 create database zapa_desarrollo;
+
 use zapa_desarrollo;
+
+
+
 
 create table roles(
 rol_id int(1)primary key,
@@ -8,7 +12,7 @@ rol_desc varchar(30)
 );
 
 insert into roles values(1,"administrador"),(2,"usuario");
-
+select * from roles;
 create table tipos(
 tipo_id int(2) primary key,
 tipo_desc varchar(30)
@@ -27,8 +31,8 @@ color_id int(2) primary key,
 color_nom varchar(40)
 );
 select * from colores;
-insert into colores(color_id, color_nom) values (1,"rojo"),(2,"verde"),(3,"azul");
-insert into colores(color_id, color_nom) values (4,"negro"),(5,"violeta"),(6,"marron");
+insert into colores(color_id, color_nom) values (1,"rojo"),(2,"verde"),(3,"azul"),(4,"negro"),(5,"violeta"),(6,"marron");
+
 
 /*
 create table respuestas(
@@ -43,10 +47,10 @@ create table estado(
 estado_id int(1) PRIMARY KEY,
 estado_desc varchar(20)
 );
-select * from stock;
 
 select *from estado;
 insert into estado(estado_id,estado_desc) values (1,"Disponible"),(2,"No disponible");
+select * from tipos;
 
 create table calzados(
 cal_id int(3) primary key,
@@ -60,8 +64,8 @@ foreign key(tipo_id) references tipos(tipo_id)
 );
 drop table calzados;
 
-select * from colores;
-select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id;
+select * from usuarios;
+select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id having c.cal_gen="M";
 select * from tipos;
 select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;
 select *from calzados;
@@ -91,7 +95,14 @@ drop table stock;
 select * from stock;
 
 
+
+
+
+
+
 select * from stock;
+
+select s.stock_id, s.estado_id, s.color_id,c.cal_id as idCalzado, c.cal_desc, c.cal_gen from stock s  left join calzados c on c.cal_id = s.cal_id where s.color_id=1;
 
 create table usuarios(
 usu_id int(3) primary key AUTO_INCREMENT,
@@ -107,14 +118,23 @@ foreign key(rol_id) references roles(rol_id)
 
 select * from usuarios;
 
+
+
+select count(u.usu_id),u.usu_nombre,u.usu_apellido, r.reser_id as reserva_numero, r.stock_id as Numero_de_Stock from usuarios u right join reserva r on u.usu_id= r.usu_id group by u.usu_id having count(u.usu_id)>=5; 
+
+
+insert into usuarios(usu_nombre,usu_Apellido,usu_dir,usu_mail,usu_pass,rol_id) values("Admin","Dinamita","calle123","admin@gmail.com",12345678,1);
+
 create table reserva(
 reser_id int(4) primary key,
 usu_id int(3),
-cal_id int(3),
+stock_id int(3),
 foreign key (usu_id) references usuarios(usu_id),
-foreign key (cal_id) references calzados(cal_id)
+foreign key (stock_id) references stock(stock_id)
 );
+select * from usuarios;
+insert into reserva(reser_id,usu_id,stock_id) values(1,1,2),(2,1,3),(3,1,4),(4,1,2),(5,1,6);
+insert into reserva(reser_id,usu_id,stock_id) values(6,2,2),(7,2,6);
+insert into reserva(reser_id,usu_id,stock_id) values(8,3,2),(9,3,3),(10,3,4),(11,3,2),(12,3,6),(13,3,1);
 
-drop table reserva;
-drop table stock_fem;
-drop table stock_masc;
+select count(u.usu_id) as numero_de_reservas,u.usu_nombre,u.usu_apellido, r.reser_id as reserva_numero, r.stock_id as Numero_de_Stock from usuarios u right join reserva r on u.usu_id= r.usu_id group by u.usu_id having count(u.usu_id)>=5;
