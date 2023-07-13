@@ -20,10 +20,10 @@ function loggin($mail,$contra){
   
       switch($registro['rol_id']){
         case 1:
-          header("Location:/admin/admin.php");
+          header("Location:../admin/admin.php");
           break;
         case 2:
-          header("Location:/filtro.php");
+          header("Location:../filtro.php");
           break;
         default:
         break;          
