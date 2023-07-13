@@ -70,16 +70,19 @@
                     <img id="logo" src="./img/Logo2.png" alt="Logo de la página" style="width:130px;height:25%;margin:auto;">
                     <div id="formR">
                         <div id="inputTextos" style="justify-content: center;">
-                            <input id="email" placeholder="Correo" style="height:30px;" name="mail" type="text">
-                            <input style="height:30px;" style="margin-top:10px ;" name="pass" placeholder="Contraseña" type="password">
-                            <input style="display:none;" id="email2" placeholder="Correo2" style="height:30px;" name="mail2" type="text">
-                            <input id="pass2" style="display:none;height:30px;" style="margin-top:10px ;" name="pass2" placeholder="Contraseña2" type="text">
-                            <a style="position: relative;top:10%;" href="restablecerContrasena.php">¿Olvidaste tu Contraseña?</a>
+                            <input id="email2" placeholder="Correo" style="height:30px;" name="mail2" type="text">
+                            <input id="pass2" style="height:30px;" style="margin-top:10px;" name="pass2" placeholder="Contraseña" type="password">
+                            <input style="display:none;" id="email" placeholder="Correo2"  name="mail" type="text">
+                            <input id="pass" style="display:none;"  name="pass" placeholder="Contraseña1" type="text">
+                            <a style="position: relative;top:4px;" href="restablecerContrasena.php">¿Olvidaste tu Contraseña?</a>
                                
                         </div>
 
                         <div id="inputSubmit">
-                            <input id="botomRegistrarse" type="submit" value="Iniciar Sesion" formaction="./functions.php/loggin.php" formmethod="post">
+                            <input id="botomRegistrarse" class="BotomFunction" type="submit" value="Iniciar Sesion Falso">
+                        </div>
+                        <div id="inputSubmit" style="display:none">
+                            <input id="botomRegistrarseVerdadero" type="submit" value="Iniciar Sesion" formaction="./functions.php/loggin.php" formmethod="post">
                         </div>
                     </div>
                     <div id="yaTenesCuenta">
@@ -134,9 +137,7 @@
 
 
     </div>
-<script src="js/login.js" type="module">
-    
-</script>
+<script src="./js/logg.js" ></script>
 
 </body>
 
