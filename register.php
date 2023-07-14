@@ -96,33 +96,15 @@
                             
                             </div>
                             
-                        </div>
-                        <div id="yaTenesCuenta">
+                        
+                            <div id="yaTenesCuenta">
 
                                 <a id="linkLoggin" href="login.php">¿Ya tenés cuenta? Inicia Sesion!</a>
-                       
+                            </div>
                         </div>
                     </form>
             </div>
                                            
-
-        </div>
-        
-        <div id="aboutOf" class="container">
-
-            <div id="allInformation">
-
-                   
-
-
-                    </div>
-
-                    
-
-                   
-
-            </div>
-
 
         </div>
 

@@ -66,9 +66,10 @@
 
 
         <form style="height:100%;" id="contenedorForm">
-          <br>
-          <img id="logo" src="./img/Logo2.png" alt="Logo de la página" style="width:130px;height:25%;margin:auto;">
           <div id="formR">
+          <br>
+          <img id="logo" src="./img/Logo2.png" alt="Logo de la página" style="width:130px;height:20%;margin:auto;">
+         
             <div id="inputTextos" style="justify-content: center;">
               <input id="email2" placeholder="Correo" style="height:30px;" name="mail2" type="text">
               <input id="pass2" style="height:30px;" style="margin-top:10px;" name="pass2" placeholder="Contraseña" type="password">
@@ -78,13 +79,12 @@
 
             </div>
 
+            <!-- <div id="inputSubmit">
+              <input id="botomRegistrarse" class="BotomFunction" type="submit" value="Iniciar Sesion Falso"> 
+            </div>-->
             <div id="inputSubmit">
-              <input id="botomRegistrarse" class="BotomFunction" type="submit" value="Iniciar Sesion Falso"> <!-- qué es esto??? -->
+              <input id="botomRegistrarse" class="BotomFunction" type="submit" value="Iniciar Sesion" formaction="./functions.php/loggin.php" formmethod="post"> <!-- ESTO MANDA A LA VERIFICACION DE ROLES??? -->
             </div>
-            <div id="inputSubmit" style="display:none">
-              <input id="botomRegistrarseVerdadero" type="submit" value="Iniciar Sesion" formaction="./functions.php/loggin.php" formmethod="post"> <!-- ESTO MANDA A LA VERIFICACION DE ROLES??? -->
-            </div>
-          </div>
           <div id="yaTenesCuenta">
 
             <a id="linkLoggin" href="register.php">¿No tenés cuenta? Registrate!</a>
@@ -101,42 +101,13 @@
           }
 
           ?>
-
+          </div>
         </form>
       </div>
 
-
-    </div>
-    <div id="aboutOf" class="container">
-
-      <div id="allInformation">
-
-        <div class="containersInfo" id="sobreFlashi">
-          <div class="nombres">
-            <h2>Sobre Flashi</h2>
-
-          </div>
-
-          <div .links>
-
-            <a class="items" href="">Contacto</a><br>
-            <a class="items" href="">Politicas de Privacidad</a> <br>
-            <a class="items" href="">Terminos y Condiciones</a>
-
-
-          </div>
-
-        </div>
-
-
-
       </div>
-
-
     </div>
 
-
-  </div>
   <script src="./js/logg.js"></script> <!-- qué es esto??? -->
 
 </body>

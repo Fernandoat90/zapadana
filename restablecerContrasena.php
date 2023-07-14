@@ -65,9 +65,10 @@
       <div id="registro" class="container">
 
         <form id="contenedorForm">
-          <br>
-          <img id="logo" src="./img/Logo2.png" alt="Logo de la página" style="width:170px;height:40%;margin:auto;">
           <div id="formR">
+            <br>
+          <img id="logo" src="./img/Logo2.png" alt="Logo de la página" style="width:140px;height:20%;margin:auto;">
+          
             <?php if (isset($_GET['env'])) { // de donde viene este 'env'?? --> [DE /functions.php/mandarCorreo.php]
               echo "<strong style=color:green;>El Mail fue enviado con exito</strong>";
             }
@@ -77,8 +78,7 @@
               <input style="height:30px" placeholder="Correo" name="mail" type="text">
               <input style="display:none; margin-top:10px ;" name="pass" placeholder="Contraseña" type="text"> <!-- xq??????? -->
               <input style="display:none; margin-top:10px ;" name="pass2" placeholder="Reintroducir Contraseña" type="text">
-              <a style="display:none; 
-                                    position: relative;top:10%;" href="">¿Olvidaste tu Contraseña?</a>
+              <a style="display:none;position: relative;top:10%;" href="">¿Olvidaste tu Contraseña?</a>
             </div>
 
             <div id="inputSubmit">
@@ -89,40 +89,14 @@
             }
 
             ?>
-          </div>
+          
           <div id="yaTenesCuenta">
 
             <a id="linkLoggin" href="login.php">Iniciar Sesion</a>
 
+           </div>
           </div>
-
         </form>
-      </div>
-
-
-    </div>
-    <div id="aboutOf" class="container"> <!-- HABRIA Q BORRAR ESTO ONO-->
-
-      <div id="allInformation">
-
-        <div class="containersInfo" id="sobreFlashi">
-          <div class="nombres">
-            <h2>Sobre Flashi</h2>
-
-          </div>
-
-          <div .links>
-
-            <a class="items" href="">Contacto</a><br>
-            <a class="items" href="">Politicas de Privacidad</a> <br>
-            <a class="items" href="">Terminos y Condiciones</a>
-
-
-          </div>
-
-        </div>
-
-
       </div>
 
 
