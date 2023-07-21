@@ -8,7 +8,7 @@ $sqlSentence = "select * from usuarios where usu_mail='$mail';"; //Verifica q ex
 mysqli_query($conection, $sqlSentence);
 
 if (mysqli_affected_rows($conection) > 0) {
-  header("location:./../restablecerContrasena.php?env");  //ah. viene de acá. ok. MANDA CORREO SI EXISTE
+  
   $name = "ZapaDana";
   $asunto = "Correo Mandado";
   $mensaje = "https://equipodinamita23.000webhostapp.com/restablecerContrasena2.php?mail=" . $mail;
@@ -18,6 +18,8 @@ if (mysqli_affected_rows($conection) > 0) {
 
 
   @mail($mail, $asunto, $mensaje, $header);
+
+  header("location:./../restablecerContrasena.php?env");  //ah. viene de acá. ok. MANDA CORREO SI EXISTE
 } else {
   header("location:./../restablecerContrasena.php?sin");  // si no existe, avisa
 }

@@ -1,4 +1,8 @@
 <?php
+    require "./functions.php/seguridadHome.php";
+?>
+
+<?php
 require "./functions.php/conection.php";
 require "./functions.php/devolverResulset.php";
 

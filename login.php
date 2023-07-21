@@ -79,11 +79,11 @@
 
             </div>
 
-            <!-- <div id="inputSubmit">
-              <input id="botomRegistrarse" class="BotomFunction" type="submit" value="Iniciar Sesion Falso"> 
-            </div>-->
-            <div id="inputSubmit">
-              <input id="botomRegistrarse" class="BotomFunction" type="submit" value="Iniciar Sesion" formaction="./functions.php/loggin.php" formmethod="post"> <!-- ESTO MANDA A LA VERIFICACION DE ROLES??? -->
+             <div id="inputSubmit">
+              <input id="botomRegistrarse" class="BotomFunction" type="submit" value="Iniciar Sesion"> 
+            </div>
+            <div style="display:none;" id="inputSubmit">
+              <input id="botomRegistrarseVerdadero" class="BotomFunction" type="submit" value="Iniciar Sesion verdadero" formaction="./functions.php/loggin.php" formmethod="post"> <!-- ESTO MANDA A LA VERIFICACION DE ROLES??? -->
             </div>
           <div id="yaTenesCuenta">
 

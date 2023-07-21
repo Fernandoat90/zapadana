@@ -118,7 +118,7 @@ foreign key(rol_id) references roles(rol_id)
 
 select * from usuarios;
 
-
+update stock set n_37=53 where stock_id=1;
 
 select count(u.usu_id),u.usu_nombre,u.usu_apellido, r.reser_id as reserva_numero, r.stock_id as Numero_de_Stock from usuarios u right join reserva r on u.usu_id= r.usu_id group by u.usu_id having count(u.usu_id)>=5; 
 
@@ -126,13 +126,14 @@ select count(u.usu_id),u.usu_nombre,u.usu_apellido, r.reser_id as reserva_numero
 insert into usuarios(usu_nombre,usu_Apellido,usu_dir,usu_mail,usu_pass,rol_id) values("Admin","Dinamita","calle123","admin@gmail.com",12345678,1);
 
 create table reserva(
-reser_id int(4) primary key,
+reser_id int(4) primary key auto_increment,
 usu_id int(3),
 stock_id int(3),
 foreign key (usu_id) references usuarios(usu_id),
 foreign key (stock_id) references stock(stock_id)
 );
-select * from usuarios;
+drop table reserva;
+select * from reserva;
 insert into reserva(reser_id,usu_id,stock_id) values(1,1,2),(2,1,3),(3,1,4),(4,1,2),(5,1,6);
 insert into reserva(reser_id,usu_id,stock_id) values(6,2,2),(7,2,6);
 insert into reserva(reser_id,usu_id,stock_id) values(8,3,2),(9,3,3),(10,3,4),(11,3,2),(12,3,6),(13,3,1);

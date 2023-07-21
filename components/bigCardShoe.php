@@ -125,7 +125,7 @@
                     <img class="bigCardShoeDivImage" src="<?php echo $url?>" alt="">
                 </div>
                 <div class="bigCardShoeInfo">
-                    <form class="bigCardShoeForm" action="./reservaCompletada.php" method="post">
+                    <form class="bigCardShoeForm" action="./updateStock.php" method="post">
                         <input type="number" name="id" value=<?php echo $id; ?> style="display:none;">
                         <p class="bigCardShoePTexto" >Marca: <input class="bigCardShoeFormText" type="text" name="marca" readonly value="<?php echo $marca ?>"></p>
                         <p class="bigCardShoePTexto" >Tipo: <input class="bigCardShoeFormText" type="text" name="tipo" readonly value="<?php echo $tipo ?>"></p>

@@ -1,4 +1,7 @@
 <?php
+    require "./functions.php/seguridadHome.php";
+?>
+<?php
     if($_POST['genero']==1 ){
         $genero="M";
     }

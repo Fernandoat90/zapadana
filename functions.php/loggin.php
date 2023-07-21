@@ -16,6 +16,7 @@ function loggin($mail,$contra){
       session_start();
       $_SESSION['id']=$registro['usu_id'];
       $_SESSION['nombre']=$registro['usu_nombre'];
+      $_SESSION['email']=$registro['usu_mail'];
       $_SESSION['tipoUsuario']=$registro['rol_id'];
   
       switch($registro['rol_id']){
