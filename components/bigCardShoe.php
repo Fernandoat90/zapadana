@@ -4,12 +4,12 @@
         ?>
         <style>
             :root{
-                --bp:1px solid Blue;
+                --bp:none;
                 --bf:1px solid black;
             }
             .bigCardShoeContainer{
                 width:70%;
-                height:600px;
+                height:500px;
                 border:1px solid black;
                 border-radius:25px;
                 display:flex;
@@ -26,8 +26,8 @@
                 background-color:;
             }
             .bigCardShoeDivImage{
-                width: 80%;
-                height:85%;
+                width: 90%;
+                height:90%;
                 border-radius:150px;
             }
             .bigCardShoeInfo{
@@ -45,8 +45,8 @@
             align-items:start;
             border:1px solid black;
             border-radius:50px; 
-            width:80%;
-            height:90%;
+            width: 450px;
+            height:450px;
             background-color:yellow;
             padding-left:8%;
         }
@@ -54,6 +54,8 @@
         .bigCardShoePTexto{
             font-family: 'impact',cursive, sans-serif, Geneva, Tahoma, sans-serif;
             font-size:25px;
+            display:inline;
+            margin-top:6%;
         
         }
 
@@ -63,14 +65,20 @@
             color:red;
             position:relative;
             left:70%;
+            display:inline;
         }
 
         .bigCardShoeFormText{
             border:none;
             background:none;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+            font-family: 'impact', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Geneva, Tahoma, sans-serif;
+            height:30px;
+            width:100px;
             font-size:22px;
+            overflow: visible;
         }
+
+        
 
         .bigCardShoeFormPrice{
             border:none;
@@ -78,6 +86,7 @@
             font-family:'impact';
             font-size:30px;
             color:red;
+            height:25px;
             
         }
 
@@ -91,9 +100,19 @@
             position:relative;
             left:25%;
             cursor:pointer;
+            font-size:20px;
         }
         .bigCardShoeFormSubmit:hover{
             background-color:blueviolet;
+        }
+        .bigCardShoeFormSubmitContainer{
+            border:var(--bp);
+            width: 100%;
+            height:30%;  /*Si se necesita mas espacio dentro de la info achicar este height */
+            display:flex;
+            align-items:end;
+            position: relative;
+            
         }
         </style>
         
@@ -103,12 +122,15 @@
                 </div>
                 <div class="bigCardShoeInfo">
                     <form class="bigCardShoeForm" >
-                        <p class="bigCardShoePTexto" >Marca: <input class="bigCardShoeFormText" type="text" value="<?php echo $marca ?>"></p>
-                        <p class="bigCardShoePTexto" >Tipo: <input class="bigCardShoeFormText" type="text" value="<?php echo $tipo ?>"></p>
-                        <p class="bigCardShoePTexto" >Genero: <input class="bigCardShoeFormText" type="text" value="<?php echo $genero ?>"></p>
-                        <p class="bigCardShoePTexto" >Color: <input class="bigCardShoeFormText" type="text" value="<?php echo $color ?>"></p>
-                        <p class="bigCardShoePPrice" >$<input class="bigCardShoeFormPrice"  type="number" name="<?php echo $precio ?>" value=0.01 step=0.01 id=""></p>
-                        <input class="bigCardShoeFormSubmit" type="submit">
+                        <p class="bigCardShoePTexto" >Marca: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $marca ?>"></p>
+                        <p class="bigCardShoePTexto" >Tipo: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $tipo ?>"></p>
+                        <p class="bigCardShoePTexto" >Genero: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $genero ?>"></p>
+                        <p class="bigCardShoePTexto" >Color: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $color ?>"></p>
+                        <p class="bigCardShoePPrice" >$<input class="bigCardShoeFormPrice"  type="number" readonly name="precio" value=<?php echo $precio ?> step=0.01 id=""></p>
+                        <div class="bigCardShoeFormSubmitContainer">
+                            <input value="Reservar" class="bigCardShoeFormSubmit" type="submit">
+                        </div>
+                        
                     </form>
                 </div>
         </div>
@@ -116,6 +138,6 @@
         <?php
     }
 
-bigCardShoe(13.43,"Nike","De vestir","Femenino","Rojo");
+
 
 ?>
