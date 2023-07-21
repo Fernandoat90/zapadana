@@ -1,3 +1,25 @@
+<?php
+require "./functions.php/conection.php";
+require "./functions.php/devolverResulset.php";
+
+$id=$_POST["id"];
+
+$stock=mysqli_fetch_assoc(devolverResulset(conectar(),"select * from stock where stock_id=$id;"));
+$color=$stock["color_id"];
+$color=mysqli_fetch_assoc(devolverResulset(conectar(),"select * from colores where color_id=$color;"));
+$calzado= $stock["cal_id"];
+$calzado=mysqli_fetch_assoc(devolverResulset(conectar(),"select * from calzados where cal_id=$calzado;"));
+$tipo=$calzado["tipo_id"];
+$tipoM=mysqli_fetch_assoc(devolverResulset(conectar(),"select * from tipos where tipo_id=$tipo;"));
+if($calzado["cal_gen"]=="M"){
+    $genero="Masculino";
+}
+else{
+    $genero="Femenino";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +65,16 @@
 
             </div>    
             <div class="containerComponent">
-                <?php bigCardShoe(13.43,"Nike","De vestir","Femenino","Rojo"); ?>
+                <?php
+                
+                $precio=$calzado["cal_precio"];
+                $marca=$calzado["cal_desc"];
+                $tipo=$tipoM["tipo_desc"];
+                $color=$color["color_nom"];
+                $url=$stock["stock_img"];
+                $talle=$_POST["talle"];
+                
+                bigCardShoe($id,$precio,$marca,$tipo,$genero,$color,$url,$talle); ?>
             </div>
         </div>
         

@@ -138,3 +138,4 @@ insert into reserva(reser_id,usu_id,stock_id) values(6,2,2),(7,2,6);
 insert into reserva(reser_id,usu_id,stock_id) values(8,3,2),(9,3,3),(10,3,4),(11,3,2),(12,3,6),(13,3,1);
 
 select count(u.usu_id) as numero_de_reservas,u.usu_nombre,u.usu_apellido, r.reser_id as reserva_numero, r.stock_id as Numero_de_Stock from usuarios u right join reserva r on u.usu_id= r.usu_id group by u.usu_id having count(u.usu_id)>=5;
+

@@ -20,6 +20,7 @@
                     background-color:aqua;
                     border-radius:10px;
                     box-shadow:black 10px 10px;
+                    margin-top:5px;
                             }
                     .containerrr:hover{
                         transition:2s;
@@ -40,6 +41,7 @@
                         display:flex;
                         flex-direction:column;
                         align-items:center;
+                        
                         
                     }
 
@@ -74,13 +76,13 @@
             <div class="containerrr">
                 
                 <img src="<?php echo $imgUrl?>" class="imagenMuestra"  alt="Imagen del zapato">
-            <form class="formCard">
-                    <input style="display:none" class="inputt" type="number" value="<?php echo $id ?>" name="id" readonly>
+            <form class="formCard" action="./confirmarCompra.php" method="post">
+                    <input style="display:none;" class="inputt" type="number" value="<?php echo $id ?>" name="id" readonly>
                     <input class="inputt marcaFormCard" value="<?php echo $marca ?>" type="text"readonly>
                     
                     <input class="inputt tipoFormCard" value="<?php echo $tipo ?>" type="text" readonly>
                     <p class="price" >$<?php echo $precio ?></p>
-                    <p>Talles Disponibles:<select class="tallesFormCard" name=""> 
+                    <p>Talles Disponibles:<select class="tallesFormCard" name="talle"> 
                     <?php $isTalle=false; 
                     if($tallesDisponibles[0]>0){ 
                         $isTalle=true; 
@@ -141,7 +143,7 @@
                     
                     </select></p>
                         <?php if($isTalle){ ?>
-                    <input type="submit" class="buttomFormCard" value="Reservar">
+                    <input type="submit" class="buttomFormCard" value="Reservar" >
                         <?php }  else{
                             echo "<h4>No Disponible</h4>";
                         }?> 

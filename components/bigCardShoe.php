@@ -1,6 +1,6 @@
 <?php
 
-    function bigCardShoe($precio,$marca,$tipo,$genero,$color){
+    function bigCardShoe($id,$precio,$marca,$tipo,$genero,$color,$url,$talle){
         ?>
         <style>
             :root{
@@ -9,7 +9,7 @@
             }
             .bigCardShoeContainer{
                 width:70%;
-                height:500px;
+                height:520px;
                 border:1px solid black;
                 border-radius:25px;
                 display:flex;
@@ -31,7 +31,7 @@
                 border-radius:150px;
             }
             .bigCardShoeInfo{
-                height:100%;
+                height:106%;
                 width:54%;
                 display:flex;
                 justify-content:center;
@@ -46,7 +46,7 @@
             border:1px solid black;
             border-radius:50px; 
             width: 450px;
-            height:450px;
+            height:470px;
             background-color:yellow;
             padding-left:8%;
         }
@@ -55,7 +55,7 @@
             font-family: 'impact',cursive, sans-serif, Geneva, Tahoma, sans-serif;
             font-size:25px;
             display:inline;
-            margin-top:6%;
+            margin-top:3%;
         
         }
 
@@ -108,25 +108,35 @@
         .bigCardShoeFormSubmitContainer{
             border:var(--bp);
             width: 100%;
-            height:30%;  /*Si se necesita mas espacio dentro de la info achicar este height */
+            height:20%;  /*Si se necesita mas espacio dentro de la info achicar este height */
             display:flex;
-            align-items:end;
+            align-items:center;
             position: relative;
             
+        }
+        .bigCardShoeTarjetasInputs{
+            height:25px;
+            margin-left:10%;
         }
         </style>
         
         <div class="bigCardShoeContainer" >
                 <div class="bigCardShoeImage">
-                    <img class="bigCardShoeDivImage" src="https://img.freepik.com/fotos-premium/zapatilla-roja-aislado-sobre-fondo-blanco_185193-64054.jpg" alt="">
+                    <img class="bigCardShoeDivImage" src="<?php echo $url?>" alt="">
                 </div>
                 <div class="bigCardShoeInfo">
-                    <form class="bigCardShoeForm" >
-                        <p class="bigCardShoePTexto" >Marca: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $marca ?>"></p>
-                        <p class="bigCardShoePTexto" >Tipo: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $tipo ?>"></p>
+                    <form class="bigCardShoeForm" action="./reservaCompletada.php" method="post">
+                        <input type="number" name="id" value=<?php echo $id; ?> style="display:none;">
+                        <p class="bigCardShoePTexto" >Marca: <input class="bigCardShoeFormText" type="text" name="marca" readonly value="<?php echo $marca ?>"></p>
+                        <p class="bigCardShoePTexto" >Tipo: <input class="bigCardShoeFormText" type="text" name="tipo" readonly value="<?php echo $tipo ?>"></p>
                         <p class="bigCardShoePTexto" >Genero: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $genero ?>"></p>
+                        <p class="bigCardShoePTexto" >Talle: <input class="bigCardShoeFormText" type="number" name="talle" step=1 readonly value="<?php echo $talle ?>"></p>
                         <p class="bigCardShoePTexto" >Color: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $color ?>"></p>
                         <p class="bigCardShoePPrice" >$<input class="bigCardShoeFormPrice"  type="number" readonly name="precio" value=<?php echo $precio ?> step=0.01 id=""></p>
+                        <div class="bigCardShoeTarjetasContainer">
+                                <p class="bigCardShoePTexto"> Numero de Tarjeta: <br><input class="bigCardShoeTarjetasInputs" type="number" placeholder="Numero de la tarjeta" step=1 required></p> <br>
+                                <p class="bigCardShoePTexto"> Codigo de seguridad: <br><input  class="bigCardShoeTarjetasInputs" type="number" maxlength=4 placeholder="Codigo de seguridad" required></p>
+                        </div>
                         <div class="bigCardShoeFormSubmitContainer">
                             <input value="Reservar" class="bigCardShoeFormSubmit" type="submit">
                         </div>

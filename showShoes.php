@@ -70,7 +70,7 @@
                     <?php
                         while($registro=mysqli_fetch_assoc($resulset)){
 
-                            $id=$registro['cal_id'];
+                            $id=$registro['stock_id'];
                             $precio=$registro['cal_precio'];
                             $marca=$registro['cal_desc'];
                             if($registro['tipo_id']==1){
