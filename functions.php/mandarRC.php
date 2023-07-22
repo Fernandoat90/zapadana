@@ -9,6 +9,11 @@
     <title>Document</title>
 </head>
 <body id="bodyElement">
+    <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;">
+        <div style="width: 30%;height: 50%; background-image:url('../img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
+
+        </div>
+    </div>
     <form style="display:none">
         <input type="number" name="id" value="<?php echo $idStock  ?>" id=""> <br>
         <input type="number" name="talle" value="<?php echo $tallePedido  ?>" id="">

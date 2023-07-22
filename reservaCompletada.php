@@ -43,7 +43,7 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
 
                         if($affectedForUpdateStock>0){
                                 if($affectedRowsCreateReserve>0){
-                                        echo "RESERVA CREADA Y CORREO MANDADO.";
+                                        echo "<h2>RESERVA CREADA Y CORREO MANDADO.</h2>";
                                 }
                                 else{
                                     echo "ERROR AL CREAR LA RESERVA";
@@ -56,7 +56,7 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
 
                         
                 ?>
-                    <button href="filtro.php">Volver a inicio</button>
+                    <button style="width:60px;height:80px; background-color:red;color:white;cursor:pointer;border-radius:25px;" ><a style="color:white;" href="filtro.php">Inicio</a></button>
             </div>
 
 
