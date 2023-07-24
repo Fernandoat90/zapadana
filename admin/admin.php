@@ -126,10 +126,9 @@ $tiposMartriz = mysqli_query($c, $sql);
             }
 
             ?>
-    <form>
-        <input type="text" name="mostrarCalzadosGenerales" style="display: none;">
-        <input formaction="admin.php" formmethod="post" type="submit" value="Ver todos los Calzados Generales">
-    </form>
+   
+
+    <button id="mostrarCalzadosGeneralessss">Ver todos los calzados generales</button>
 
 
     <form>
@@ -148,7 +147,7 @@ $tiposMartriz = mysqli_query($c, $sql);
     <!-- Parte 2-->
     <br><br><br><br><br>
     <h2 id="tituloCalzadosGenerales">Todos Los Calzados Generales</h2>
-    <div style="display:flex;  flex-wrap:wrap;">
+    <div id="calzadosGenerales" style="display:none;  flex-wrap:wrap;">
     <?php
     $conectionCalzadosSelect = conectar();
     $calzadosGenerales = mysqli_query($conectionCalzadosSelect, "select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;");
