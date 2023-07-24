@@ -23,7 +23,7 @@
                     margin-top:5px;
                             }
                     .containerrr:hover{
-                        transition:2s;
+                        transition:1s;
                         transform: translate(15px,15px);
                         box-shadow:none;
                     }

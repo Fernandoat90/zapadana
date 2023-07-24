@@ -99,7 +99,7 @@ select * from stock;
 
 select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id where s.estado_id=1;
 
-
+select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id having c.cal_gen='$genero' && s.estado_id=1;
 select * from stock;
 
 select s.stock_id, s.estado_id, s.color_id,c.cal_id as idCalzado, c.cal_desc, c.cal_gen from stock s  left join calzados c on c.cal_id = s.cal_id where s.color_id=1;

@@ -1,0 +1,9 @@
+#botonLogout{
+    background-image: url("../img/cerrada.png");
+    background-size: 80% 90%;
+    background-repeat: no-repeat;
+    z-index:2;
+}
+#botonLogout:hover{
+    background-image: url("../img/abierta.png");
+}

@@ -1,15 +1,5 @@
 <?php
-/*
-session_start();
-if(isset ($_SESSION['id']) &&($_SESSION['tipoUsuario'])==1){
-//todo ok
-
-}
-else{
-    echo"Pagina Prohibida. Inicie Sesion";
-    exit();
-}
-*/
+require "../functions.php/seguridadAdmin.php";
 
 require '../functions.php/conection.php';
 $c = conectar();
@@ -32,13 +22,19 @@ $tiposMartriz = mysqli_query($c, $sql);
 
 
     <style>
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
         .border{
             border:1px solid black;
             border-radius:25px;
         }
         img{
             width: 40%;
-            height: 150px;
+            height: 50%;
             border-radius:200px;
             align-items:center;
             justify-items:center;
@@ -92,6 +88,11 @@ $tiposMartriz = mysqli_query($c, $sql);
 </head>
 
 <body>
+    <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;z-index:9;">
+        <div style="width: 30%;height: 50%; background-image:url('../img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
+
+        </div>
+    </div> 
     <strong>
         <h1>Página de Administrador</h1>
     </strong>
@@ -146,7 +147,7 @@ $tiposMartriz = mysqli_query($c, $sql);
 
     <!-- Parte 2-->
     <br><br><br><br><br>
-    <h2 id="tituloCalzadosGenerales">Todos Los Calzados Generales</h2>
+    <h2 style="display:none;" id="tituloCalzadosGenerales">Todos Los Calzados Generales</h2>
     <div id="calzadosGenerales" style="display:none;  flex-wrap:wrap;">
     <?php
     $conectionCalzadosSelect = conectar();
@@ -235,6 +236,7 @@ $tiposMartriz = mysqli_query($c, $sql);
     $sqlMostrarStock="select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id where s.estado_id=1;";
     $matrizStock=mysqli_query($conexionMostrarStock,$sqlMostrarStock); ?>
     <div style="display: none; " id="todosLosStocks">
+    <h2>Stocks</h2>
         <div style="display:flex; flex-wrap:wrap;">
     <?php
     while($stockIndividual=mysqli_fetch_assoc($matrizStock)){
@@ -412,8 +414,8 @@ $tiposMartriz = mysqli_query($c, $sql);
 
 
 <script src="./../js/admin.js"></script>
-
-
+<script src="./../js/admin2.js"></script>
+<script src="../js/chargeFile.js"></script>
 </body>
 
 </html>

@@ -12,8 +12,9 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/reservaCompletada.css">
+    <link rel="stylesheet" href="./css/logout.css">
 </head>
-<body style="background-color: bisque;">
+<body style="background-color: black;">
 
     <div id="main" >
         <div id="todoElRegistrase">
@@ -31,7 +32,8 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
                                 <h2 >Reservada</h2> <!-- PONER DENTRO DE ESTE H2 LO QUE QUERES QUE APAREZCA ARRIBA-->
                             </div>
                         </div>
-
+                        
+                        <a id="botonLogout" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;left:30%;" href="./functions.php/logout.php"></a>
                 </div>
 
 
@@ -56,7 +58,7 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
 
                         
                 ?>
-                    <button id="volverInicio"  ><a style="color:white;" href="filtro.php">Inicio</a></button>
+                    <a style="border:1px solid black; width:100px;background-color:red;height:60px;display:flex;justify-content:center;align-items:center;border-radius:25px;color:white;" href="./filtro.php">Inicio</a>
             </div>
 
 

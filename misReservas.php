@@ -36,9 +36,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/showShoes.css">
+    <link rel="stylesheet" href="./css/logout.css">
 </head>
-<body style="background-color: bisque;">
+<body style="background-color: black;">
+    <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;z-index:9;">
+        <div style="width: 30%;height: 50%; background-image:url('img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
 
+        </div>
+    </div> 
     <div id="main" >
         <div id="todoElRegistrase">
             <div id="logo_y_nombre" class="container">
@@ -55,6 +60,7 @@
                                 <h2 >Reservas</h2> <!-- PONER DENTRO DE ESTE H2 LO QUE QUERES QUE APAREZCA ARRIBA-->
                             </div>
                         </div>
+                        <a id="botonLogout" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;left:30%;" href="./functions.php/logout.php"></a>
 
                 </div>
 
@@ -96,7 +102,7 @@
 
     </div>
     <script src="./js/filtro.js"></script>
-    
+    <script src="./js/chargeFile.js"></script>
 </body>
 </html>
 </body>

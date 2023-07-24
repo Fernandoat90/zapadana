@@ -1,4 +1,5 @@
 <?php
+    require "../functions.php/seguridadAdmin.php";
     $stock_id=$_POST['stock_id'];
     $cal_id = $_POST['cal_id'];
     $color_id = $_POST['color_id'];
@@ -26,6 +27,18 @@
 
     if (isset($_POST['enviarAFormStock'])) {
     ?>
+    <style>
+             *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+    </style>
+    <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;z-index:9;">
+        <div style="width: 30%;height: 50%; background-image:url('../img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
+
+        </div>
+    </div> 
     
     <form >
             <input style="display: none;"  type="number" value="<?php echo $stock_id ?>" name="stock_id"> <br> <br>
@@ -86,3 +99,4 @@
 <form>
     <input type="submit" value="Volver a la página principal" formaction="admin.php" formmethod="get">
 </form>
+<script src="../js/chargeFile.js"></script>

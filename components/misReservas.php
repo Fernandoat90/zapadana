@@ -19,11 +19,11 @@
                     align-items:center;
                     background-color:aqua;
                     border-radius:10px;
-                    box-shadow:black 10px 10px;
+                    box-shadow:black 10px 10px 10px;
                     margin-top:5px;
                             }
                     .containerrr:hover{
-                        transition:2s;
+                        transition:1s;
                         transform: translate(15px,15px);
                         box-shadow:none;
                     }
