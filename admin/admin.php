@@ -32,9 +32,16 @@ $tiposMartriz = mysqli_query($c, $sql);
 
 
     <style>
+        .border{
+            border:1px solid black;
+            border-radius:25px;
+        }
         img{
-            width: 10%;
-            height: 15%;
+            width: 40%;
+            height: 150px;
+            border-radius:200px;
+            align-items:center;
+            justify-items:center;
         }
         .calzadosGenerales {
             display: none;
@@ -141,24 +148,29 @@ $tiposMartriz = mysqli_query($c, $sql);
     <!-- Parte 2-->
     <br><br><br><br><br>
     <h2 id="tituloCalzadosGenerales">Todos Los Calzados Generales</h2>
+    <div style="display:flex;  flex-wrap:wrap;">
     <?php
     $conectionCalzadosSelect = conectar();
     $calzadosGenerales = mysqli_query($conectionCalzadosSelect, "select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;");
 
     while ($calzadoGeneral = mysqli_fetch_assoc($calzadosGenerales)) {
 
-    ?> <br> <br><br><br>
-        <form class="calzadosGenerales" style="border:1px solid black; width:30%;">
+    ?>
+    
+    <br> <br><br><br>
+        <form class="calzadosGenerales border" style="border:1px solid black; width:30%; height:100%; display:flex;flex-direction:column;justify-content:center;align-items:center;">
             <h3>id:</h3><input readonly value="<?php echo $calzadoGeneral['cal_id'];   ?>" type="number">
             <h4>Genero:</h4> <input readonly value="<?php echo $calzadoGeneral['cal_gen'];    ?>" type="text">
             <h4>Marca:</h4> <input readonly value="<?php echo $calzadoGeneral['cal_desc'];    ?>" type="text">
             <h4>Tipo:</h4> <input readonly value="<?php echo $calzadoGeneral['tipo_desc']  ?>" type="text">
 
-        </form> <?php
-            }
+        </form> 
+        
+        <?php
+            } ?>
 
-
-
+</div>
+<?php
             //PARTE 3 ABAJO
 
                 ?>
@@ -221,13 +233,16 @@ $tiposMartriz = mysqli_query($c, $sql);
 
 
     $conexionMostrarStock= conectar();
-    $sqlMostrarStock="select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id;";
+    $sqlMostrarStock="select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id where s.estado_id=1;";
     $matrizStock=mysqli_query($conexionMostrarStock,$sqlMostrarStock); ?>
-    <div style="display: none;" id="todosLosStocks">
+    <div style="display: none; " id="todosLosStocks">
+        <div style="display:flex; flex-wrap:wrap;">
     <?php
     while($stockIndividual=mysqli_fetch_assoc($matrizStock)){
         ?>
+        <div class="border" style="display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;">
         <br><br><br><br>
+        <div>
         <h5>Id del stock:<?php echo $stockIndividual['stock_id'] ?> </h5>
         <h5>Marca:<?php echo $stockIndividual['cal_desc'] ?> </h5>
         <?php
@@ -273,9 +288,9 @@ $tiposMartriz = mysqli_query($c, $sql);
         ?>
         <h5>Precio:<?php echo $stockIndividual['cal_precio']  ?></h5>
         <h5>Genero:<?php echo $stockIndividual['cal_gen']  ?></h5>
- 
-        <img src='<?php echo $stockIndividual['stock_img'];?>' alt="Imagen de zapatos">
-
+        </div>
+        <img style="order:-1" class="border" src='<?php echo $stockIndividual['stock_img'];?>' alt="Imagen de zapatos">
+        <div>
         <h5>STOCK DISPONIBLE</h6>
         <?php
             if($stockIndividual['n_35']!=0){ ?>
@@ -346,6 +361,7 @@ $tiposMartriz = mysqli_query($c, $sql);
                 <h5>Talle 45: <?php echo $stockIndividual['n_45']?></h6>
            <?php }
         ?>
+        </div>
 
         <form >
             <input style="display: none;" type="number" value="<?php echo $stockIndividual['stock_id'] ?>" name="stock_id">
@@ -383,11 +399,13 @@ $tiposMartriz = mysqli_query($c, $sql);
             <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_45'] ?>" name="n_45">
             
             <input class="stockEsconder" type="submit"  formaction="./admin2.php" formmethod="post"  value="Editar Stock">
+            <input class="stockEsconder" type="submit"  formaction="../functions.php/deleteStock.php" formmethod="post"  value="Eliminar">
         </form>
-
+        </div>
         <?php 
     } 
     ?>
+    </div>
 </div>
 
     

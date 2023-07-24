@@ -11,7 +11,7 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/showShoes.css">
+    <link rel="stylesheet" href="./css/reservaCompletada.css">
 </head>
 <body style="background-color: bisque;">
 
@@ -28,7 +28,7 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
                             </div>
 
                             <div id="contenedorNombre">
-                                <h2 ></h2> <!-- PONER DENTRO DE ESTE H2 LO QUE QUERES QUE APAREZCA ARRIBA-->
+                                <h2 >Reservada</h2> <!-- PONER DENTRO DE ESTE H2 LO QUE QUERES QUE APAREZCA ARRIBA-->
                             </div>
                         </div>
 
@@ -56,7 +56,7 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
 
                         
                 ?>
-                    <button style="width:60px;height:80px; background-color:red;color:white;cursor:pointer;border-radius:25px;" ><a style="color:white;" href="filtro.php">Inicio</a></button>
+                    <button id="volverInicio"  ><a style="color:white;" href="filtro.php">Inicio</a></button>
             </div>
 
 

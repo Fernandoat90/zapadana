@@ -1,0 +1,188 @@
+:root{
+    --bp:none;
+    --bf:1px solid black;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.cards{
+    display: flex;
+    flex-direction:  column;
+    border: 1px solid black;
+    width: 100vw;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+   position: relative;
+   bottom: 10%;
+    
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    border: var(--bp);
+    
+}
+
+#todoElRegistrase{
+    background-image: url(https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); 
+    background-size: 100% 80%; 
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.container{
+    border: var(--bp);
+    width: 100%;
+   
+}
+
+#logo_y_nombre{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 0.70%;
+    background-color: white;
+    
+}
+
+#registro{
+    height: 65%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 2%;
+}
+#titleregistro{
+    font-size:300%;
+    text-align: center;
+}
+
+#aboutOf{
+background-color: rgb(0, 0, 0);
+height: 20%;
+position: relative;
+bottom: 20%;
+display: flex;
+justify-content: center;
+color:#fdfdfdd0;
+}
+
+#contenedorForm{
+    height: 68%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: black;
+    opacity: 100%;
+    margin-top: 7%;
+    
+}
+
+
+
+#inputTextos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:90% ;
+    align-items: center;
+
+    
+}
+
+input{
+    width: 80%;
+    height: 15%;
+    border-radius: 25px;
+    font-size: 1.2vw;
+    font-family: sans-serif;
+    padding-left: 3%;
+    opacity: 100%;
+}
+
+#volverInicio{
+    border-radius: 50px;
+    border: none;
+    width:10% ;
+    height:7% ;
+    padding-left: 0;
+    background-color: red;
+    cursor: pointer;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+#volverInicio:hover{
+    background-color: blueviolet;
+}
+
+#inputSubmit{
+    width: 100%;
+    height: 100%;
+    border: var(--bp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#contenedorNombreLogo{
+    height: 80%;
+    border: var(--bp);
+    width: 92%;
+    display: flex;
+    justify-content: center;
+}
+
+#subContenedorLogoNombre{
+    border: var(--bp);
+    width: 30%;
+    display: flex;
+}
+
+#contenedorLogo{
+    border: var(--bp);
+    width: 40%;
+}
+
+#contenedorNombre{
+    border: var(--bp);
+    width: 40%;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 2.5vw;
+}
+
+#logo{
+    width: 40%;
+    height: 130%;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

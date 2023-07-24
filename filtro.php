@@ -19,8 +19,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/filtro.css">
 </head>
-<body style="background-color: bisque;">
+<body style="background-color: bisque;z-index:-1;">
+    <!--<div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;z-index:9;">
+        <div style="width: 30%;height: 50%; background-image:url('img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
 
+        </div>
+    </div> -->
     <div id="main" >
         <div id="todoElRegistrase">
             <div id="logo_y_nombre" class="container">
@@ -64,7 +68,21 @@
 
 
 
+                    <form id="contenedorForm">
+                    <h3 class="genderName" style="margin-left:5%;">ver mis reservas</h3>
+                        <div id="formR">
+                            <div id="inputTextos"style="display:none" style="justify-content: center;">
+                                    <input  placeholder="genero" value=1 name="genero" type="text">
+                                
+                            </div>
 
+                            <div id="inputSubmit">
+                            <input id="botomRegistrarse" style="background-image: url('img/mujerFelizZapatillas.png');
+                            background-size: 100% 100%" type="submit" value="" formaction="./misReservas.php" formmethod="post">
+                            </div>
+                        </div>
+                        
+                    </form>
 
 
 

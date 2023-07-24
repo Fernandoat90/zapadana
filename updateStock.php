@@ -23,6 +23,40 @@
     $cantidad44=($stock["n_44"]-1);
     $cantidad45=($stock["n_45"]-1);
 
+    if ($cantidad35<=0){
+        $cantidad35=0;
+    }
+    else if($cantidad36<=0){
+        $cantidad36=0;
+    }
+    else if($cantidad37<=0){
+        $cantidad37=0;
+    }
+    else if($cantidad38<=0){
+        $cantidad38=0;
+    }
+    else if($cantidad39<=0){
+        $cantidad39=0;
+    }
+    else if($cantidad40<=0){
+        $cantidad40=0;
+    }
+    else if($cantidad41<=0){
+        $cantidad41=0;
+    }
+    else if($cantidad42<=0){
+        $cantidad42=0;
+    }
+    else if($cantidad43<=0){
+        $cantidad43=0;
+    }
+    else if($cantidad44<=0){
+        $cantidad44=0;
+    }
+    else if($cantidad45<=0){
+        $cantidad45=0;
+    }
+
 
 
     //echo "\n".$idStock;
@@ -77,7 +111,7 @@
     }
     $conectionForCreateReserve= conectar();
     $idUser=$_SESSION['id'];
-    $sqlForCreateReserve="insert into reserva(usu_id, stock_id ) values ($idUser,$idStock);";
+    $sqlForCreateReserve="insert into reserva(usu_id, stock_id,reser_talle ) values ($idUser,$idStock,$tallePedido);";
     mysqli_query($conectionForUpdateStock,$talleSQL);
     mysqli_query($conectionForCreateReserve,$sqlForCreateReserve);
     $affectedRowsCreateReserve=mysqli_affected_rows($conectionForCreateReserve);

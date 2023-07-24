@@ -64,7 +64,7 @@ foreign key(tipo_id) references tipos(tipo_id)
 );
 drop table calzados;
 
-select * from usuarios;
+select * from estados;
 select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id having c.cal_gen="M";
 select * from tipos;
 select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;
@@ -97,7 +97,7 @@ select * from stock;
 
 
 
-
+select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id where s.estado_id=1;
 
 
 select * from stock;
@@ -116,6 +116,8 @@ rol_id int(1),
 foreign key(rol_id) references roles(rol_id)
 );
 
+update stock set n_35=0 where stock_id=2;
+
 select * from usuarios;
 
 update stock set n_37=53 where stock_id=1;
@@ -129,14 +131,19 @@ create table reserva(
 reser_id int(4) primary key auto_increment,
 usu_id int(3),
 stock_id int(3),
+reser_talle int(3),
 foreign key (usu_id) references usuarios(usu_id),
 foreign key (stock_id) references stock(stock_id)
 );
 drop table reserva;
 select * from reserva;
-insert into reserva(reser_id,usu_id,stock_id) values(1,1,2),(2,1,3),(3,1,4),(4,1,2),(5,1,6);
-insert into reserva(reser_id,usu_id,stock_id) values(6,2,2),(7,2,6);
-insert into reserva(reser_id,usu_id,stock_id) values(8,3,2),(9,3,3),(10,3,4),(11,3,2),(12,3,6),(13,3,1);
+insert into reserva(usu_id,stock_id) values(1,1,2),(2,1,3),(3,1,4),(4,1,2),(5,1,6);
+insert into reserva(usu_id,stock_id) values(6,2,2),(7,2,6);
+insert into reserva(usu_id,stock_id,reser_talle) values(3,2,35),(3,3,37),(3,4,38),(3,2,40),(3,6,34),(3,1,45);
+
+select * from reserva where usu_id=1;
+select * from stock where stock_id=2;
 
 select count(u.usu_id) as numero_de_reservas,u.usu_nombre,u.usu_apellido, r.reser_id as reserva_numero, r.stock_id as Numero_de_Stock from usuarios u right join reserva r on u.usu_id= r.usu_id group by u.usu_id having count(u.usu_id)>=5;
 
+select usu_id from reserva;

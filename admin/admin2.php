@@ -47,7 +47,7 @@
 
             <input type="text"style="display:none;" name="ActualizarStock"> <br>
             
-            Color:<input type="number" value="<?php echo $color_id ?>" name="color_id"> <br>
+            Color:<input style="display:none;" type="number" value="<?php echo $color_id ?>" name="color_id"> <br>
                 <select name="color_id" id="">
                     <option style="color: red;" <?php if($color_id==1){ echo "selected";} ?> value=1>Rojo</option>
                     <option style="color: green;"  <?php if($color_id==2){ echo "selected";} ?> value=2>Verde</option>
