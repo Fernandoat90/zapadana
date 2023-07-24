@@ -15,7 +15,8 @@
     require "./functions.php/conection.php";
     require "./functions.php/devolverResulset.php";
     $user=$_SESSION['id'];
-    $reservas= devolverResulset(conectar(),"select * from reserva where usu_id=$user;");
+    $conect=conectar();
+    $reservas= devolverResulset($conect,"select * from reserva where usu_id=$user;");
 
 ?>
 
@@ -70,6 +71,7 @@
 
             <div class="cards">
                     <?php
+                    if(mysqli_Affected_rows($conect)>0){
                         while($registro=mysqli_fetch_assoc($reservas)){
                             $idStock=$registro['stock_id'];
                             $caracteristicasStock= mysqli_fetch_assoc(devolverResulset(conectar(),"select * from stock where stock_id=$idStock;"));
@@ -87,8 +89,10 @@
                             $color=1;
                             $imgUrl=$caracteristicasStock['stock_img'];
                             ShoeCard($id,$precio,$marca,$tipo,$imgUrl,$talle,$color);
-                        }
-                            
+                        }}
+                          else{
+                            echo "<h1>No tienes reservas hechas</h1>";
+                          }  
                     ?>
             </div>
 
