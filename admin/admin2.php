@@ -66,7 +66,7 @@
             <div id="elementoTres" class="elementCabecera"><a id="botonLogout" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
     </div>
             <input style="display: none;"  type="number" value="<?php echo $stock_id ?>" name="stock_id"> <br> <br>
-            <select name="cal_id" id="">
+            <select required name="cal_id" id="">
             <?php
             while ($calzado = mysqli_fetch_assoc($calzadosGenerales)) {
             ?>
@@ -77,15 +77,15 @@
             
         </select> <br>
 
-            Url de la imagen:<input class="inputBasics" type="text" value="<?php echo $stock_img ?>" name="stock_img"> <br>
+            Url de la imagen:<input required  class="inputBasics" type="text" value="<?php echo $stock_img ?>" name="stock_img"> <br>
 
-            <input class="inputBasics" style="display: none;" type="text" value="<?php echo $estado_id ?>" name="estado_id"> <br>
+            <input  class="inputBasics" style="display: none;" type="text" value="<?php echo $estado_id ?>" name="estado_id"> <br>
 
 
             <input class="inputBasics" type="text"style="display:none;" name="ActualizarStock"> <br>
             
             Color:<input style="display:none;" type="number" value="<?php echo $color_id ?>" name="color_id"> <br>
-                <select name="color_id" id="">
+                <select required name="color_id" id="">
                     <option style="color: red;" <?php if($color_id==1){ echo "selected";} ?> value=1>Rojo</option>
                     <option style="color: green;"  <?php if($color_id==2){ echo "selected";} ?> value=2>Verde</option>
                     <option style="color: blue;" <?php if($color_id==3){ echo "selected";} ?> value=3>Azul</option>
@@ -94,27 +94,27 @@
                     <option style="color: brown;" <?php if($color_id==6){ echo "selected";} ?> value=6>Marron</option>
                 </select>
             
-            Talle 35:<input class="inputBasics" type="number" value="<?php echo $n_35 ?>" name="n_35"> <br>
+            Talle 35:<input required class="inputBasics" type="number" value="<?php echo $n_35 ?>" name="n_35"> <br>
             
-            Talle 36:<input class="inputBasics" type="number" value="<?php echo $n_36 ?>" name="n_36"> <br>
+            Talle 36:<input required class="inputBasics" type="number" value="<?php echo $n_36 ?>" name="n_36"> <br>
             
-            Talle 37:<input class="inputBasics" type="number" value="<?php echo $n_37 ?>" name="n_37"> <br>
+            Talle 37:<input required class="inputBasics" type="number" value="<?php echo $n_37 ?>" name="n_37"> <br>
             
-            Talle 38:<input class="inputBasics" type="number" value="<?php echo $n_38 ?>" name="n_38"> <br>
+            Talle 38:<input required class="inputBasics" type="number" value="<?php echo $n_38 ?>" name="n_38"> <br>
             
-            Talle 39:<input class="inputBasics" type="number" value="<?php echo $n_39 ?>" name="n_39"> <br>
+            Talle 39:<input required class="inputBasics" type="number" value="<?php echo $n_39 ?>" name="n_39"> <br>
             
-            Talle 40:<input class="inputBasics" type="number" value="<?php echo $n_40 ?>" name="n_40"> <br>
+            Talle 40:<input required class="inputBasics" type="number" value="<?php echo $n_40 ?>" name="n_40"> <br>
             
-            Talle 41:<input class="inputBasics" type="number" value="<?php echo $n_41 ?>" name="n_41"> <br> 
+            Talle 41:<input required class="inputBasics" type="number" value="<?php echo $n_41 ?>" name="n_41"> <br> 
             
-            Talle 42:<input class="inputBasics" type="number" value="<?php echo $n_42 ?>" name="n_42"> <br>
+            Talle 42:<input required class="inputBasics" type="number" value="<?php echo $n_42 ?>" name="n_42"> <br>
             
-            Talle 43:<input class="inputBasics" type="number" value="<?php echo $n_43 ?>" name="n_43"> <br>
+            Talle 43:<input required class="inputBasics" type="number" value="<?php echo $n_43 ?>" name="n_43"> <br>
             
-            Talle 44:<input class="inputBasics" type="number" value="<?php echo $n_44 ?>" name="n_44"> <br>
+            Talle 44:<input required class="inputBasics" type="number" value="<?php echo $n_44 ?>" name="n_44"> <br>
             
-            Talle 45:<input class="inputBasics" type="number" value="<?php echo $n_45 ?>" name="n_45"> <br>
+            Talle 45:<input required class="inputBasics" type="number" value="<?php echo $n_45 ?>" name="n_45"> <br>
             
             <input type="submit"  formaction="./admin2.php" formmethod="post"  value="Editar Stock">
         </form> <?php }
