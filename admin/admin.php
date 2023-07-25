@@ -27,6 +27,22 @@ $tiposMartriz = mysqli_query($c, $sql);
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    background-color:yellow;
+    
+}
+    .inputBasics{
+        border-radius:25px;
+        width:15%;
+        height:25px;
+        padding-left:1%;
+    }
+    #cabecera{
+        width:100%;
+        height:10vh;
+        border:1px solid black;
+        background-color:white;
+    }
 
         .border{
             border:1px solid black;
@@ -93,15 +109,18 @@ $tiposMartriz = mysqli_query($c, $sql);
 
         </div>
     </div> 
+    <div id="cabecera">
+
+    </div>
     <strong>
         <h1>Página de Administrador</h1>
     </strong>
     <h3>Agregar Calzados Generales</h3>
     <form> <br>
-        ID: <input name="cal_id" type="number">
+        ID: <input required class="inputBasics" name="cal_id" type="number">
         <br>
         TIPO:
-        <select name="tipo_id"> <?php
+        <select required name="tipo_id"> <?php
                                 while ($tipo = mysqli_fetch_assoc($tiposMartriz)) {
                                 ?> <option value="<?php echo $tipo['tipo_id'] ?>"><?php echo $tipo['tipo_desc'] ?></option> <?php
 
@@ -110,14 +129,14 @@ $tiposMartriz = mysqli_query($c, $sql);
 
 
         </select> <br>
-        Genero: <select name="cal_gen" id="">
+        Genero: <select required name="cal_gen" id="">
             <option value="M">Hombre</option>
             <option value="F">Mujer</option>
         </select>
         <br>
-        Marca: <input name="cal_desc" type="text"> <br>
+        Marca: <input required class="inputBasics" name="cal_desc" type="text"> <br>
 
-        Precio: <input name="cal_precio" type="number" step=0.01> <br>
+        Precio: <input required class="inputBasics" name="cal_precio" type="number" step=0.01> <br>
         <input formaction="admin.php" formmethod="post" type="submit" value="Subir Calzado General">
     </form> <?php
             if (isset($_POST['cal_id'])) {
@@ -159,10 +178,10 @@ $tiposMartriz = mysqli_query($c, $sql);
     
     <br> <br><br><br>
         <form class="calzadosGenerales border" style="border:1px solid black; width:30%; height:100%; display:flex;flex-direction:column;justify-content:center;align-items:center;">
-            <h3>id:</h3><input readonly value="<?php echo $calzadoGeneral['cal_id'];   ?>" type="number">
-            <h4>Genero:</h4> <input readonly value="<?php echo $calzadoGeneral['cal_gen'];    ?>" type="text">
-            <h4>Marca:</h4> <input readonly value="<?php echo $calzadoGeneral['cal_desc'];    ?>" type="text">
-            <h4>Tipo:</h4> <input readonly value="<?php echo $calzadoGeneral['tipo_desc']  ?>" type="text">
+            <h3 >id:</h3><input class="inputBasics" readonly value="<?php echo $calzadoGeneral['cal_id'];   ?>" type="number">
+            <h4>Genero:</h4> <input class="inputBasics" readonly value="<?php echo $calzadoGeneral['cal_gen'];    ?>" type="text">
+            <h4>Marca:</h4> <input class="inputBasics" readonly value="<?php echo $calzadoGeneral['cal_desc'];    ?>" type="text">
+            <h4>Tipo:</h4> <input class="inputBasics" readonly value="<?php echo $calzadoGeneral['tipo_desc']  ?>" type="text">
 
         </form> 
         
@@ -204,18 +223,18 @@ $tiposMartriz = mysqli_query($c, $sql);
             <option style="color:brown" value=6>Marron</option>
         </select>
         <br>
-        talle 35:<input value=0 type="number" name="n_35" id=""><br>
-        talle 36:<input value=0 type="number" name="n_36" id=""><br>
-        talle 37:<input value=0 type="number" name="n_37" id=""><br>
-        talle 38:<input value=0 type="number" name="n_38" id=""><br>
-        talle 39:<input value=0 type="number" name="n_39" id=""><br>
-        talle 40:<input value=0 type="number" name="n_40" id=""><br>
-        talle 41:<input value=0 type="number" name="n_41" id=""><br>
-        talle 42:<input value=0 type="number" name="n_42" id=""><br>
-        talle 43:<input value=0 type="number" name="n_43" id=""><br>
-        talle 44:<input value=0 type="number" name="n_44" id=""><br>
-        talle 45:<input value=0 type="number" name="n_45" id=""><br>
-        Imagen Url: <input name="stock_img" type="text">
+        talle 35:<input class="inputBasics" value=0 type="number" name="n_35" id=""><br>
+        talle 36:<input class="inputBasics" value=0 type="number" name="n_36" id=""><br>
+        talle 37:<input class="inputBasics" value=0 type="number" name="n_37" id=""><br>
+        talle 38:<input class="inputBasics" value=0 type="number" name="n_38" id=""><br>
+        talle 39:<input class="inputBasics" value=0 type="number" name="n_39" id=""><br>
+        talle 40:<input class="inputBasics" value=0 type="number" name="n_40" id=""><br>
+        talle 41:<input class="inputBasics" value=0 type="number" name="n_41" id=""><br>
+        talle 42:<input class="inputBasics" value=0 type="number" name="n_42" id=""><br>
+        talle 43:<input class="inputBasics" value=0 type="number" name="n_43" id=""><br>
+        talle 44:<input class="inputBasics" value=0 type="number" name="n_44" id=""><br>
+        talle 45:<input class="inputBasics" value=0 type="number" name="n_45" id=""><br>
+        Imagen Url: <input class="inputBasics" name="stock_img" type="text">
         <input type="submit" value="Subir Stock" formaction="admin.php" formmethod="post">
     </form>
 
