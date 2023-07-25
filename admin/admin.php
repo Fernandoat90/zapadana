@@ -222,7 +222,7 @@ body{
 
         </select> <br>
         Color
-        <select name="color_id" id="">
+        <select required name="color_id" id="">
             <option style="color:red" value=1>Rojo</option>
             <option style="color:green" value=2>Verde</option>
             <option style="color:blue" value=3>Azul</option>
@@ -231,18 +231,18 @@ body{
             <option style="color:brown" value=6>Marron</option>
         </select>
         <br>
-        talle 35:<input class="inputBasics" value=0 type="number" name="n_35" id=""><br>
-        talle 36:<input class="inputBasics" value=0 type="number" name="n_36" id=""><br>
-        talle 37:<input class="inputBasics" value=0 type="number" name="n_37" id=""><br>
-        talle 38:<input class="inputBasics" value=0 type="number" name="n_38" id=""><br>
-        talle 39:<input class="inputBasics" value=0 type="number" name="n_39" id=""><br>
-        talle 40:<input class="inputBasics" value=0 type="number" name="n_40" id=""><br>
-        talle 41:<input class="inputBasics" value=0 type="number" name="n_41" id=""><br>
-        talle 42:<input class="inputBasics" value=0 type="number" name="n_42" id=""><br>
-        talle 43:<input class="inputBasics" value=0 type="number" name="n_43" id=""><br>
-        talle 44:<input class="inputBasics" value=0 type="number" name="n_44" id=""><br>
-        talle 45:<input class="inputBasics" value=0 type="number" name="n_45" id=""><br>
-        Imagen Url: <input class="inputBasics" name="stock_img" type="text">
+        talle 35:<input required class="inputBasics" value=0 type="number" name="n_35" id=""><br>
+        talle 36:<input required class="inputBasics" value=0 type="number" name="n_36" id=""><br>
+        talle 37:<input required class="inputBasics" value=0 type="number" name="n_37" id=""><br>
+        talle 38:<input required class="inputBasics" value=0 type="number" name="n_38" id=""><br>
+        talle 39:<input required class="inputBasics" value=0 type="number" name="n_39" id=""><br>
+        talle 40:<input required class="inputBasics" value=0 type="number" name="n_40" id=""><br>
+        talle 41:<input required class="inputBasics" value=0 type="number" name="n_41" id=""><br>
+        talle 42:<input required class="inputBasics" value=0 type="number" name="n_42" id=""><br>
+        talle 43:<input required class="inputBasics" value=0 type="number" name="n_43" id=""><br>
+        talle 44:<input required class="inputBasics" value=0 type="number" name="n_44" id=""><br>
+        talle 45:<input required class="inputBasics" value=0 type="number" name="n_45" id=""><br>
+        Imagen Url: <input required class="inputBasics" name="stock_img" type="text">
         <input type="submit" value="Subir Stock" formaction="admin.php" formmethod="post">
     </form>
 
