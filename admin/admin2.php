@@ -1,5 +1,8 @@
-<?php
+ <link rel="stylesheet" href="../css/admin.css">
+ <link rel="stylesheet" href="../css/logout.css">
+ <?php
     require "../functions.php/seguridadAdmin.php";
+   
     $stock_id=$_POST['stock_id'];
     $cal_id = $_POST['cal_id'];
     $color_id = $_POST['color_id'];
@@ -33,7 +36,20 @@
     margin: 0;
     box-sizing: border-box;
 }
+.inputBasics{
+        border-radius:25px;
+        width:15%;
+        height:25px;
+        padding-left:1%;
+    }
+    #cabecera{
+        width:100%;
+        height:10vh;
+        border:1px solid black;
+        background-color:white;
+    }
     </style>
+    
     <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;z-index:9;">
         <div style="width: 30%;height: 50%; background-image:url('../img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
 
@@ -41,6 +57,14 @@
     </div> 
     
     <form >
+    <div id="cabecera">
+            <div class="elementCabecera"><a id="botonAtras" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;background-image: url('../img/home.png');
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        z-index:2;" href="./admin.php"></a></div>
+            <div class="elementCabecera"><h1>Administrador</h1></div>
+            <div id="elementoTres" class="elementCabecera"><a id="botonLogout" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
+    </div>
             <input style="display: none;"  type="number" value="<?php echo $stock_id ?>" name="stock_id"> <br> <br>
             <select name="cal_id" id="">
             <?php
@@ -53,12 +77,12 @@
             
         </select> <br>
 
-            Url de la imagen:<input type="text" value="<?php echo $stock_img ?>" name="stock_img"> <br>
+            Url de la imagen:<input class="inputBasics" type="text" value="<?php echo $stock_img ?>" name="stock_img"> <br>
 
-            <input style="display: none;" type="text" value="<?php echo $estado_id ?>" name="estado_id"> <br>
+            <input class="inputBasics" style="display: none;" type="text" value="<?php echo $estado_id ?>" name="estado_id"> <br>
 
 
-            <input type="text"style="display:none;" name="ActualizarStock"> <br>
+            <input class="inputBasics" type="text"style="display:none;" name="ActualizarStock"> <br>
             
             Color:<input style="display:none;" type="number" value="<?php echo $color_id ?>" name="color_id"> <br>
                 <select name="color_id" id="">
@@ -70,27 +94,27 @@
                     <option style="color: brown;" <?php if($color_id==6){ echo "selected";} ?> value=6>Marron</option>
                 </select>
             
-            Talle 35:<input type="number" value="<?php echo $n_35 ?>" name="n_35"> <br>
+            Talle 35:<input class="inputBasics" type="number" value="<?php echo $n_35 ?>" name="n_35"> <br>
             
-            Talle 36:<input type="number" value="<?php echo $n_36 ?>" name="n_36"> <br>
+            Talle 36:<input class="inputBasics" type="number" value="<?php echo $n_36 ?>" name="n_36"> <br>
             
-            Talle 37:<input type="number" value="<?php echo $n_37 ?>" name="n_37"> <br>
+            Talle 37:<input class="inputBasics" type="number" value="<?php echo $n_37 ?>" name="n_37"> <br>
             
-            Talle 38:<input type="number" value="<?php echo $n_38 ?>" name="n_38"> <br>
+            Talle 38:<input class="inputBasics" type="number" value="<?php echo $n_38 ?>" name="n_38"> <br>
             
-            Talle 39:<input type="number" value="<?php echo $n_39 ?>" name="n_39"> <br>
+            Talle 39:<input class="inputBasics" type="number" value="<?php echo $n_39 ?>" name="n_39"> <br>
             
-            Talle 40:<input type="number" value="<?php echo $n_40 ?>" name="n_40"> <br>
+            Talle 40:<input class="inputBasics" type="number" value="<?php echo $n_40 ?>" name="n_40"> <br>
             
-            Talle 41:<input type="number" value="<?php echo $n_41 ?>" name="n_41"> <br> 
+            Talle 41:<input class="inputBasics" type="number" value="<?php echo $n_41 ?>" name="n_41"> <br> 
             
-            Talle 42:<input type="number" value="<?php echo $n_42 ?>" name="n_42"> <br>
+            Talle 42:<input class="inputBasics" type="number" value="<?php echo $n_42 ?>" name="n_42"> <br>
             
-            Talle 43:<input type="number" value="<?php echo $n_43 ?>" name="n_43"> <br>
+            Talle 43:<input class="inputBasics" type="number" value="<?php echo $n_43 ?>" name="n_43"> <br>
             
-            Talle 44:<input type="number" value="<?php echo $n_44 ?>" name="n_44"> <br>
+            Talle 44:<input class="inputBasics" type="number" value="<?php echo $n_44 ?>" name="n_44"> <br>
             
-            Talle 45:<input type="number" value="<?php echo $n_45 ?>" name="n_45"> <br>
+            Talle 45:<input class="inputBasics" type="number" value="<?php echo $n_45 ?>" name="n_45"> <br>
             
             <input type="submit"  formaction="./admin2.php" formmethod="post"  value="Editar Stock">
         </form> <?php }

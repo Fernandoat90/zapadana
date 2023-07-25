@@ -7,3 +7,10 @@
 #botonLogout:hover{
     background-image: url("../img/abierta.png");
 }
+
+#botonAtras{
+    background-image: url("../img/home.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index:2;
+}

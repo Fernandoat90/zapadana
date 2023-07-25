@@ -101,6 +101,8 @@ body{
 
 
     </style>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/logout.css">
 </head>
 
 <body>
@@ -110,11 +112,17 @@ body{
         </div>
     </div> 
     <div id="cabecera">
-
+            <div class="elementCabecera"><a id="botonAtras" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;background-image: url('../img/home.png');
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        z-index:2;" href="./admin.php"></a></div>
+            <div class="elementCabecera"><h1>Administrador</h1></div>
+            <div id="elementoTres" class="elementCabecera"><a id="botonLogout" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
     </div>
     <strong>
         <h1>Página de Administrador</h1>
     </strong>
+    <main>
     <h3>Agregar Calzados Generales</h3>
     <form> <br>
         ID: <input required class="inputBasics" name="cal_id" type="number">
@@ -178,10 +186,10 @@ body{
     
     <br> <br><br><br>
         <form class="calzadosGenerales border" style="border:1px solid black; width:30%; height:100%; display:flex;flex-direction:column;justify-content:center;align-items:center;">
-            <h3 >id:</h3><input class="inputBasics" readonly value="<?php echo $calzadoGeneral['cal_id'];   ?>" type="number">
-            <h4>Genero:</h4> <input class="inputBasics" readonly value="<?php echo $calzadoGeneral['cal_gen'];    ?>" type="text">
-            <h4>Marca:</h4> <input class="inputBasics" readonly value="<?php echo $calzadoGeneral['cal_desc'];    ?>" type="text">
-            <h4>Tipo:</h4> <input class="inputBasics" readonly value="<?php echo $calzadoGeneral['tipo_desc']  ?>" type="text">
+            <h3 >id:</h3><input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_id'];   ?>" type="number">
+            <h4>Genero:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_gen'];    ?>" type="text">
+            <h4>Marca:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_desc'];    ?>" type="text">
+            <h4>Tipo:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['tipo_desc']  ?>" type="text">
 
         </form> 
         
@@ -260,9 +268,9 @@ body{
     <?php
     while($stockIndividual=mysqli_fetch_assoc($matrizStock)){
         ?>
-        <div class="border" style="display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;">
+        <div   class="border " style="display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;">
         <br><br><br><br>
-        <div>
+        <div style="border:1px solid black;background-color:white;">
         <h5>Id del stock:<?php echo $stockIndividual['stock_id'] ?> </h5>
         <h5>Marca:<?php echo $stockIndividual['cal_desc'] ?> </h5>
         <?php
@@ -310,76 +318,101 @@ body{
         <h5>Genero:<?php echo $stockIndividual['cal_gen']  ?></h5>
         </div>
         <img style="order:-1" class="border" src='<?php echo $stockIndividual['stock_img'];?>' alt="Imagen de zapatos">
-        <div>
+        <div style="border:1px solid black;background-color:white;margin-left:3px;">
         <h5>STOCK DISPONIBLE</h6>
         <?php
-            if($stockIndividual['n_35']!=0){ ?>
+            $haveTalle=false;
+            if($stockIndividual['n_35']!=0){
+                $haveTalle=true;
+                ?>
                 <h5>Talle 35: <?php echo $stockIndividual['n_35']?></h6>
            <?php }
         ?>
         <?php
-            if($stockIndividual['n_36']!=0){ ?>
+            if($stockIndividual['n_36']!=0){
+                $haveTalle=true;
+                ?>
                 <h5>Talle 36: <?php echo $stockIndividual['n_36']?></h6>
            <?php }
         ?>
 
 
 <?php
-            if($stockIndividual['n_37']!=0){ ?>
+            if($stockIndividual['n_37']!=0){
+                $haveTalle=true;
+                ?>
                 <h5>Talle 37: <?php echo $stockIndividual['n_37']?></h6>
            <?php }
         ?>
 
 
 <?php
-            if($stockIndividual['n_38']!=0){ ?>
+            if($stockIndividual['n_38']!=0){
+                $haveTalle=true;
+                ?>
                 <h5>Talle 38: <?php echo $stockIndividual['n_38']?></h6>
            <?php }
         ?>
         
         <?php
-            if($stockIndividual['n_39']!=0){ ?>
+            if($stockIndividual['n_39']!=0){
+                $haveTalle=true;
+                ?>
                 <h5>Talle 39: <?php echo $stockIndividual['n_39']?></h6>
            <?php }
         ?>
 
 
 <?php
-            if($stockIndividual['n_40']!=0){ ?>
+            if($stockIndividual['n_40']!=0){
+                $haveTalle=true;
+                ?>
                 <h5>Talle 40: <?php echo $stockIndividual['n_40']?></h6>
            <?php }
         ?>
 
 <?php
-            if($stockIndividual['n_41']!=0){ ?>
+            if($stockIndividual['n_41']!=0){
+                $haveTalle=true;
+                ?>
                 <h5>Talle 41: <?php echo $stockIndividual['n_41']?></h6>
            <?php }
         ?>
 
 <?php
-            if($stockIndividual['n_42']!=0){ ?>
+            if($stockIndividual['n_42']!=0){
+                $haveTalle=true;
+                ?>
                 <h5>Talle 42: <?php echo $stockIndividual['n_42']?></h6>
            <?php }
         ?>
 
 
 <?php
-            if($stockIndividual['n_43']!=0){ ?>
+            if($stockIndividual['n_43']!=0){
+                $haveTalle=true;
+                ?>
                 <h5>Talle 43: <?php echo $stockIndividual['n_43']?></h6>
            <?php }
         ?>
 
 
 <?php
-            if($stockIndividual['n_44']!=0){ ?>
+            if($stockIndividual['n_44']!=0){
+                $haveTalle=true;
+                ?>
                 <h5>Talle 44: <?php echo $stockIndividual['n_44']?></h6>
            <?php }
         ?>
 
 <?php
-            if($stockIndividual['n_45']!=0){ ?>
+            if($stockIndividual['n_45']!=0){ $haveTalle=true;?>
+            
                 <h5>Talle 45: <?php echo $stockIndividual['n_45']?></h6>
            <?php }
+           if(!$haveTalle){
+            echo "<h6>No hay talles disponibles</h6>";
+           }
         ?>
         </div>
 
@@ -435,6 +468,7 @@ body{
 <script src="./../js/admin.js"></script>
 <script src="./../js/admin2.js"></script>
 <script src="../js/chargeFile.js"></script>
+</main>
 </body>
 
 </html>

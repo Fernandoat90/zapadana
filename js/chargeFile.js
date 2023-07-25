@@ -1,7 +1,7 @@
 let testElement= document.getElementById("testElement");
-console.log("Hi bitch");
+console.log("Hi");
 
 window.addEventListener('load',()=>{
-    setTimeout(()=>{testElement.style.display="none"},1);
+    setTimeout(()=>{testElement.style.display="none"},2000);
     
 });

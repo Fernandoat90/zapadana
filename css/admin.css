@@ -1,0 +1,28 @@
+#cabecera{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color: yellow;
+}
+.elementCabecera{
+    border:1px solid black;
+    height: 100%;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#elementoTres{
+    display: flex;
+    justify-content: end;
+    align-items:center;
+}
+
+.centrarSacarBorde{
+    border-radius:0px;
+    padding-left:1%;
+}
