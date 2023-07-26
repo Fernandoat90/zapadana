@@ -27,6 +27,36 @@ $tiposMartriz = mysqli_query($c, $sql);
     margin: 0;
     box-sizing: border-box;
 }
+button{
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    width:150px;
+    height:4%;
+    cursor:pointer;
+    margin-left:10%;
+}
+
+.botonSubmit{
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    width:150px;
+    height:4%;
+    cursor:pointer;
+    margin-left:10%;
+}
+
+button:hover{
+    background-color:red;
+    color:white;
+}
+
+.botonSubmit:hover{
+    background-color:red;
+    color:white;
+}
+
 body{
     background-color:yellow;
     
@@ -119,12 +149,44 @@ body{
             <div class="elementCabecera"><h1>Administrador</h1></div>
             <div id="elementoTres" class="elementCabecera"><a id="botonLogout" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
     </div>
+    <div style="margin-left:40%;">
     <strong>
         <h1>Página de Administrador</h1>
     </strong>
     <main>
-    <h3>Agregar Calzados Generales</h3>
-    <form> <br>
+    
+     <?php
+            if (isset($_POST['cal_id'])) {
+                
+                require '../functions.php/subirProductoGeneral.php';
+                subirProductoGeneral(conectar(),$id, $tipo, $marca, $precio, $genero);
+            }
+
+            ?>
+   
+
+    <button style="margin-top:20px;" id="mostrarCalzadosGeneralessss">Ver todos los calzados generales</button>
+
+
+    
+    <button id="agregarCalzadosGeneralesssBoton">
+            Agregar Calzados
+     </button>
+    
+     <button id="botomStocks">
+            Ver todos los Stocks
+    </button>
+
+    <button id="botonSubirStockk">
+            Agregar Stock
+    </button>
+
+  
+
+    </div>
+
+    <form id="agregarCalzadosGeneralesss"> <br>
+    <h3>Agregar Calzados Generales</h3> <br>
         ID: <input required class="inputBasics" name="cal_id" type="number">
         <br>
         TIPO:
@@ -145,32 +207,8 @@ body{
         Marca: <input required class="inputBasics" name="cal_desc" type="text"> <br>
 
         Precio: <input required class="inputBasics" name="cal_precio" type="number" step=0.01> <br>
-        <input formaction="admin.php" formmethod="post" type="submit" value="Subir Calzado General">
-    </form> <?php
-            if (isset($_POST['cal_id'])) {
-                
-                require '../functions.php/subirProductoGeneral.php';
-                subirProductoGeneral(conectar(),$id, $tipo, $marca, $precio, $genero);
-            }
-
-            ?>
-   
-
-    <button id="mostrarCalzadosGeneralessss">Ver todos los calzados generales</button>
-
-
-    <form>
-        <input type="text" name="subirStock" style="display: none;">
-        <input formaction="admin.php" formmethod="post" type="submit" value="Subir Stock">
+        <input class="botonSubmit" formaction="admin.php" formmethod="post" type="submit" value="Subir Calzado General">
     </form>
-
-  <button id="botomStocks">
-            Ver todos los Stocks
-  </button>
-
-
-
-
 
     <!-- Parte 2-->
     <br><br><br><br><br>
@@ -185,7 +223,7 @@ body{
     ?>
     
     <br> <br><br><br>
-        <form class="calzadosGenerales border" style="border:1px solid black; width:30%; height:100%; display:flex;flex-direction:column;justify-content:center;align-items:center;">
+        <form class="calzadosGenerales border" style="border:1px solid black; width:30%; height:100%; display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:orange;">
             <h3 >id:</h3><input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_id'];   ?>" type="number">
             <h4>Genero:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_gen'];    ?>" type="text">
             <h4>Marca:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_desc'];    ?>" type="text">
@@ -268,9 +306,9 @@ body{
     <?php
     while($stockIndividual=mysqli_fetch_assoc($matrizStock)){
         ?>
-        <div   class="border " style="display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;">
+        <div   class="border " style="background-color:orange;display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;">
         <br><br><br><br>
-        <div style="border:1px solid black;background-color:white;">
+        <div style="margen-left:4px;margin-right:4px;:border:1px solid black;background-color:white;">
         <h5>Id del stock:<?php echo $stockIndividual['stock_id'] ?> </h5>
         <h5>Marca:<?php echo $stockIndividual['cal_desc'] ?> </h5>
         <?php
@@ -467,6 +505,8 @@ body{
 
 <script src="./../js/admin.js"></script>
 <script src="./../js/admin2.js"></script>
+<script src="./../js/admin3.js"></script>
+<script src="./../js/admin4.js"></script>
 <script src="../js/chargeFile.js"></script>
 </main>
 </body>

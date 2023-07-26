@@ -36,6 +36,26 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.botonSubmit{
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    width:9%;
+    height:4%;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:red;
+    color:white;
+}
+
+.botonSubmit:hover{
+    background-color:red;
+    color:white;
+}
+
 .inputBasics{
         border-radius:25px;
         width:15%;
@@ -116,11 +136,11 @@
             
             Talle 45:<input required class="inputBasics" type="number" value="<?php echo $n_45 ?>" name="n_45"> <br>
             
-            <input type="submit"  formaction="./admin2.php" formmethod="post"  value="Editar Stock">
+            <input class="botonSubmit" type="submit"  formaction="./admin2.php" formmethod="post"  value="Editar Stock">
         </form> <?php }
 ?>
 
 <form>
-    <input type="submit" value="Volver a la página principal" formaction="admin.php" formmethod="get">
+    <input class="botonSubmit" type="submit" value="Volver a la página principal" formaction="admin.php" formmethod="get">
 </form>
 <script src="../js/chargeFile.js"></script>

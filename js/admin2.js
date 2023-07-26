@@ -8,9 +8,10 @@ let tituloCalzadosGenerales= document.getElementById("tituloCalzadosGenerales");
 mostrarCalzadosGeneralesBotom.innerText="Mostrar Calzados";
 function calzadosGeneralesFunction(){
     
-        console.log("Nose que pasa");
+        
         
         if(interruptorCalzadosGenerales){
+            resetear();
             calzadosGenerales.style.display="flex";
             tituloCalzadosGenerales.style.display="block";
             mostrarCalzadosGeneralesBotom.innerText="Esconder Calzados";
@@ -27,3 +28,15 @@ function calzadosGeneralesFunction(){
 
 mostrarCalzadosGeneralesBotom.addEventListener('click',calzadosGeneralesFunction);
 let interruptorCalzadosGenerales=true;
+
+function resetear(){
+    stocks.style.display="none";
+    botomStocks.innerText="Ver todos los registros";
+    mostrarCalzadosGeneralesBotom.innerText="Mostrar Calzados";
+    calzadosGenerales.style.display="none";
+    tituloCalzadosGenerales.style.display="none";
+    agregarCalzadosGeneralesss.style.display="none";
+    agregarCalzadosGeneralesssBoton.innerText="Agregar Calzados";
+    formSubirStock.style.display="none";
+    botonSubirStockk.innerText="Agregar Stock";
+}
