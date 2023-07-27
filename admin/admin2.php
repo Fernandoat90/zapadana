@@ -114,27 +114,27 @@ button:hover{
                     <option style="color: brown;" <?php if($color_id==6){ echo "selected";} ?> value=6>Marron</option>
                 </select>
             
-            Talle 35:<input required class="inputBasics" type="number" value="<?php echo $n_35 ?>" name="n_35"> <br>
+            Talle 35:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_35 ?>" name="n_35"> <br>
             
-            Talle 36:<input required class="inputBasics" type="number" value="<?php echo $n_36 ?>" name="n_36"> <br>
+            Talle 36:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_36 ?>" name="n_36"> <br>
             
-            Talle 37:<input required class="inputBasics" type="number" value="<?php echo $n_37 ?>" name="n_37"> <br>
+            Talle 37:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_37 ?>" name="n_37"> <br>
             
-            Talle 38:<input required class="inputBasics" type="number" value="<?php echo $n_38 ?>" name="n_38"> <br>
+            Talle 38:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_38 ?>" name="n_38"> <br>
             
-            Talle 39:<input required class="inputBasics" type="number" value="<?php echo $n_39 ?>" name="n_39"> <br>
+            Talle 39:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_39 ?>" name="n_39"> <br>
             
-            Talle 40:<input required class="inputBasics" type="number" value="<?php echo $n_40 ?>" name="n_40"> <br>
+            Talle 40:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_40 ?>" name="n_40"> <br>
             
-            Talle 41:<input required class="inputBasics" type="number" value="<?php echo $n_41 ?>" name="n_41"> <br> 
+            Talle 41:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_41 ?>" name="n_41"> <br> 
             
-            Talle 42:<input required class="inputBasics" type="number" value="<?php echo $n_42 ?>" name="n_42"> <br>
+            Talle 42:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_42 ?>" name="n_42"> <br>
             
-            Talle 43:<input required class="inputBasics" type="number" value="<?php echo $n_43 ?>" name="n_43"> <br>
+            Talle 43:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_43 ?>" name="n_43"> <br>
             
-            Talle 44:<input required class="inputBasics" type="number" value="<?php echo $n_44 ?>" name="n_44"> <br>
+            Talle 44:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_44 ?>" name="n_44"> <br>
             
-            Talle 45:<input required class="inputBasics" type="number" value="<?php echo $n_45 ?>" name="n_45"> <br>
+            Talle 45:<input required min=0 class="inputBasics" type="number" value="<?php echo $n_45 ?>" name="n_45"> <br>
             
             <input class="botonSubmit" type="submit"  formaction="./admin2.php" formmethod="post"  value="Editar Stock">
         </form> <?php }
