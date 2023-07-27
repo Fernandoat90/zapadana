@@ -92,7 +92,13 @@
                             $talle=$registro["reser_talle"];
                             $color=1;
                             $imgUrl=$caracteristicasStock['stock_img'];
-                            ShoeCard($id,$precio,$marca,$tipo,$imgUrl,$talle,$color);
+                            if($caracteristicasCalzado['cal_gen']=="F"){
+                                $genero="F";
+                            }
+                            else{
+                                $genero="M";
+                            }
+                            ShoeCard($id,$precio,$marca,$tipo,$imgUrl,$talle,$color,$genero);
                         }}
                           else{
                             echo "<h1>No tienes reservas hechas</h1>";

@@ -1,6 +1,6 @@
 <?php
 
-    function ShoeCard($id,$precio,$marca,$tipo,$imgUrl ,$talle,$color){
+    function ShoeCard($id,$precio,$marca,$tipo,$imgUrl ,$talle,$color,$genero){
         ?>
         
             <style>
@@ -83,8 +83,12 @@
                     
                     <input style="position:relative;
                     top:5px;" class="inputt tipoFormCard" value="<?php echo $tipo ?>" type="text" readonly>
+                    <p style="display:none;">Genero:<input style="position:relative;
+                    top:5px;" class="inputt tipoFormCard" value="<?php echo $genero ?>" type="text" readonly></p>
                     <p style="position:relative;
                     top:6px;">Talle: <input  class="inputt tipoFormCard" value="<?php echo $talle ?>" type="text" readonly></p>
+                    <p style="position:relative;
+                    top:6px;">Genero: <input  class="inputt tipoFormCard" value="<?php echo $genero ?>" type="text" readonly></p>
                     <p style="position:relative;
                     top:5px;" class="price" >$<?php echo $precio ?></p>
                     

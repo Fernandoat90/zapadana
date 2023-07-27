@@ -308,7 +308,7 @@ body{
         ?>
         <div   class="border " style="background-color:orange;display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;">
         <br><br><br><br>
-        <div style="margen-left:4px;margin-right:4px;:border:1px solid black;background-color:white;">
+        <div style="margen-left:4px;margin-right:4px;:border:1px solid black;background-color:yellow;">
         <h5>Id del stock:<?php echo $stockIndividual['stock_id'] ?> </h5>
         <h5>Marca:<?php echo $stockIndividual['cal_desc'] ?> </h5>
         <?php
@@ -356,7 +356,7 @@ body{
         <h5>Genero:<?php echo $stockIndividual['cal_gen']  ?></h5>
         </div>
         <img style="order:-1" class="border" src='<?php echo $stockIndividual['stock_img'];?>' alt="Imagen de zapatos">
-        <div style="border:1px solid black;background-color:white;margin-left:3px;">
+        <div style="border:1px solid black;background-color:yellow;margin-left:3px;" >
         <h5>STOCK DISPONIBLE</h6>
         <?php
             $haveTalle=false;

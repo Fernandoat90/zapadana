@@ -63,8 +63,8 @@ foreign key(tipo_id) references tipos(tipo_id)
 /*foreign key (marc_id) references marcas(marc_id)*/ 
 );
 drop table calzados;
-
-select * from estados;
+use zapa_Desarrollo;
+select * from calzados;
 select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id having c.cal_gen="M";
 select * from tipos;
 select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;
