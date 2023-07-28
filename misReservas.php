@@ -25,7 +25,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ZapaDana</title>
 </head>
 <body>
     
@@ -35,7 +35,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ZapaDana</title>
     <link rel="stylesheet" href="./css/showShoes.css">
     <link rel="stylesheet" href="./css/logout.css">
 </head>

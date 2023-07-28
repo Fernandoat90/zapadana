@@ -135,7 +135,7 @@
                         <p class="bigCardShoePPrice" >$<input class="bigCardShoeFormPrice"  type="number" readonly name="precio" value=<?php echo $precio ?> step=0.01 id=""></p>
                         <div class="bigCardShoeTarjetasContainer">
                                 <p class="bigCardShoePTexto"> Numero de Tarjeta: <br><input class="bigCardShoeTarjetasInputs" type="number" placeholder="Numero de la tarjeta" step=1 required></p> <br>
-                                <p class="bigCardShoePTexto"> Codigo de seguridad: <br><input  class="bigCardShoeTarjetasInputs" type="number" maxlength=4 placeholder="Codigo de seguridad" required></p>
+                                <p class="bigCardShoePTexto"> Codigo de seguridad: <br><input  class="bigCardShoeTarjetasInputs" max=999 type="number" maxlength=4 placeholder="Codigo de seguridad" required></p>
                         </div>
                         <div class="bigCardShoeFormSubmitContainer">
                             <input value="Reservar" class="bigCardShoeFormSubmit" type="submit">
