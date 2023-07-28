@@ -78,12 +78,12 @@ button:hover{
     
     <form >
     <div id="cabecera">
-            <div class="elementCabecera"><a id="botonAtras" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;background-image: url('../img/home.png');
+            <div id="elementoUno" class="elementCabecera"><a id="botonAtras" title="Home" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;background-image: url('../img/prueba-logo4.png');
                         background-size: 100% 100%;
                         background-repeat: no-repeat;
-                        z-index:2;" href="./admin.php"></a></div>
+                        z-index:2;position:relative;left:30%;" href="./admin.php"></a></div>
             <div class="elementCabecera"><h1>Administrador</h1></div>
-            <div id="elementoTres" class="elementCabecera"><a id="botonLogout" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
+            <div id="elementoTres" class="elementCabecera"><a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
     </div>
             <input style="display: none;"  type="number" value="<?php echo $stock_id ?>" name="stock_id"> <br> <br>
             <select required name="cal_id" id="">
@@ -141,6 +141,6 @@ button:hover{
 ?>
 
 <form>
-    <input class="botonSubmit" type="submit" value="Volver a la página principal" formaction="admin.php" formmethod="get">
+    <input class="botonSubmit" type="submit" value="Home" formaction="admin.php" formmethod="get">
 </form>
 <script src="../js/chargeFile.js"></script>

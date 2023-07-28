@@ -20,7 +20,8 @@
                     background-color:aqua;
                     border-radius:10px;
                     box-shadow:black 10px 10px;
-                    margin-top:5px;
+
+                    margin:1%;;
                             }
                     .containerrr:hover{
                         transition:1s;

@@ -16,6 +16,11 @@ body{
     align-items: center;
 }
 
+#elementoUno{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
 
 #elementoTres{
     display: flex;

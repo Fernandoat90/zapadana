@@ -142,12 +142,12 @@ body{
         </div>
     </div> 
     <div id="cabecera">
-            <div class="elementCabecera"><a id="botonAtras" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;background-image: url('../img/home.png');
+            <div id="elementoUno" class="elementCabecera"><a id="botonAtras" title="Home" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;background-image: url('../img/prueba-logo4.png');
                         background-size: 100% 100%;
                         background-repeat: no-repeat;
-                        z-index:2;" href="./admin.php"></a></div>
+                        z-index:2;position:relative;left:30%;" href="./admin.php"></a></div>
             <div class="elementCabecera"><h1>Administrador</h1></div>
-            <div id="elementoTres" class="elementCabecera"><a id="botonLogout" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
+            <div id="elementoTres" class="elementCabecera"><a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
     </div>
     <div style="margin-left:40%;">
     <strong>
@@ -161,8 +161,13 @@ body{
                 require '../functions.php/subirProductoGeneral.php';
                 subirProductoGeneral(conectar(),$id, $tipo, $marca, $precio, $genero);
             }
+            if (isset($_POST['n_35'])) {
+                require '../functions.php/subirStock.php';
+                subirStock($c, $cal_id2, $color_id2, $n_35, $n_36, $n_37, $n_38, $n_39, $n_40, $n_41, $n_42, $n_43, $n_44, $n_45,$stock_img);
+            }
 
             ?>
+            
    
 
     <button style="margin-top:20px;" id="mostrarCalzadosGeneralessss">Ver todos los calzados generales</button>
@@ -286,10 +291,7 @@ body{
 
     <?php
 
-    if (isset($_POST['n_35'])) {
-        require '../functions.php/subirStock.php';
-        subirStock($c, $cal_id2, $color_id2, $n_35, $n_36, $n_37, $n_38, $n_39, $n_40, $n_41, $n_42, $n_43, $n_44, $n_45,$stock_img);
-    }
+    
 
 
 

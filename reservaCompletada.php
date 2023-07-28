@@ -24,19 +24,19 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
 
                         <div id="subContenedorLogoNombre">
                             <div id="contenedorLogo">
-                                <img id="logo" src="./img/logo.png" alt="Logo de la página">
-
+                                <!--<img id="logo" src="./img/logo.png" alt="Logo de la página">
+-->
                             </div>
 
                             <div id="contenedorNombre">
                                 <h2 >Reservada</h2> <!-- PONER DENTRO DE ESTE H2 LO QUE QUERES QUE APAREZCA ARRIBA-->
                             </div>
                         </div>
-                        <a id="botonAtras" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;right:60%;background-image: url('./img/home.png');
+                        <a id="botonAtras" title="Home" style=" width:100px;display:flex;justify-content:center;align-items:center;color:white;position:relative;right:25%;bottom:14%;height:80px;background-image: url('./img/prueba-logo4.png');
                         background-size: 100% 100%;
                         background-repeat: no-repeat;
                         z-index:2;" href="./filtro.php"></a>
-                        <a id="botonLogout" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;left:30%;" href="./functions.php/logout.php"></a>
+                        <a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;left:30%;" href="./functions.php/logout.php"></a>
                 </div>
 
 
@@ -61,7 +61,13 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
 
                         
                 ?>
-                    <a style="border:1px solid black; width:100px;background-color:red;height:60px;display:flex;justify-content:center;align-items:center;border-radius:25px;color:white;" href="./filtro.php">Inicio</a>
+                    <style>
+                        #buttomHomee:hover{
+                            background-color:blueviolet;
+                            color:white;
+                        }
+                    </style>
+                    <a id="buttomHomee" style="border:1px solid black; width:100px;background-color:red;height:60px;display:flex;justify-content:center;align-items:center;border-radius:25px;color:white;text-decoration:none;" href="./filtro.php">Inicio</a>
             </div>
 
 
