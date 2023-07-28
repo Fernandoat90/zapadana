@@ -19,8 +19,8 @@ function subirStock($c,$cal_id,$color_id,$n_35,$n_36,$n_37,$n_38,$n_39,$n_40,$n_
     $conection=$c;
     $sql="insert into stock(estado_id,cal_id,color_id,n_35,n_36,n_37,n_38,n_39,n_40,n_41,n_42,n_43,n_44,n_45,stock_img) values(1,$cal_id,$color_id,$n_35,$n_36,$n_37,$n_38,$n_39,$n_40,$n_41,$n_42,$n_43,$n_44,$n_45,'$stock_img');";
     mysqli_query($conection,$sql);
-    if(mysqli_affected_rows($conection)>0){
-        echo "<h2 style:'color:blue;'>Stock Subido</h2>";
+    if(mysqli_affected_rows($conection)>0 && $_SESSION['stockSubido']==true){
+        echo "<h2 style:'color:green;'>Stock Subido</h2>";
     }
     else{
         echo "<h2 style:'color:red;'>Stock No Subido</h2>";
