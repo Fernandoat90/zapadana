@@ -16,7 +16,7 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
 </head>
 <body style="background-color: black;">
 
-    <div id="main" >
+    <div id="main" style="green">
         <div id="todoElRegistrase">
             <div id="logo_y_nombre" class="container">
 
@@ -29,7 +29,7 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
                             </div>
 
                             <div id="contenedorNombre">
-                                <h2 >Reservada</h2> <!-- PONER DENTRO DE ESTE H2 LO QUE QUERES QUE APAREZCA ARRIBA-->
+                                <h2 style="color:white" >Reservada</h2> <!-- PONER DENTRO DE ESTE H2 LO QUE QUERES QUE APAREZCA ARRIBA-->
                             </div>
                         </div>
                         <a id="botonAtras" title="Home" style=" width:100px;display:flex;justify-content:center;align-items:center;color:white;position:relative;right:25%;bottom:14%;height:80px;background-image: url('./img/prueba-logo4.png');
@@ -67,7 +67,7 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
                             color:white;
                         }
                     </style>
-                    <a id="buttomHomee" style="border:1px solid black; width:100px;background-color:red;height:60px;display:flex;justify-content:center;align-items:center;border-radius:25px;color:white;text-decoration:none;" href="./filtro.php">Inicio</a>
+                    <a id="buttomHomee" style="border:1px solid black; width:100px;background-color:var(--c1);height:60px;display:flex;justify-content:center;align-items:center;border-radius:25px;color:white;text-decoration:none;" href="./filtro.php">Inicio</a>
             </div>
 
 

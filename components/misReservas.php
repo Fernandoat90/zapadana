@@ -17,7 +17,7 @@
                     display:flex;
                     flex-direction:column;
                     align-items:center;
-                    background-color:aqua;
+                    background-color:var(--c5);
                     border-radius:10px;
                     box-shadow:black 10px 10px 10px;
                     margin-top:5px;
@@ -62,8 +62,8 @@
                     }
                     .buttomFormCard{
                         border-radius:25px;
-                        background-color:red;
-                        color:white;
+                        background-color:var(--c4);
+                        color:var(--c1);
                         height: 20px;
                         margin-top:5px;
                     }

@@ -16,11 +16,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zapadana</title>
     <link rel="stylesheet" href="./css/filtro.css">
     <link rel="stylesheet" href="./css/logout.css">
 </head>
-<body style="background-color: bisque;z-index:-1;">
+<body style="background-color: var(--c2);z-index:-1;">
     <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;z-index:9;">
         <div style="width: 30%;height: 50%; background-image:url('img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
 
@@ -34,18 +34,18 @@
 
                         <div id="subContenedorLogoNombre">
                             <div id="contenedorLogo">
-                                <img id="logo" src="./img/logo.png" alt="Logo de la página">
+                                
 
                             </div>
 
                             <div id="contenedorNombre">
-                                <h2 >Genero</h2>
+                                <h2 style="color:white">Genero</h2>
                             </div>
                         </div>
                         <style>
                             
                         </style>
-                        <a id="botonAtras" title="Home" style=" width:100px;height:80px;display:flex;justify-content:center;align-items:center;color:white;position:relative;right:25%;bottom:14%;background-image: url('./img/prueba-logo4.png');
+                        <a id="botonAtras" title="Home" style=" width:100px;display:flex;justify-content:center;align-items:center;color:white;position:relative;right:25%;bottom:14%;height:80px;background-image: url('./img/prueba-logo4.png');
                         background-size: 100% 100%;
                         background-repeat: no-repeat;
                         z-index:2;" href="./filtro.php"></a>

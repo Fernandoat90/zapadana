@@ -25,8 +25,16 @@ $tiposMartriz = mysqli_query($c, $sql);
         *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    --c1:#03543B;
+    --c2:#9C3A21;
+    --c3:#FC8668;
+    --c4:#5FE8BD;
+    --c5:#B2C9B2;
 }
+
+
+
 button{
     border-radius:20px;
     display:flex;
@@ -42,7 +50,7 @@ button{
     display:flex;
     justify-content:center;
     width:150px;
-    height:4%;
+    height:30px;
     cursor:pointer;
     margin-left:10%;
 }
@@ -150,9 +158,7 @@ body{
             <div id="elementoTres" class="elementCabecera"><a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
     </div>
     <div style="margin-left:40%;">
-    <strong>
-        <h1>Página de Administrador</h1>
-    </strong>
+    
     <main>
     
      <?php
@@ -218,7 +224,7 @@ body{
     <!-- Parte 2-->
     <br><br><br><br><br>
     <h2 style="display:none;" id="tituloCalzadosGenerales">Todos Los Calzados Generales</h2>
-    <div id="calzadosGenerales" style="display:none;  flex-wrap:wrap;">
+    <div id="calzadosGenerales" style="display:none;  flex-wrap:wrap;justify-content:center;">
     <?php
     $conectionCalzadosSelect = conectar();
     $calzadosGenerales = mysqli_query($conectionCalzadosSelect, "select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;");
@@ -228,7 +234,7 @@ body{
     ?>
     
     <br> <br><br><br>
-        <form class="calzadosGenerales border" style="border:1px solid black; width:30%; height:100%; display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:orange;">
+        <form class="calzadosGenerales border" style="border:1px solid black; width:30%; height:100%; display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:var(--c3);">
             <h3 >id:</h3><input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_id'];   ?>" type="number">
             <h4>Genero:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_gen'];    ?>" type="text">
             <h4>Marca:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_desc'];    ?>" type="text">
@@ -303,12 +309,13 @@ body{
     $sqlMostrarStock="select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id where s.estado_id=1;";
     $matrizStock=mysqli_query($conexionMostrarStock,$sqlMostrarStock); ?>
     <div style="display: none; " id="todosLosStocks">
-    <h2>Stocks</h2>
-        <div style="display:flex; flex-wrap:wrap;">
+    <h2 style="position:relative;left:48%;color:white;font-size:40px;">Stocks</h2>
+        <div style="display:flex; flex-wrap:wrap;justify-content:center;">
+        
     <?php
     while($stockIndividual=mysqli_fetch_assoc($matrizStock)){
         ?>
-        <div   class="border " style="background-color:orange;display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;">
+        <div   class="border " style="background-color:var(--c3);display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;">
         <br><br><br><br>
         <div style="margen-left:4px;margin-right:4px;:border:1px solid black;background-color:yellow;">
         <h5>Id del stock:<?php echo $stockIndividual['stock_id'] ?> </h5>

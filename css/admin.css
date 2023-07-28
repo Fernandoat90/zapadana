@@ -1,10 +1,23 @@
+:root{
+    --bp:none;
+    --bf:1px solid black;
+    --c1:#03543B;
+    --c2:#9C3A21;
+    --c3:#FC8668;
+    --c4:#5FE8BD;
+    --c5:#B2C9B2;
+    
+}
+
 #cabecera{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--c1);
+    color:white;
 }
 body{
-    background-color: yellow;
+    background-color: var(--c2);
 
 }
 .elementCabecera{
@@ -14,6 +27,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 #elementoUno{

@@ -14,7 +14,7 @@
                 border-radius:25px;
                 display:flex;
                 flex-direction:row;
-                background-color:deeppink;
+                background-color:var(--c4);
             }
             .bigCardShoeImage{
                 border-right:1px solid black;
@@ -47,7 +47,7 @@
             border-radius:50px; 
             width: 450px;
             height:470px;
-            background-color:yellow;
+            background-color:var(--c5);
             padding-left:8%;
         }
 
