@@ -7,12 +7,12 @@ function verStock(){
     if(interruptor==true){
         
     stocks.style.display="block";
-    botomStocks.innerText="Ocultar Todos Los registros ";
+    botomStocks.innerText="Ocultar Todos Los stocks ";
     interruptor=false;
 }
     else{
         stocks.style.display="none";
-        botomStocks.innerText="Ver todos los registros";
+        botomStocks.innerText="Ver todo el stock";
         interruptor=true;
     }
 }

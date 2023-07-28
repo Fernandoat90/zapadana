@@ -18,6 +18,7 @@ function loggin($mail,$contra){
       $_SESSION['nombre']=$registro['usu_nombre'];
       $_SESSION['email']=$registro['usu_mail'];
       $_SESSION['rol']=$registro['rol_id'];
+      $_SESSION['stockSubido']=false;
   
       switch($registro['rol_id']){
         case 1:

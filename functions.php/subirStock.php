@@ -1,4 +1,5 @@
 <?php
+$_SESSION['stockSubido']=true;
 $cal_id2=$_POST['cal_id2'];
 $color_id2=$_POST['color_id'];
 $n_35=$_POST['n_35'];
