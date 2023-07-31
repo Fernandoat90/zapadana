@@ -66,9 +66,9 @@
     <div id="main"> 
    
         <div id="todoElRegistrase" >
-       <br><br><br><h3 style="color:white;text-align:center">Haz click en el logo para Ingresar</h3> 
+       <br><br><br><h3 style="color:var(--c1);text-align:center;font-family:'impact';">Clickea para ingresar ↓</h3> 
        <div style="text-align:center;">
-<a href=login.php><button style="background-color:rgba(224, 140, 30, 0.83);border-radius:25px;"><img src="./img/logo-ini.png" alt="logo" ></button></a>
+<a href=login.php><button style="background-color:var(--c4);border-radius:25px;"><img src="./img/logo-ini.png" alt="logo" ></button></a>
 </div>
  
             </div>
