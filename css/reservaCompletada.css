@@ -177,6 +177,13 @@ input{
     
 }
 
+#foot{
+    height: 54%;
+    width: 100%;
+    background-color: black;
+    z-index: 767;
+}
+
 
 
 

@@ -79,6 +79,9 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
 
 
     </div>
+    <div id="foot">
+
+    </div>
     <script src="./js/filtro.js"></script>
     
 </body>
