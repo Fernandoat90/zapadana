@@ -17,7 +17,7 @@ $tiposMartriz = mysqli_query($c, $sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zapadana</title>
 
 
 
@@ -43,6 +43,7 @@ button{
     height:4%;
     cursor:pointer;
     margin-left:10%;
+    
 }
 
 .botonSubmit{
@@ -53,16 +54,18 @@ button{
     height:30px;
     cursor:pointer;
     margin-left:10%;
+    background-color:red;
+    color:white;
 }
 
 button:hover{
-    background-color:red;
-    color:white;
+    background-color:var(--c4);
+    color:var(--c1);
 }
 
 .botonSubmit:hover{
-    background-color:red;
-    color:white;
+    background-color:var(--c3);
+    color:var(--c1);
 }
 
 body{
@@ -74,6 +77,20 @@ body{
         width:15%;
         height:25px;
         padding-left:1%;
+    }
+    .inputBasicsWidther{
+        
+        border-radius:25px;
+        width:60%;
+        height:25px;
+        padding-left:1%;
+    }
+    .inputBasicsMinWidther{
+        
+        border-radius:25px;
+        width:20%;
+        height:25px;
+        padding-left:4%;
     }
     #cabecera{
         width:100%;
@@ -195,10 +212,10 @@ body{
   
 
     </div>
-
-    <form style="color:white;" id="agregarCalzadosGeneralesss"> <br>
-    <h3>Agregar Calzados Generales</h3> <br>
-        ID: <input required class="inputBasics" name="cal_id" type="number">
+    <div style="display:flex;justify-content:start;width:100%;align-items:center;">
+    <form style="border:1px solid black;width:20%;background-color:var(--c4);border-radius:10px;position:relative;top:16px;left:20px;" id="agregarCalzadosGeneralesss"> <br>
+    <h2 >Agregar Calzados Generales</h2> <br>
+        ID: <input required class="inputBasicsWidther" name="cal_id" type="number">
         <br>
         TIPO:
         <select required name="tipo_id"> <?php
@@ -215,15 +232,15 @@ body{
             <option value="F">Mujer</option>
         </select>
         <br>
-        Marca: <input required class="inputBasics" name="cal_desc" type="text"> <br>
+        Marca: <input required class="inputBasicsWidther" name="cal_desc" type="text"> <br>
 
-        Precio: <input required class="inputBasics" name="cal_precio" type="number" step=0.01> <br>
+        Precio: <input required class="inputBasicsWidther" name="cal_precio" type="number" step=0.01> <br>
         <input class="botonSubmit" formaction="admin.php" formmethod="post" type="submit" value="Subir Calzado General">
     </form>
-
+    </div>
     <!-- Parte 2-->
     <br><br><br><br><br>
-    <h2 style="display:none;" id="tituloCalzadosGenerales">Todos Los Calzados Generales</h2>
+    <h2 style="display:none;color:white;" id="tituloCalzadosGenerales">Todos Los Calzados Generales</h2>
     <div id="calzadosGenerales" style="display:none;  flex-wrap:wrap;justify-content:center;">
     <?php
     $conectionCalzadosSelect = conectar();
@@ -256,7 +273,7 @@ body{
 
 
 
-    <form style="color:white;" id="formSubirStock">
+    <form style="border:1px solid black;width:25%;background-color:var(--c4);border-radius:10px;position:relative;top:16px;left:20px;" id="formSubirStock">
         <h4>Calzado General</h4>
         <select name="cal_id2" id="">
             <?php
@@ -280,19 +297,19 @@ body{
             <option style="color:brown" value=6>Marron</option>
         </select>
         <br>
-        talle 35:<input required class="inputBasics" value=0 type="number" name="n_35" min=0 id=""><br>
-        talle 36:<input required class="inputBasics" value=0 type="number" name="n_36" min=0 id=""><br>
-        talle 37:<input required class="inputBasics" value=0 type="number" name="n_37" min=0 id=""><br>
-        talle 38:<input required class="inputBasics" value=0 type="number" name="n_38" min=0 id=""><br>
-        talle 39:<input required class="inputBasics" value=0 type="number" name="n_39" min=0 id=""><br>
-        talle 40:<input required class="inputBasics" value=0 type="number" name="n_40" min=0 id=""><br>
-        talle 41:<input required class="inputBasics" value=0 type="number" name="n_41" min=0 id=""><br>
-        talle 42:<input required class="inputBasics" value=0 type="number" name="n_42" min=0 id=""><br>
-        talle 43:<input required class="inputBasics" value=0 type="number" name="n_43" min=0 id=""><br>
-        talle 44:<input required class="inputBasics" value=0 type="number" name="n_44" min=0 id=""><br>
-        talle 45:<input required class="inputBasics" value=0 type="number" name="n_45" min=0 id=""><br>
-        Imagen Url: <input required class="inputBasics" name="stock_img" type="text">
-        <input type="submit" value="Subir Stock" formaction="admin.php" formmethod="post">
+        talle 35:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_35" min=0 id=""><br>
+        talle 36:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_36" min=0 id=""><br>
+        talle 37:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_37" min=0 id=""><br>
+        talle 38:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_38" min=0 id=""><br>
+        talle 39:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_39" min=0 id=""><br>
+        talle 40:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_40" min=0 id=""><br>
+        talle 41:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_41" min=0 id=""><br>
+        talle 42:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_42" min=0 id=""><br>
+        talle 43:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_43" min=0 id=""><br>
+        talle 44:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_44" min=0 id=""><br>
+        talle 45:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_45" min=0 id=""><br>
+        Imagen Url: <input placeholder="URL de la imagen" required class="inputBasicsWidther" name="stock_img" type="text">
+        <input class="botonSubmit" type="submit" value="Subir Stock" formaction="admin.php" formmethod="post">
     </form>
 
     <?php

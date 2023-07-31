@@ -114,27 +114,27 @@ button:hover{
                     <option style="color: brown;" <?php if($color_id==6){ echo "selected";} ?> value=6>Marron</option>
                 </select>
                 </p>
-            <p style="color:white;" >Talle 35:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_35 ?>" name="n_35"></p> <br>
+            <p style="color:white;" >Talle 35:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_35 ?>" name="n_35"></p> <br>
             
-            <p style="color:white;" >Talle 36:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_36 ?>" name="n_36"></p> <br>
+            <p style="color:white;" >Talle 36:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_36 ?>" name="n_36"></p> <br>
             
-            <p style="color:white;" >Talle 37:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_37 ?>" name="n_37"></p> <br>
+            <p style="color:white;" >Talle 37:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_37 ?>" name="n_37"></p> <br>
             
-            <p style="color:white;" >Talle 38:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_38 ?>" name="n_38"></p> <br>
+            <p style="color:white;" >Talle 38:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_38 ?>" name="n_38"></p> <br>
             
-            <p style="color:white;" >Talle 39:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_39 ?>" name="n_39"></p> <br>
+            <p style="color:white;" >Talle 39:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_39 ?>" name="n_39"></p> <br>
             
-            <p style="color:white;" >Talle 40:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_40 ?>" name="n_40"></p> <br>
+            <p style="color:white;" >Talle 40:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_40 ?>" name="n_40"></p> <br>
             
-            <p style="color:white;" >Talle 41:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_41 ?>" name="n_41"></p> <br> 
+            <p style="color:white;" >Talle 41:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_41 ?>" name="n_41"></p> <br> 
             
-            <p style="color:white;" >Talle 42:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_42 ?>" name="n_42"></p> <br>
+            <p style="color:white;" >Talle 42:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_42 ?>" name="n_42"></p> <br>
             
-            <p style="color:white;" >Talle 43:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_43 ?>" name="n_43"></p> <br>
+            <p style="color:white;" >Talle 43:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_43 ?>" name="n_43"></p> <br>
             
-            <p style="color:white;" >Talle 44:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_44 ?>" name="n_44"></p> <br>
+            <p style="color:white;" >Talle 44:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_44 ?>" name="n_44"></p> <br>
             
-            <p style="color:white;" >Talle 45:<input  required min=0 class="inputBasics" type="number" value="<?php echo $n_45 ?>" name="n_45"></p> <br>
+            <p style="color:white;" >Talle 45:<input max=99 required min=0 class="inputBasics" type="number" value="<?php echo $n_45 ?>" name="n_45"></p> <br>
             
             <input class="botonSubmit" type="submit"  formaction="./admin2.php" formmethod="post"  value="Editar Stock">
         </form> <?php }
