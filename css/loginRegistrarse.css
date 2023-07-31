@@ -66,6 +66,8 @@
     z-index: 2;
     padding-bottom: 0.70%;
     background-color: var(--c1);
+    min-width: 800px;
+    min-height: 300px;
     
 }
 
@@ -101,7 +103,8 @@ color:#fdfdfdd0;
     background-color: var(--c4);
     opacity: 0.83;
     margin-top: 7%;
-    
+    min-width: 180px;
+    min-height: 400px;
 }
 
 #formR{

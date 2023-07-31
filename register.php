@@ -71,12 +71,12 @@
                             <div id="inputTextos"  >
                               
                                    
-                                    <input placeholder="Nombre" name="nom"type="text" required>
-                                    <input placeholder="Apellido" name="ape"type="text" required>
-                                    <input placeholder="Dirección" name="dir"type="text" required>
-                                    <input placeholder="Correo" name="mail"type="email" required>
-                                    <input placeholder="Contraseña" name="password"type="password" id="pass" required>
-                                    <input name="pass2" placeholder="Confirmar Contraseña" type="password" id="pass2" required>
+                                    <input style="height:45px;" placeholder="Nombre" name="nom"type="text" required>
+                                    <input style="height:45px;" placeholder="Apellido" name="ape"type="text" required>
+                                    <input style="height:45px;" placeholder="Dirección" name="dir"type="text" required>
+                                    <input style="height:45px;" placeholder="Correo" name="mail"type="email" required>
+                                    <input style="height:45px;" placeholder="Contraseña" name="password"type="password" id="pass" required>
+                                    <input style="height:45px;" name="pass2" placeholder="Confirmar Contraseña" type="password" id="pass2" required>
                                     <?php 
                                     if(isset($_GET['invalida'])){
                                         echo"<strong style=color:red;>¡¡¡ Las contraseñas No coinciden !!!</strong>"; 
