@@ -17,7 +17,7 @@ $tiposMartriz = mysqli_query($c, $sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zapadana</title>
+    <title>ZapaDana</title>
 
 
 
@@ -274,6 +274,8 @@ body{
 
 
     <form style="border:1px solid black;width:25%;background-color:var(--c4);border-radius:10px;position:relative;top:16px;left:20px;" id="formSubirStock">
+        <h2>Agregar Nuevo Stock</h2>
+        <br><br>
         <h4>Calzado General</h4>
         <select name="cal_id2" id="">
             <?php
