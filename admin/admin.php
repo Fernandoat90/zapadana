@@ -196,7 +196,7 @@ body{
 
     </div>
 
-    <form id="agregarCalzadosGeneralesss"> <br>
+    <form style="color:white;" id="agregarCalzadosGeneralesss"> <br>
     <h3>Agregar Calzados Generales</h3> <br>
         ID: <input required class="inputBasics" name="cal_id" type="number">
         <br>
@@ -256,8 +256,8 @@ body{
 
 
 
-    <form id="formSubirStock">
-        <h6>Calzado General</h6>
+    <form style="color:white;" id="formSubirStock">
+        <h4>Calzado General</h4>
         <select name="cal_id2" id="">
             <?php
             $conectionCalzadosSelect = conectar();
