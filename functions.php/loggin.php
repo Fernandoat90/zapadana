@@ -33,14 +33,12 @@ function loggin($mail,$contra){
     }
   
       else {
-          echo "La contraseña es incorrecta <br><br>";
-          echo "<br><br><h2><a href=./../login.php><button>Iniciar sesion</button></a></h2>";
+          header("location:../login.php?cuentaInvalida");
       }
   
   }
   else {
-      echo "<h1>No existe el usuario $mail<br><br></h1>";
-      echo "<br><br><h2><a href=https://equipodinamita23.000webhostapp.com/login.php><button>Iniciar sesion</button></a></h2>";
+    header("location:../login.php?cuentaInvalida");
   }
 
 }//fin inicio de sesion

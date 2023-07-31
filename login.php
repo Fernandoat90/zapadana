@@ -63,14 +63,30 @@
 
 
       <div id="registro" class="container">
-
+        
+        
 
         <form style="height:100%;" id="contenedorForm">
           <div id="formR">
+            
           <br>
           <img id="logo" src="./img/Logo2.png" alt="Logo de la página" style="width:130px;height:20%;margin:auto;">
          
             <div id="inputTextos" style="justify-content: center;">
+            <?php
+          if (isset($_GET['valida'])) {
+            echo "<h4 style=color:green;padding-left:10%;position:relative;right:8%;><strong>Su usuario fue cargado con exito</strong></h4>";
+          }
+
+          if (isset($_GET['contrasenaActualizada'])) {
+            echo "<h4 style=color:green;padding-left:10%;position:relative;right:8%;><strong>Contraseña Actualizada</strong></h4>"; //carteles de confirmacion para no hcaer otra pagina???
+          }
+
+          if (isset($_GET['cuentaInvalida'])) {
+            echo "<h4 style=color:red;padding-left:10%;position:relative;right:8%;><strong>Usuario incorrecto</strong></h4>"; //carteles de confirmacion para no hcaer otra pagina???
+          }
+
+          ?>
               <input id="email2" placeholder="Correo" style="height:30px;" name="mail2" type="text">
               <input id="pass2" style="height:30px;" style="margin-top:10px;" name="pass2" placeholder="Contraseña" type="password">
               <input style="display:none;" id="email" placeholder="Correo2" name="mail" type="text"> <!-- Esto era para comparar en la base de datos si existe un usuario con este mail -->
@@ -91,16 +107,7 @@
 
 
           </div>
-          <?php
-          if (isset($_GET['valida'])) {
-            echo "<h4 style=color:green;padding-left:10%;><strong>Su usuario fue cargado con exito</strong></h4>";
-          }
-
-          if (isset($_GET['contrasenaActualizada'])) {
-            echo "<h4 style=color:green;padding-left:10%;><strong>Contraseña Actualizada</strong></h4>"; //carteles de confirmacion para no hcaer otra pagina???
-          }
-
-          ?>
+          
           </div>
         </form>
       </div>
