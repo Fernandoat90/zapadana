@@ -258,3 +258,11 @@ input{
     align-items: center;  
     
 }
+
+#gifCarga{
+    width:30% ;
+    height:80% ;
+    background-size: 100%;
+    position: relative;
+    right:15%;
+}
