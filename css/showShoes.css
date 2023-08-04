@@ -19,7 +19,7 @@ body{
 .cards{
     display: flex;
     flex-direction:  row;
-    border: 1px solid black;
+    
     width: 100vw;
     height: 100%;
     justify-content: space-around;
@@ -56,7 +56,9 @@ body{
     z-index: 2;
     padding-bottom: 0.70%;
     background-color: var(--c1);
-    
+    width: 100vw;
+    min-height: 80px;
+
 }
 
 #registro{
@@ -247,24 +249,89 @@ input{
     margin-left: 25%;
     color: red;
 }
+ #gifCarga{
+    width:30% ;
+    height:80% ;
+    background-size: 100%;
+    position: relative;
+    right:15%;
+}
+ #NombrePagina{
+    position: relative;
+    left: 70px;
+    font-size:2.5rem ;
+    
+ }
 
+ #botonLogout{
+    position: relative;
+    left: 25%;
+  }
+ 
+#aboutOf{
+    position: relative;
+    top: 450px;
+    display: none;
+    z-index: 100;
+ }
+/*   
+ -TO DELETE THE POSITION OF LOGOUT IMAGE
+ -TO DELETE THE SIZES OF THE IMAGE OF THE CHARGE SCREEN  */
 /* MOBILE */
-@media(min-width:480px){
-    
-}
+    @media(max-width:480px){
+        #gifCarga{
+            /* width: ;
+            height: ; */
+        }
+        #aboutOf{
+            position: relative;
+            top: 450px;
+         }
 
-/* EXTRA SMALL DEVICES */
-@media(min-width:481px) and (max-width:767px){
+         #NombrePagina{
+            position: relative;
+            left: 70px;
+            font-size:2.5rem ;
+         }
+         #botonLogout{
+            position: relative;
+            left: 50px;
+         }
+         #NombrePagina{
+            font-size: 2.1rem;
+         }
+
+         #logo_y_nombre{
+            width: 110vw;
+         }
+   }
    
-}
-/* SMALL TABLETS */
-@media(min-width:768px) and (max-width:991px){
-   
-}
-/* LARGE TABLET / LAPTOPS */
-@media(min-width:992px) and (max-width:1199px){
+   /* EXTRA SMALL DEVICES */
+   @media(min-width:481px) and (max-width:767px){
+         #aboutOf{
+            position: relative;
+            top: 200px;
+         }
+
+         #NombrePagina{
+            position: relative;
+            left: 70px;
+            font-size:2.5rem ;
+         }
+         #botonLogout{
+            position: relative;
+            left: 80px;
+         }
+      
+   }
+   /* SMALL TABLETS */
+   @media(min-width:768px) and (max-width:991px){
     
-}
-
-
+   }
+   /* LARGE TABLET / LAPTOPS */
+   @media(min-width:992px) and (max-width:1199px){
+    
+   }
+   
+    
 

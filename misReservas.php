@@ -65,7 +65,7 @@
                         background-size: 100% 100%;
                         background-repeat: no-repeat;
                         z-index:2;" href="./filtro.php"></a>
-                        <a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;left:30%;" href="./functions.php/logout.php"></a>
+                        <a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative; " href="./functions.php/logout.php"></a>
 
                 </div>
 

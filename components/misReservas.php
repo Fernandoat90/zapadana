@@ -21,6 +21,7 @@
                     border-radius:10px;
                     box-shadow:black 10px 10px 10px;
                     margin:10px;
+                    min-height:300px;
                             }
                     .containerrr:hover{
                         transition:1s;
@@ -48,12 +49,12 @@
 
                     .marcaFormCard{
                         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                        font-size: 1.5vw;
+                        font-size: 1.5rem;
                     }
 
                     .tipoFormCard{
                         font-family: 'Arial Narrow', Arial, sans-serif;
-                        font-size: 1.2vw;
+                        font-size: 1.2rem;
                     }
 
                     .tallesFormCard{

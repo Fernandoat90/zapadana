@@ -3,7 +3,7 @@
     background-size: 80% 90%;
     background-repeat: no-repeat;
     z-index:2;
-    left: 30%;
+    
 }
 #botonLogout:hover{
     background-image: url("../img/abierta.png");
