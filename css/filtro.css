@@ -244,3 +244,57 @@ input{
     color: red;
 }
 
+
+ #NombrePagina{
+    position: relative;
+    left: 70px;
+    font-size:2.5rem ;
+ }
+/* MOBILE */
+    @media(max-width:480px){
+        #aboutOf{
+            position: relative;
+            top: 450px;
+         }
+
+         #NombrePagina{
+            position: relative;
+            left: 70px;
+            font-size:2.5rem ;
+         }
+         #botonLogout{
+            position: relative;
+            left: 35px;
+         }
+         
+   }
+   
+   /* EXTRA SMALL DEVICES */
+   @media(min-width:481px) and (max-width:767px){
+         #aboutOf{
+            position: relative;
+            top: 200px;
+         }
+
+         #NombrePagina{
+            position: relative;
+            left: 70px;
+            font-size:2.5rem ;
+         }
+         #botonLogout{
+            position: relative;
+            left: 80px;
+         }
+      
+   }
+   /* SMALL TABLETS */
+   @media(min-width:768px) and (max-width:991px){
+    
+   }
+   /* LARGE TABLET / LAPTOPS */
+   @media(min-width:992px) and (max-width:1199px){
+    
+   }
+   
+   
+

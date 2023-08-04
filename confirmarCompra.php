@@ -45,7 +45,7 @@ else{
 </head>
 <body style="background-color: var(--c2);">
     <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;z-index:9;">
-        <div style="width: 30%;height: 50%; background-image:url('img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
+        <div id="gifCarga" style="width: 30%;height: 50%; background-image:url('img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
 
         </div>
     </div> 
@@ -66,7 +66,7 @@ else{
                             </div>
 
                             <div id="contenedorNombre">
-                                <h2 style="color:white" >Confirmar</h2> <!-- PONER DENTRO DE ESTE H2 LO QUE QUERES QUE APAREZCA ARRIBA-->
+                                <h2 id="NombrePagina" style="color:white" >Confirmar</h2> <!-- PONER DENTRO DE ESTE H2 LO QUE QUERES QUE APAREZCA ARRIBA-->
                             </div>
                         </div>
                         <a id="botonAtras" title="Home" style=" width:100px;display:flex;justify-content:center;align-items:center;color:white;position:relative;right:25%;bottom:14%;height:80px;background-image: url('./img/prueba-logo4.png');

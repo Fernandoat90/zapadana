@@ -248,3 +248,23 @@ input{
     color: red;
 }
 
+/* MOBILE */
+@media(min-width:480px){
+    
+}
+
+/* EXTRA SMALL DEVICES */
+@media(min-width:481px) and (max-width:767px){
+   
+}
+/* SMALL TABLETS */
+@media(min-width:768px) and (max-width:991px){
+   
+}
+/* LARGE TABLET / LAPTOPS */
+@media(min-width:992px) and (max-width:1199px){
+    
+}
+
+
+
