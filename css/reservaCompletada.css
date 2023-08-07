@@ -234,10 +234,10 @@ input{
          }
          #botonLogout{
             position: relative;
-            left: 50px;
+            left: 12px;
          }
          #NombrePagina{
-            font-size: 2.1rem;
+            font-size: 1.7rem;
          }
 
          #logo_y_nombre{
