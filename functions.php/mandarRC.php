@@ -7,9 +7,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<style>
+    <style>
         /* PEGAR DE ACA PARA ABAJO */
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 #gifCarga{
     width:30% ;
@@ -77,13 +81,11 @@
 
 
     </style>
+</head>
+
 
 <body id="bodyElement">
-    <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;">
-        <div id="gifCarga" style=" background-image:url('img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;left:5%;">
-
-        </div>
-    </div>
+    
     <form style="display:none">
         <input type="number" name="id" value="<?php echo $idStock  ?>" id=""> <br>
         <input type="number" name="talle" value="<?php echo $tallePedido  ?>" id="">

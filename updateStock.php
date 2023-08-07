@@ -125,6 +125,11 @@
     <title>Actualizando Stock</title>
     <style>
         /* PEGAR DE ACA PARA ABAJO */
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 #gifCarga{
     width:30% ;
