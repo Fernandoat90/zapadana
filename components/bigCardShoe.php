@@ -3,7 +3,7 @@
     function bigCardShoe($id,$precio,$marca,$tipo,$genero,$color,$url,$talle){
         ?>
         <style>
-            :root{
+            /* :root{
                 --bp:none;
                 --bf:1px solid black;
             }
@@ -15,6 +15,8 @@
                 display:flex;
                 flex-direction:row;
                 background-color:var(--c4);
+                min-width:650px;
+                min-height:600px;
             }
             .bigCardShoeImage{
                 border-right:1px solid black;
@@ -108,7 +110,7 @@
         .bigCardShoeFormSubmitContainer{
             border:var(--bp);
             width: 100%;
-            height:20%;  /*Si se necesita mas espacio dentro de la info achicar este height */
+            height:20%;  /*Si se necesita mas espacio dentro de la info achicar este height //
             display:flex;
             align-items:center;
             position: relative;
@@ -117,7 +119,7 @@
         .bigCardShoeTarjetasInputs{
             height:25px;
             margin-left:10%;
-        }
+        } */
         </style>
         
         <div class="bigCardShoeContainer" >

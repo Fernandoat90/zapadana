@@ -14,7 +14,7 @@ $affectedForUpdateStock=$_POST["affectedForUpdateStock"];
     <link rel="stylesheet" href="./css/reservaCompletada.css">
     <link rel="stylesheet" href="./css/logout.css">
 </head>
-<body style="background-color: black;">
+<body style="background-color: var(--c2);">
 
     <div id="main" style="green">
         <div id="todoElRegistrase">

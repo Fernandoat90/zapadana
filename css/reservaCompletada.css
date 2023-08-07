@@ -27,6 +27,7 @@ body{
    position: relative;
    bottom: 10%;
     min-height: 600px;
+    
 }
 
 #main{
@@ -40,7 +41,7 @@ body{
     background-color: var(--c2);
     width: 100%;
     height: 100%;
-    
+    min-height: 600px;
 }
 
 .container{
@@ -181,7 +182,7 @@ input{
 #foot{
     height: 54%;
     width: 100%;
-    background-color: black;
+    background-color: white;
     z-index: 767;
 }
 
@@ -192,7 +193,7 @@ input{
     height:80% ;
     background-size: 100%;
     position: relative;
-    right:15%;
+    right: 10px;
 }
  #NombrePagina{
     position: relative;
@@ -240,7 +241,7 @@ input{
          }
 
          #logo_y_nombre{
-            width: 110vw;
+            width: 120vw;
          }
          .cards{
             /* min-height: ; */
