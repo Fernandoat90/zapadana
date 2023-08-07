@@ -195,7 +195,7 @@
 </head>
 <body id="bodyElement">
     <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;">
-        <div style="height: 100vh; width: 100vw; background-image:url('img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
+        <div id="gifCarga" style=" background-image:url('img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;left:5%;">
 
         </div>
     </div>
