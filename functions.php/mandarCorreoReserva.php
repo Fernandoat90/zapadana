@@ -5,16 +5,16 @@
 <?php
 require 'conection.php';
 
-
+    $font="font-family:'impact';";
   $name = "ZapaDana";
   $asunto = "Reserva de zapato";
-  $mensaje = "Su reserva fue realizada con exito. <br> Gracias por elegirnos.";
+  $mensaje = "<div style='width:400px;height:100%;border:1px solid black;min-height:50px;background-color:red;color:white;'> <h2>Su reserva fue realizada con exito.</h2> <br> <h4>Gracias por elegirnos.</h4></div>";
   $header = "From: ZapaDana@example.com" . "\r\n";
   $header .= "Reply-To: noreply@example.com" . "\r\n";
-  $header .= "X-Mailer: PHP/" . phpversion();
+  $header .= "X-Mailer: PHP/" . phpversion(). "\r\n";
+  $header .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-
-  @mail("david64423@gmail.com", $asunto, $mensaje, $header);
+  @mail($_SESSION['email'], $asunto, $mensaje, $header);
   ?>
 
   <!DOCTYPE html>
