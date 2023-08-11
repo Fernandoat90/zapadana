@@ -20,7 +20,7 @@
                     background-color:var(--c5);
                     border-radius:10px;
                     box-shadow:black 10px 10px 10px;
-                    margin:10px;
+                    margin:3%;
                     min-height:300px;
                             }
                     .containerrr:hover{

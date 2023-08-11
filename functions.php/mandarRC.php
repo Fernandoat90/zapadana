@@ -44,6 +44,11 @@
     display: flex;
     justify-content: center;
  }
+
+ *{
+    background-color:black;
+    color:black;
+ }
 /*   
  -TO DELETE THE POSITION OF LOGOUT IMAGE
  -TO DELETE THE SIZES OF THE IMAGE OF THE CHARGE SCREEN  */

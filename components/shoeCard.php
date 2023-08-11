@@ -21,7 +21,7 @@
                     border-radius:10px;
                     box-shadow:black 10px 10px;
                     min-height:300px;
-                    margin:1%;;
+                    margin:3%;
                             }
                     .containerrr:hover{
                         transition:1s;

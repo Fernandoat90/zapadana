@@ -1,5 +1,5 @@
 let testElement= document.getElementById("testElement");
-console.log("Hi");
+
 testElement.style.overflow="hidden";
 testElement.style.width="150vw";
 testElement.style.height="100vh";

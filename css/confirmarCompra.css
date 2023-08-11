@@ -403,6 +403,11 @@ margin-left:10%;
     display: flex;
     justify-content: center;
  }
+ #botonAtras{
+    position: relative;
+    right: 25%;
+    bottom:14%;
+    }
 /*   
  -TO DELETE THE POSITION OF LOGOUT IMAGE
  -TO DELETE THE SIZES OF THE IMAGE OF THE CHARGE SCREEN  */
@@ -476,6 +481,19 @@ margin-left:10%;
             height: 30px;
             width: 80px;
             font-size: 16px;
+        }
+        #botonLogout{
+            position: relative;
+            left: 20px;
+         }
+     #NombrePagina{
+        position: relative;
+        left: 30px;
+        font-size:2.1rem ;
+         }
+     #botonAtras{
+        position: relative;
+        right: 130px;
         }
    }
    

@@ -61,7 +61,7 @@
                                 <h2 id="NombrePagina" style="color:white" >Reservas</h2> <!-- PONER DENTRO DE ESTE H2 LO QUE QUERES QUE APAREZCA ARRIBA-->
                             </div>
                         </div>
-                        <a id="botonAtras" title="Home" style=" width:100px;display:flex;justify-content:center;align-items:center;color:white;position:relative;right:25%;bottom:14%;height:80px;background-image: url('./img/prueba-logo4.png');
+                        <a id="botonAtras" title="Home" style=" width:100px;display:flex;justify-content:center;align-items:center;color:white;position:relative;height:80px;background-image: url('./img/prueba-logo4.png');
                         background-size: 100% 100%;
                         background-repeat: no-repeat;
                         z-index:2;" href="./filtro.php"></a>

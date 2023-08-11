@@ -213,6 +213,11 @@ input{
     display: none;
     z-index: 100;
  }
+ #botonAtras{
+    position: relative;
+    right: 25%;
+    bottom:14%;
+    }
 /*   
  -TO DELETE THE POSITION OF LOGOUT IMAGE
  -TO DELETE THE SIZES OF THE IMAGE OF THE CHARGE SCREEN  */
@@ -247,6 +252,19 @@ input{
             /* min-height: ; */
             min-width: 120vw;
          }
+         #botonLogout{
+            position: relative;
+            left: 20px;
+         }
+    #NombrePagina{
+        position: relative;
+        left: 30px;
+        font-size:2.1rem ;
+         }
+     #botonAtras{
+        position: relative;
+        right: 130px;
+        }
    }
    
    /* EXTRA SMALL DEVICES */

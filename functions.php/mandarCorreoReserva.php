@@ -23,6 +23,12 @@ require 'conection.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+    background-color:black;
+    color:black;
+ }
+    </style>
 </head>
 <body id="bodyElement">
 
@@ -33,6 +39,7 @@ require 'conection.php';
         <input type="number" name="affectedForUpdateStock" value="<?php echo $_POST["affectedForUpdateStock"]  ?>" id="">
         <input type="submit" id="submitElement" value="Enviar" formaction="./mandarRC.php" formmethod="POST">
     </form>
+    
 
     <script src="../js/updateStock.js"></script>
 </body>
