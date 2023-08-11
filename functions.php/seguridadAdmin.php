@@ -15,7 +15,7 @@
     else{
         header("location:../functions.php/logout.php");
         ?>
-        <script src="../js/logout.js"></script>
+    
         <?php
     }
 ?></div>
