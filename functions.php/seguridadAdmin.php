@@ -1,5 +1,4 @@
-<div style="display:none;">
-<a id="botonOutput" href="../functions.php/logout.php"></a>
+
 <div style="display:none;">
 <a id="botonOutput" href="../functions.php/logout.php"></a>
 <?php
@@ -21,5 +20,4 @@
         <script src="../js/logout.js"></script>
         <?php
     }
-?></div>
 ?></div>
