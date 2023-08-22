@@ -2,7 +2,7 @@
 
 use zapa_desarrollo;
 
-
+show tables;
 
 
 create table roles(
@@ -52,7 +52,7 @@ insert into estado(estado_id,estado_desc) values (1,"Disponible"),(2,"No disponi
 select * from tipos;
 
 create table calzados(
-cal_id int(3) primary key,
+cal_id int(3) primary key auto_increment,
 cal_desc varchar(40),
 cal_precio float(5,2),
 cal_gen char(1),
@@ -61,6 +61,8 @@ tipo_id int(2),
 foreign key(tipo_id) references tipos(tipo_id)
 /*foreign key (marc_id) references marcas(marc_id)*/ 
 );
+
+alter table calzados alter column cal_id int(3) primary key auto_increment;
 
 use zapa_Desarrollo;
 select * from calzados;
