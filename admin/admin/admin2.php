@@ -28,8 +28,8 @@
 
     if (isset($_POST['enviarAFormStock'])) {
     ?>
-    <link rel="stylesheet" href="../css/admin.css">
- <link rel="stylesheet" href="../css/logout.css">
+     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/logout.css">
     <style>
              *{
     padding: 0;

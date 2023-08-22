@@ -1,0 +1,2 @@
+genderName= document.getElementsByClassName("genderName");
+

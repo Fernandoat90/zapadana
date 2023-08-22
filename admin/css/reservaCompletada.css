@@ -1,0 +1,305 @@
+:root{
+    --bp:none;
+    --bf:1px solid black;
+    --c1:#03543B;
+    --c2:#9C3A21;
+    --c3:#FC8668;
+    --c4:#5FE8BD;
+    --c5:#B2C9B2;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.cards{
+    display: flex;
+    flex-direction:  column;
+    
+    width: 100vw;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+   position: relative;
+   bottom: 10%;
+    min-height: 600px;
+    
+}
+
+#main{
+    width: 100%;
+    height: 100vh;
+    border: var(--bp);
+    
+}
+
+#todoElRegistrase{
+    background-color: var(--c2);
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+}
+
+.container{
+    border: var(--bp);
+    width: 100%;
+   
+}
+
+#logo_y_nombre{
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 0.70%;
+    background-color: var(--c1);
+    width: 100vw;
+    min-height: 80px;
+}
+
+#registro{
+    height: 65%;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    bottom: 2%;
+}
+#titleregistro{
+    font-size:300%;
+    text-align: center;
+}
+
+#aboutOf{
+display: none;
+height: 20%;
+position: relative;
+bottom: 20%;
+display: flex;
+justify-content: center;
+color:#fdfdfdd0;
+}
+
+#contenedorForm{
+    height: 68%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    
+    opacity: 100%;
+    margin-top: 7%;
+    
+}
+
+
+
+#inputTextos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:90% ;
+    align-items: center;
+
+    
+}
+
+input{
+    width: 80%;
+    height: 15%;
+    border-radius: 25px;
+    font-size: 1.2vw;
+    font-family: sans-serif;
+    padding-left: 3%;
+    opacity: 100%;
+}
+
+#volverInicio{
+    border-radius: 50px;
+    border: none;
+    width:10% ;
+    height:7% ;
+    padding-left: 0;
+    background-color: red;
+    cursor: pointer;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+#volverInicio:hover{
+    background-color: blueviolet;
+}
+
+#inputSubmit{
+    width: 100%;
+    height: 100%;
+    border: var(--bp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#contenedorNombreLogo{
+    height: 80%;
+    border: var(--bp);
+    width: 92%;
+    display: flex;
+    justify-content: center;
+}
+
+#subContenedorLogoNombre{
+    border: var(--bp);
+    width: 30%;
+    display: flex;
+}
+
+#contenedorLogo{
+    border: var(--bp);
+    width: 40%;
+}
+
+#contenedorNombre{
+    border: var(--bp);
+    width: 40%;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 2.5vw;
+}
+
+#logo{
+    width: 40%;
+    height: 130%;
+    
+}
+
+#foot{
+    height: 54%;
+    width: 100%;
+    background-color: white;
+    z-index: 767;
+}
+
+/* PEGAR DE ACA PARA ABAJO */
+
+#gifCarga{
+    width:30% ;
+    height:80% ;
+    background-size: 100%;
+    position: relative;
+    right: 10px;
+}
+ #NombrePagina{
+    position: relative;
+    left: 70px;
+    font-size:2.5rem ;
+    
+ }
+
+ #botonLogout{
+    position: relative;
+    left: 25%;
+  }
+ 
+#aboutOf{
+    position: relative;
+    top: 450px;
+    display: none;
+    z-index: 100;
+ }
+ #botonAtras{
+    position: relative;
+    right: 25%;
+    bottom:14%;
+    }
+/*   
+ -TO DELETE THE POSITION OF LOGOUT IMAGE
+ -TO DELETE THE SIZES OF THE IMAGE OF THE CHARGE SCREEN  */
+/* MOBILE */
+    @media(max-width:480px){
+        #gifCarga{
+            /* width: ;
+            height: ; */
+        }
+        #aboutOf{
+            position: relative;
+            top: 450px;
+         }
+
+         #NombrePagina{
+            position: relative;
+            left: 70px;
+            font-size:2.5rem ;
+         }
+         #botonLogout{
+            position: relative;
+            left: 12px;
+         }
+         #NombrePagina{
+            font-size: 1.7rem;
+         }
+
+         #logo_y_nombre{
+            width: 120vw;
+         }
+         .cards{
+            /* min-height: ; */
+            min-width: 120vw;
+         }
+         #botonLogout{
+            position: relative;
+            left: 20px;
+         }
+    #NombrePagina{
+        position: relative;
+        left: 30px;
+        font-size:2.1rem ;
+         }
+     #botonAtras{
+        position: relative;
+        right: 150px;
+        }
+   }
+   
+   /* EXTRA SMALL DEVICES */
+   @media(min-width:481px) and (max-width:767px){
+         #aboutOf{
+            position: relative;
+            top: 200px;
+         }
+
+         #NombrePagina{
+            position: relative;
+            left: 70px;
+            font-size:2.5rem ;
+         }
+         #botonLogout{
+            position: relative;
+            left: 80px;
+         }
+      
+   }
+   /* SMALL TABLETS */
+   @media(min-width:768px) and (max-width:991px){
+    
+   }
+   /* LARGE TABLET / LAPTOPS */
+   @media(min-width:992px) and (max-width:1199px){
+    
+   }
+
+
+
+
+
+
+
+
+
+
