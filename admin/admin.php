@@ -179,10 +179,10 @@ body{
     <main>
     
      <?php
-            if (isset($_POST['cal_id'])) {
+            if (isset($_POST['agregandoUnCalzadoGeneral'])) {
                 
                 require '../functions.php/subirProductoGeneral.php';
-                subirProductoGeneral(conectar(),$id, $tipo, $marca, $precio, $genero);
+                subirProductoGeneral(conectar(), $tipo, $marca, $precio, $genero);
             }
             if (isset($_POST['n_35'])) {
                 require '../functions.php/subirStock.php';
@@ -192,30 +192,31 @@ body{
             ?>
             
    
-
-    <button style="margin-top:20px;" id="mostrarCalzadosGeneralessss">Ver todos los calzados generales</button>
-
-
-    
-    <button id="agregarCalzadosGeneralesssBoton">
+    <button style="margin-top:20px;" id="agregarCalzadosGeneralesssBoton">
             Agregar Calzados
      </button>
+     
+    <button  id="mostrarCalzadosGeneralessss">Ver todos los calzados generales</button>
+
+
     
-     <button id="botomStocks">
-            Ver todos los Stocks
-    </button>
+    
+    
+     
 
     <button id="botonSubirStockk">
             Agregar Stock
     </button>
 
-  
+  <button id="botomStocks">
+            Ver todos los Stocks
+    </button>
 
     </div>
     <div style="display:flex;justify-content:start;width:100%;align-items:center;">
     <form style="border:1px solid black;width:20%;background-color:var(--c4);border-radius:10px;position:relative;top:16px;left:20px;" id="agregarCalzadosGeneralesss"> <br>
     <h2 >Agregar Calzados Generales</h2> <br>
-        ID: <input required class="inputBasicsWidther" name="cal_id" type="number">
+        <input type="text" name="agregandoUnCalzadoGeneral" style="display:none;">
         <br>
         TIPO:
         <select required name="tipo_id"> <?php

@@ -44,3 +44,5 @@ function loggin($mail,$contra){
 }//fin inicio de sesion
 
 loggin($mail,$contra);
+
+?>
