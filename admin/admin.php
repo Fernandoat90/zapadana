@@ -281,7 +281,7 @@ body{
         <select name="cal_id2" id="">
             <?php
             $conectionCalzadosSelect = conectar();
-            $calzadosGenerales = mysqli_query($conectionCalzadosSelect, "select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;");
+            $calzadosGenerales = mysqli_query($conectionCalzadosSelect,/*"select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;"*/"select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id order by c.cal_id desc;");
 
             while ($calzado = mysqli_fetch_assoc($calzadosGenerales)) {
             ?>
