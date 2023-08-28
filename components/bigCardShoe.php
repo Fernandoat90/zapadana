@@ -132,7 +132,7 @@
                         <p class="bigCardShoePTexto" >Marca: <input class="bigCardShoeFormText" type="text" name="marca" readonly value="<?php echo $marca ?>"></p>
                         <p class="bigCardShoePTexto" >Tipo: <input class="bigCardShoeFormText" type="text" name="tipo" readonly value="<?php echo $tipo ?>"></p>
                         <p class="bigCardShoePTexto" >Genero: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $genero ?>"></p>
-                        <p class="bigCardShoePTexto" >Talle: <input class="bigCardShoeFormText" type="number" name="talle" step=1 readonly value="<?php echo $talle ?>"></p>
+                        <p class="bigCardShoePTexto" >Talle: <input name="talle" class="bigCardShoeFormText" type="number"  step=1 readonly value="<?php echo $talle ?>"></p>
                         <p class="bigCardShoePTexto" >Color: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $color ?>"></p>
                         <p class="bigCardShoePPrice" >$<input class="bigCardShoeFormPrice"  type="number" readonly name="precio" value=<?php echo $precio ?> step=0.01 id=""></p>
                         <div class="bigCardShoeTarjetasContainer">
