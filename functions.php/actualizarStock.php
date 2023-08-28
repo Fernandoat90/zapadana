@@ -10,9 +10,9 @@ function ActualizarStock($c, $cal_id, $color_id, $n_35, $n_36, $n_37, $n_38, $n_
     mysqli_query($conection,$sql);
 
     if(mysqli_affected_rows($conection)>0){
-        echo "<h2 style:'color:blue;'>Stock Subido</h2>";
+        header("location:./admin.php?stockActualizado=1");
     }
     else{
-        echo "<h2 style:'color:red;'>Stock No Subido</h2>";
+        header("location:./admin.php?stockActualizado=0");
     }
 }

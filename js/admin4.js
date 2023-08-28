@@ -1,9 +1,9 @@
 let botonSubirStockk= document.getElementById("botonSubirStockk");
 let formSubirStock= document.getElementById("formSubirStock");
-
+let contenedorImagenesUrlStock= document.getElementById("contenedorImagenesUrlStock");
 
 formSubirStock.style.display="none";
-
+contenedorImagenesUrlStock.style.display="none";
 let interruptor8=true;
 
 
@@ -14,11 +14,13 @@ botonSubirStockk.addEventListener('click',()=>{
 
 
     formSubirStock.style.display="block";
+    contenedorImagenesUrlStock.style.display="flex";
     botonSubirStockk.innerText="Ocultar Formulario Stock";
     interruptor8=false;
  }  
  else{
     formSubirStock.style.display="none";
+    contenedorImagenesUrlStock.style.display="none";
     botonSubirStockk.innerText="Agregar Stock";
     interruptor8=true;
  } 
@@ -34,4 +36,5 @@ function resetear(){
     agregarCalzadosGeneralesssBoton.innerText="Agregar Calzados";
     formSubirStock.style.display="none";
     botonSubirStockk.innerText="Agregar Stock";
+    contenedorImagenesUrlStock.style.display="none";
 }

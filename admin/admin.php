@@ -17,6 +17,7 @@ $tiposMartriz = mysqli_query($c, $sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/imagenesStocksUrl.css">
     <title>ZapaDana</title>
 
 
@@ -46,6 +47,21 @@ button{
     
 }
 
+
+#contenedorImagenesUrlStock{
+    display:flex;
+    flex-direction:row; 
+    justify-content:center;
+    align-items:center;
+    width:700px; 
+    height:300px;
+    border:1px solid black;
+    flex-wrap:wrap;
+    position:relative;
+    left:500px;
+    bottom:420px;
+    background-color:var(--c3);
+}
 .botonSubmit{
     border-radius:20px;
     display:flex;
@@ -160,7 +176,7 @@ body{
     <link rel="stylesheet" href="../css/logout.css">
 </head>
 
-<body>
+<body style="overflow-x:hidden;">
     <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;z-index:9;">
         <div style="width: 30%;height: 50%; background-image:url('../img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;position:relative;right:20%;">
 
@@ -179,6 +195,14 @@ body{
     <main>
     
      <?php
+            if(isset($_GET['stockActualizado'])){
+                if($_GET['stockActualizado']==1){
+                    echo "<h2 style='position:relative;left:6%;'>Stock Actualizado</h2>";
+                }
+                else{
+                    echo "<h2 style='position:relative;left:6%;'>Stock no actualizado</h2>";
+                }
+            }
             if (isset($_POST['agregandoUnCalzadoGeneral'])) {
                 
                 require '../functions.php/subirProductoGeneral.php';
@@ -274,7 +298,7 @@ body{
 
 
 
-    <form style="border:1px solid black;width:25%;background-color:var(--c4);border-radius:10px;position:relative;top:16px;left:20px;" id="formSubirStock">
+    <form style="border:1px solid black;width:25%;background-color:var(--c4);border-radius:10px;position:relative;left:20px;bottom:20px;" id="formSubirStock">
         <h2>Agregar Nuevo Stock</h2>
         <br><br>
         <h4>Calzado General</h4>
@@ -311,10 +335,25 @@ body{
         talle 43:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_43" min=0 id=""><br>
         talle 44:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_44" min=0 id=""><br>
         talle 45:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_45" min=0 id=""><br>
-        Imagen Url: <input placeholder="URL de la imagen" required class="inputBasicsWidther" name="stock_img" type="text">
+        Imagen Url: <input id="inputUrlStock" placeholder="URL de la imagen" required class="inputBasicsWidther" name="stock_img" type="text">
         <input class="botonSubmit" type="submit" value="Subir Stock" formaction="admin.php" formmethod="post">
     </form>
+    
+    <div id="contenedorImagenesUrlStock" style="display:none;">
+        <button class="botonUrl" style="background-image:url('https://acdn.mitiendanube.com/stores/001/245/791/products/3821f8e5-532a-4704-8f8a-b8a31ab42f3e-f5af221623f8186b8716808642733440-640-0.jpg')">
+        
+        <button class="botonUrl" style="background-image:url('https://media.revistagq.com/photos/615dbcc7fb06b6008a72732b/1:1/w_800,h_800,c_limit/air-jordan-1-mid-green-yellow-.jpeg')">
+        
+        <button class="botonUrl" style="background-image:url('https://us.123rf.com/450wm/doomu/doomu1707/doomu170700057/83274882-nuevas-zapatillas-de-deporte-azules-sin-marca-de-f%C3%A1brica-del-dril-de-algod%C3%B3n-en-un-fondo-blanco.jpg')">
+        
+        <button class="botonUrl" style="background-image:url('https://imagenes.elpais.com/resizer/FtqCfBrZH71Wr63XFX9FN8FvEwo=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/S3H73SQL7BDJDDJYFKFMJKJLLQ.png')">
+        
+        <button class="botonUrl" style="background-image:url('https://http2.mlstatic.com/D_NQ_NP_769262-MLA49482431641_032022-W.jpg')">
+        
+        <button class="botonUrl" style="background-image:url('https://acdn.mitiendanube.com/stores/001/165/935/products/zapatillas-ringo-got-suela1-76c0c2b576fd15892615980187125103-640-0.jpg')">
+    </div>
 
+    <script src="../js/rellenarUrlStock.js"> </script>
     <?php
 
     
@@ -335,7 +374,7 @@ body{
     <?php
     while($stockIndividual=mysqli_fetch_assoc($matrizStock)){
         ?>
-        <div   class="border " style="background-color:var(--c3);display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;">
+        <div   class="border " style="background-color:var(--c3);display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;height:250px;">
         <br><br><br><br>
         <div style="margen-left:4px;margin-right:4px;:border:1px solid black;background-color:yellow;">
         <h5>Id del stock:<?php echo $stockIndividual['stock_id'] ?> </h5>
@@ -522,13 +561,14 @@ body{
             <input class="stockEsconder" type="submit"  formaction="../functions.php/deleteStock.php" formmethod="post"  value="Eliminar">
         </form>
         </div>
+        <br><br>
+
         <?php 
     } 
     ?>
     </div>
 </div>
-
-    
+   
 
 
 
@@ -538,6 +578,13 @@ body{
 <script src="./../js/admin4.js"></script>
 <script src="../js/chargeFile.js"></script>
 </main>
+<br><br><br> <br><br>
+<br><br><br> <br><br>
+<br><br><br> <br><br><br> <br><br>
+<br><br><br> <br><br>
+<br><br><br> <br><br><br> <br><br>
+<br><br><br> <br><br>
+<br><br><br> 
 </body>
 
 </html>

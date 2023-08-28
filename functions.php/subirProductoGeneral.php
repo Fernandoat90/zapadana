@@ -10,11 +10,11 @@
         mysqli_query($c,$sql3);
 
         if(mysqli_affected_rows($conection)>0){
-            echo "<h2 style='color:blue;'> Calzado General Cargado</h2>";
+            echo "<h2 style='color:white;'> Calzado General Cargado</h2>";
         }
         else{
         
-                echo "<h2 style='color:red;'> ERROR AL CARGAR</h2>";
+                echo "<h2 style='color:white;'> ERROR AL CARGAR</h2>";
             
         }
     }

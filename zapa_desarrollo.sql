@@ -2,7 +2,7 @@
 
 use zapa_desarrollo;
 
-
+show tables;
 
 
 create table roles(
@@ -52,7 +52,7 @@ insert into estado(estado_id,estado_desc) values (1,"Disponible"),(2,"No disponi
 select * from tipos;
 
 create table calzados(
-cal_id int(3) primary key,
+cal_id int(3) primary key auto_increment,
 cal_desc varchar(40),
 cal_precio float(5,2),
 cal_gen char(1),
@@ -62,8 +62,12 @@ foreign key(tipo_id) references tipos(tipo_id)
 /*foreign key (marc_id) references marcas(marc_id)*/ 
 );
 
+insert into calzados(cal_desc, cal_precio, cal_gen, tipo_id) values("Nike",23.23,"F",1);
+
+
 use zapa_Desarrollo;
 select * from calzados;
+select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id order by c.cal_id desc;
 
 create table stock(
 stock_id int(3) auto_increment,

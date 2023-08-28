@@ -32,4 +32,5 @@ function resetear(){
     agregarCalzadosGeneralesssBoton.innerText="Agregar Calzados";
     formSubirStock.style.display="none";
     botonSubirStockk.innerText="Agregar Stock";
+    contenedorImagenesUrlStock.style.display="none";
 }

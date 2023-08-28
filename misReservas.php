@@ -2,15 +2,7 @@
     require "./functions.php/seguridadHome.php";
 ?>
 <?php
-    if($_POST['genero']==1 ){
-        $genero="M";
-    }
-    else if($_POST['genero']==2){
-        $genero="F";
-    }
-    else{
-        echo "Travesti";
-    }
+    
     require "./components/misReservas.php";
     require "./functions.php/conection.php";
     require "./functions.php/devolverResulset.php";
@@ -98,7 +90,7 @@
                             else{
                                 $genero="M";
                             }
-                            ShoeCard($id,$precio,$marca,$tipo,$imgUrl,$talle,$color,$genero);
+                            ShoeCard($registro["reser_id"],$precio,$marca,$tipo,$imgUrl,$talle,$color,$genero);
                         }}
                           else{
                             echo "<h1>No tienes reservas hechas</h1>";

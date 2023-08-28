@@ -78,7 +78,7 @@
             <div class="containerrr">
                 
                 <img src="<?php echo $imgUrl?>" class="imagenMuestra"  alt="Imagen del zapato">
-            <form class="formCard" action="./confirmarCompra.php" method="post">
+            <form class="formCard" action="./functions.php/eliminarReserva.php" method="post">
                     <input style="display:none;" class="inputt" type="number" value="<?php echo $id ?>" name="id" readonly>
                     <input class="inputt marcaFormCard" value="<?php echo $marca ?>" type="text"readonly>
                     
@@ -96,7 +96,7 @@
                         <?php
                         $isTalle=true;
                         if($isTalle){ ?>
-                    <input style="display:none;" type="submit" class="buttomFormCard" value="Reservar" >
+                    <input type="submit" class="buttomFormCard" value="Cancelar" >
                         <?php }  else{
                             echo "<h4>No Disponible</h4>";
                         }?> 
