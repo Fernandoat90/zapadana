@@ -6,6 +6,6 @@ testElement.style.height="100vh";
 
 
 window.addEventListener('load',()=>{
-    setTimeout(()=>{testElement.style.display="none"},2000);
+    setTimeout(()=>{testElement.style.display="none"},0);
     
 });
