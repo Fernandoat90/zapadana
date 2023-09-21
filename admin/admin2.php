@@ -108,7 +108,7 @@ button:hover{
 
             <p style="color:white;"><br>Url de la imagen:<input required  class="inputBasics" type="text" value="<?php echo $stock_img ?>" name="stock_img"></p> <br>
             
-            <p style="color:white">Cal_id :</p> <input class="inputBasics" name="cal_id" type="number" step=1 value=<?php echo $cal_id; ?>> <br>
+            <p style="display:none;">Cal_id :</p> <input class="inputBasics" name="cal_id" type="number" step=1 value=<?php echo $cal_id; ?>> <br>
         
             <p style="color:white">Precio:</p> <input class="inputBasics" name="cal_precio" type="number" step=0.01 value=<?php echo $cal_precio; ?>> <br>
 
