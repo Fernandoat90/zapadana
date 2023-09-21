@@ -3,6 +3,7 @@
    
     $stock_id=$_POST['stock_id'];
     $cal_id = $_POST['cal_id'];
+    $cal_precio=$_POST['cal_precio'];
     $color_id = $_POST['color_id'];
     $estado_id=$_POST['estado_id'];
     $n_35 = $_POST['n_35'];
@@ -19,8 +20,11 @@
     $stock_img = $_POST['stock_img'];
     require '../functions.php/actualizarStock.php';
     require '../functions.php/conection.php';
+    
+        
 
         $conectionCalzadosSelect = conectar();
+        mysqli_query(conectar(),"update calzados set cal_precio=$cal_precio where cal_id=$cal_id;");
         $calzadosGenerales = mysqli_query($conectionCalzadosSelect, "select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;");
 
         if (isset($_POST['ActualizarStock'])) {
@@ -77,6 +81,8 @@ button:hover{
     </div> 
     
     <form >
+        
+        
     <div id="cabecera">
             <div id="elementoUno" class="elementCabecera"><a id="botonAtras" title="Home" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;background-image: url('../img/prueba-logo4.png');
                         background-size: 100% 100%;
@@ -85,6 +91,8 @@ button:hover{
             <div class="elementCabecera"><h1>Administrador</h1></div>
             <div id="elementoTres" class="elementCabecera"><a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
     </div>
+            
+        
             <input style="display: none;"  type="number" value="<?php echo $stock_id ?>" name="stock_id"> <br> <br>
             <p style="color:white">Calzado<select required name="cal_id" id="">
             <?php
@@ -96,8 +104,13 @@ button:hover{
             }           ?>
             
         </select></p> <br>
+        
 
             <p style="color:white;"><br>Url de la imagen:<input required  class="inputBasics" type="text" value="<?php echo $stock_img ?>" name="stock_img"></p> <br>
+            
+            <p style="color:white">Cal_id :</p> <input class="inputBasics" name="cal_id" type="number" step=1 value=<?php echo $cal_id; ?>> <br>
+        
+            <p style="color:white">Precio:</p> <input class="inputBasics" name="cal_precio" type="number" step=0.01 value=<?php echo $cal_precio; ?>> <br>
 
             <input  class="inputBasics" style="display: none;" type="text" value="<?php echo $estado_id ?>" name="estado_id"> <br>
 

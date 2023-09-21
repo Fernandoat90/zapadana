@@ -13,6 +13,6 @@ function ActualizarStock($c, $cal_id, $color_id, $n_35, $n_36, $n_37, $n_38, $n_
         header("location:./admin.php?stockActualizado=1");
     }
     else{
-        header("location:./admin.php?stockActualizado=0");
+        header("location:./admin.php?stockActualizado=1");
     }
 }

@@ -63,7 +63,7 @@
                     }
                     .buttomFormCard{
                         border-radius:25px;
-                        background-color:var(--c4);
+                        background-color:black;
                         color:var(--c1);
                         height: 20px;
                         margin-top:5px;

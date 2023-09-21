@@ -1,11 +1,11 @@
 :root{
     --bp:none;
     --bf:1px solid black;
-    --c1:#03543B;
-    --c2:#9C3A21;
-    --c3:#FC8668;
-    --c4:#5FE8BD;
-    --c5:#B2C9B2;
+    --c1:#99e0cc;
+    --c2:#e6f0ed;
+    --c3:;
+    --c4:#eb9c88;
+    --c5:#e6f0ed;
 }
 
 *{

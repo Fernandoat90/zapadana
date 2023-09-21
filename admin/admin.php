@@ -41,9 +41,12 @@ button{
     display:flex;
     justify-content:center;
     width:150px;
-    height:4%;
+    height:56px;
     cursor:pointer;
     margin-left:10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     
 }
 
@@ -72,6 +75,13 @@ button{
     margin-left:10%;
     background-color:red;
     color:white;
+}
+
+#buttonsContainer{
+    width:50vw;
+    height:100%;
+   
+   
 }
 
 button:hover{
@@ -214,7 +224,7 @@ body{
             }
 
             ?>
-            
+    <div id="buttonsContainer">
    
     <button style="margin-top:20px;" id="agregarCalzadosGeneralesssBoton">
             Agregar Calzados
@@ -235,6 +245,8 @@ body{
   <button id="botomStocks">
             Ver todos los Stocks
     </button>
+    
+    </div>
 
     </div>
     <div style="display:flex;justify-content:start;width:100%;align-items:center;">
@@ -524,6 +536,10 @@ body{
 
         <form >
             <input style="display: none;" type="number" value="<?php echo $stockIndividual['stock_id'] ?>" name="stock_id">
+            
+            <input style="display:none" type="number" step=1 name="cal_id" value="<?php echo $stockIndividual['cal_id']  ?>">
+            
+            <input style="display:none" type="number" step=0.01 name="cal_precio" value="<?php echo $stockIndividual['cal_precio']  ?>">
 
             <input style="display: none;" type="text" value="<?php echo $stockIndividual['stock_img'] ?>" name="stock_img">
 
