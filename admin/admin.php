@@ -27,9 +27,14 @@ $tiposMartriz = mysqli_query($c, $sql);
     padding: 0;
     margin: 0;
     box-sizing: border-box; 
-    --c1:#03543B;
-    --c2:#9C3A21;
-    --c3:#FC8668;
+    /*--c1:#03543B;*/
+    /*c1= cabecera y letras de botones*/
+    --c1:#eb9c88;
+    /*--c2:#9C3A21;*/
+    /*c2=body*/
+    --c2:#e6f0ed;
+    /*--c3:#FC8668;*/
+    --c3:#eb9c88;
     --c4:#5FE8BD;
     --c5:#B2C9B2;
 }
@@ -41,12 +46,9 @@ button{
     display:flex;
     justify-content:center;
     width:150px;
-    height:56px;
+    height:4%;
     cursor:pointer;
     margin-left:10%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
     
 }
 
@@ -67,21 +69,14 @@ button{
 }
 .botonSubmit{
     border-radius:20px;
-    display:flex;
-    justify-content:center;
+    /*display:flex;*/
+    /*justify-content:center;*/
     width:150px;
     height:30px;
     cursor:pointer;
     margin-left:10%;
     background-color:red;
     color:white;
-}
-
-#buttonsContainer{
-    width:50vw;
-    height:100%;
-   
-   
 }
 
 button:hover{
@@ -200,19 +195,20 @@ body{
             <div class="elementCabecera"><h1>Administrador</h1></div>
             <div id="elementoTres" class="elementCabecera"><a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
     </div>
-    <div style="margin-left:40%;">
+    <div style="margin-left:10%;">
     
     <main>
     
      <?php
             if(isset($_GET['stockActualizado'])){
                 if($_GET['stockActualizado']==1){
-                    echo "<h2 style='position:relative;left:6%;'>Stock Actualizado</h2>";
+                    echo "<h2 style='position:relative;right:5%;text-align:center;' id=resp>Stock Actualizado</h2>";
                 }
                 else{
-                    echo "<h2 style='position:relative;left:6%;'>Stock no actualizado</h2>";
+                    echo "<h2 style='position:relative;left:6%;' id=resp>Stock no actualizado</h2>";
                 }
             }
+            
             if (isset($_POST['agregandoUnCalzadoGeneral'])) {
                 
                 require '../functions.php/subirProductoGeneral.php';
@@ -224,32 +220,34 @@ body{
             }
 
             ?>
-    <div id="buttonsContainer">
+            <script>
+                document.getElementById("resp").style.display = "block";
+                
+                setTimeout(function(){
+                    document.getElementById("resp").style.display = "none";
+                     }, 3000);
+            </script>
    
-    <button style="margin-top:20px;" id="agregarCalzadosGeneralesssBoton">
+    <button style="margin-top:20px;display: inline-block;width: 120px; height: 50px;" id="agregarCalzadosGeneralesssBoton">
             Agregar Calzados
      </button>
      
-    <button  id="mostrarCalzadosGeneralessss">Ver todos los calzados generales</button>
+    <button style="display: inline-block;width: 120px; height: 50px;"  id="mostrarCalzadosGeneralessss">Ver todos los calzados generales</button>
 
 
-    
-    
-    
-     
-
-    <button id="botonSubirStockk">
+    <button id="botonSubirStockk" style="display: inline-block;width: 120px; height: 50px;">
             Agregar Stock
     </button>
 
-  <button id="botomStocks">
+
+  <button id="botomStocks" style="display: inline-block;width: 120px; height: 50px;">
             Ver todos los Stocks
     </button>
-    
-    </div>
 
     </div>
+    
     <div style="display:flex;justify-content:start;width:100%;align-items:center;">
+    
     <form style="border:1px solid black;width:20%;background-color:var(--c4);border-radius:10px;position:relative;top:16px;left:20px;" id="agregarCalzadosGeneralesss"> <br>
     <h2 >Agregar Calzados Generales</h2> <br>
         <input type="text" name="agregandoUnCalzadoGeneral" style="display:none;">
@@ -277,7 +275,7 @@ body{
     </div>
     <!-- Parte 2-->
     <br><br><br><br><br>
-    <h2 style="display:none;color:white;" id="tituloCalzadosGenerales">Todos Los Calzados Generales</h2>
+    <h2 style="display:none;color:black;text-align:center;" id="tituloCalzadosGenerales">Todos Los Calzados Generales</h2>
     <div id="calzadosGenerales" style="display:none;  flex-wrap:wrap;justify-content:center;">
     <?php
     $conectionCalzadosSelect = conectar();
@@ -289,6 +287,7 @@ body{
     
     <br> <br><br><br>
         <form class="calzadosGenerales border" style="border:1px solid black; width:30%; height:100%; display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:var(--c3);">
+            
             <h3 >id:</h3><input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_id'];   ?>" type="number">
             <h4>Genero:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_gen'];    ?>" type="text">
             <h4>Marca:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_desc'];    ?>" type="text">
@@ -380,7 +379,7 @@ body{
     $sqlMostrarStock="select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id where s.estado_id=1;";
     $matrizStock=mysqli_query($conexionMostrarStock,$sqlMostrarStock); ?>
     <div style="display: none; " id="todosLosStocks">
-    <h2 style="position:relative;left:48%;color:white;font-size:40px;">Stocks</h2>
+    <h2 style="position:relative;left:48%;color:black;font-size:40px;">Stocks</h2>
         <div style="display:flex; flex-wrap:wrap;justify-content:center;">
         
     <?php
@@ -536,10 +535,6 @@ body{
 
         <form >
             <input style="display: none;" type="number" value="<?php echo $stockIndividual['stock_id'] ?>" name="stock_id">
-            
-            <input style="display:none" type="number" step=1 name="cal_id" value="<?php echo $stockIndividual['cal_id']  ?>">
-            
-            <input style="display:none" type="number" step=0.01 name="cal_precio" value="<?php echo $stockIndividual['cal_precio']  ?>">
 
             <input style="display: none;" type="text" value="<?php echo $stockIndividual['stock_img'] ?>" name="stock_img">
 

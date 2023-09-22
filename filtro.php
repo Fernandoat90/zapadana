@@ -20,10 +20,10 @@
     <link rel="stylesheet" href="./css/filtro.css">
     <link rel="stylesheet" href="./css/logout.css">
 </head>
-<body style="background-color: var(--c2);z-index:-1;">
+<body style="background-color:white;">
     <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;z-index:9;">
         <div id="gifCarga" style=" background-image:url('img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;">
-
+<!--var(--c2);z-index:-1-->
         </div>
     </div> 
     <div id="main" >
@@ -39,11 +39,13 @@
                             </div>
 
                             <div id="contenedorNombre">
-                                <h2 id="NombrePagina"  style="color:white">Genero</h2>
+                                <h3 id="NombrePagina"  style="color:white">Catalogos</h3>
                             </div>
                         </div>
                         <style>
-                            
+                            *{
+                                font-family: Arial, Helvetica, sans-serif;
+                            }
                         </style>
                         <a id="botonAtras" title="Home" style=" width:100px;display:flex;justify-content:center;align-items:center;color:white;position:relative;right:25%;bottom:14%;height:80px;background-image: url('./img/prueba-logo4.png');
                         background-size: 100% 100%;
@@ -67,7 +69,7 @@
                             </div>
 
                             <div id="inputSubmit" style="display: flex; justify-content:center; align-items:center;">
-                            <input id="botomRegistrarse" type="submit" value="" formaction="./showShoes.php" formmethod="post">
+                            <input id="botomRegistrarse" style="background-image: url('img/hombre_filt.jpg');" type="submit" value="" formaction="./showShoes.php" formmethod="post">
                             </div>
                         </div>
                         
@@ -104,7 +106,7 @@
                             </div>
 
                             <div id="inputSubmit">
-                            <input id="botomRegistrarse" style="background-image: url('img/mujer.png');
+                            <input id="botomRegistrarse" style="background-image: url('img/mujer_filt.jpg');
                             background-size: 100% 100%" type="submit" value="" formaction="./showShoes.php" formmethod="post">
                             </div>
                         </div>
