@@ -195,10 +195,10 @@ body{
             <div class="elementCabecera"><h1>Administrador</h1></div>
             <div id="elementoTres" class="elementCabecera"><a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
     </div>
-    <div style="margin-left:10%;">
+    
     
     <main>
-    
+    <div style="margin-left:10%;">
      <?php
             if(isset($_GET['stockActualizado'])){
                 if($_GET['stockActualizado']==1){
@@ -232,15 +232,15 @@ body{
             Agregar Calzados
      </button>
      
-    <button style="display: inline-block;width: 120px; height: 50px;"  id="mostrarCalzadosGeneralessss">Ver todos los calzados generales</button>
+    <button style="margin-top:20px;display: inline-block;width: 120px; height: 50px;"  id="mostrarCalzadosGeneralessss">Ver todos los calzados generales</button>
 
 
-    <button id="botonSubirStockk" style="display: inline-block;width: 120px; height: 50px;">
+    <button id="botonSubirStockk" style="margin-top:20px;display: inline-block;width: 120px; height: 50px;">
             Agregar Stock
     </button>
 
 
-  <button id="botomStocks" style="display: inline-block;width: 120px; height: 50px;">
+  <button id="botomStocks" style="margin-top:20px;display: inline-block;width: 120px; height: 50px;">
             Ver todos los Stocks
     </button>
 
@@ -351,7 +351,7 @@ body{
     </form>
     
     <div id="contenedorImagenesUrlStock" style="display:none;">
-        <button class="botonUrl" style="background-image:url('https://acdn.mitiendanube.com/stores/001/245/791/products/3821f8e5-532a-4704-8f8a-b8a31ab42f3e-f5af221623f8186b8716808642733440-640-0.jpg')">
+        <button class="botonUrl" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuEFhdLgJ4ey9Dc4-9M4kOl73JUv6EV-qDBRD1o20M4niebPmlenVzEjlZwwq3e8s7Vg8&usqp=CAU')">
         
         <button class="botonUrl" style="background-image:url('https://media.revistagq.com/photos/615dbcc7fb06b6008a72732b/1:1/w_800,h_800,c_limit/air-jordan-1-mid-green-yellow-.jpeg')">
         
@@ -541,6 +541,8 @@ body{
             <input style="display: none;" type="text" value="<?php echo $stockIndividual['estado_id'] ?>" name="estado_id">
 
             <input style="display: none;" type="number" value="<?php echo $stockIndividual['cal_id'] ?>" name="cal_id">
+            
+            <input style="display: none;" type="number" step=0.01 value="<?php echo $stockIndividual['cal_precio'] ?>" name="cal_precio">
 
             <input style="display: none;" type="text" name="enviarAFormStock">
             

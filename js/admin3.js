@@ -21,7 +21,7 @@ agregarCalzadosGeneralesssBoton.addEventListener('click',()=>{
 });
 function resetear(){
     stocks.style.display="none";
-    botomStocks.innerText="Ver todos los registros";
+    // botomStocks.innerText="Ver todos los registros";
     mostrarCalzadosGeneralesBotom.innerText="Mostrar Calzados";
     calzadosGenerales.style.display="none";
     tituloCalzadosGenerales.style.display="none";

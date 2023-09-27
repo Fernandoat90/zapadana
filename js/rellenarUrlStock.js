@@ -3,7 +3,7 @@ let elementUrlStock= document.getElementsByClassName("botonUrl");
 let ContadorUrlStock=0;
 
 elementUrlStock[0].addEventListener('click', ()=>{
-inputUrlStock.value="https://acdn.mitiendanube.com/stores/001/245/791/products/3821f8e5-532a-4704-8f8a-b8a31ab42f3e-f5af221623f8186b8716808642733440-640-0.jpg";
+inputUrlStock.value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuEFhdLgJ4ey9Dc4-9M4kOl73JUv6EV-qDBRD1o20M4niebPmlenVzEjlZwwq3e8s7Vg8&usqp=CAU";
 })
 
 elementUrlStock[1].addEventListener('click', ()=>{
