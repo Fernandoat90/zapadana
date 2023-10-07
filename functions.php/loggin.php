@@ -11,7 +11,7 @@ function loggin($mail,$contra){
  $registro=mysqli_fetch_assoc($resulset);
 
  if(mysqli_affected_rows($c)>0){
-
+     
     if($contra==$registro['usu_pass']){
       session_start();
       $_SESSION['id']=$registro['usu_id'];
@@ -42,6 +42,9 @@ function loggin($mail,$contra){
   }
 
 }//fin inicio de sesion
+
+    
+
 
 loggin($mail,$contra);
 

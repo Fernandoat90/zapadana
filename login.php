@@ -85,22 +85,35 @@
           if (isset($_GET['cuentaInvalida'])) {
             echo "<h4 style=color:red;padding-left:10%;position:relative;right:8%;><strong>Usuario incorrecto</strong></h4>"; //carteles de confirmacion para no hcaer otra pagina???
           }
+          
 
           ?>
               <input id="email2" placeholder="Correo" style="height:30px;" name="mail2" type="text">
-              <input id="pass2" style="height:30px;" style="margin-top:10px;" name="pass2" placeholder="Contraseña" type="password">
+              
+              
+              <input id="pass2" style="height:30px;" style="margin-top:10px;"
+              name="pass2" placeholder="Contraseña" type="password">
+              
               <input style="display:none;" id="email" placeholder="Correo2" name="mail" type="text"> <!-- Esto era para comparar en la base de datos si existe un usuario con este mail -->
+              
               <input id="pass" style="display:none;" name="pass" placeholder="Contraseña1" type="text"> <!-- ??? no sé -->
+              
               <a style="position: relative;top:4px;" href="restablecerContrasena.php">¿Olvidaste tu Contraseña?</a>
 
             </div>
 
              <div id="inputSubmit">
+              
               <input id="botomRegistrarse" class="BotomFunction" type="submit" value="Iniciar Sesion"> 
+            
             </div>
+            
             <div style="display:none;" id="inputSubmit">
+            
               <input id="botomRegistrarseVerdadero" class="BotomFunction" type="submit" value="Iniciar Sesion verdadero" formaction="./functions.php/loggin.php" formmethod="post"> <!-- ESTO MANDA A LA VERIFICACION DE ROLES??? -->
+            
             </div>
+          
           <div id="yaTenesCuenta">
 
             <a id="linkLoggin" href="register.php">¿No tenés cuenta? Registrate!</a>
@@ -108,8 +121,11 @@
 
           </div>
           
+          
           </div>
+    
         </form>
+    
       </div>
 
       </div>

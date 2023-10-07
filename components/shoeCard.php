@@ -80,12 +80,29 @@
                 <img src="<?php echo $imgUrl?>" class="imagenMuestra"  alt="Imagen del zapato">
             <form class="formCard" action="./confirmarCompra.php" method="post">
                     <input style="display:none;" class="inputt" type="number" value="<?php echo $id ?>" name="id" readonly>
+                    
                     <input class="inputt marcaFormCard" value="<?php echo $marca ?>" type="text"readonly>
                     
                     <input class="inputt tipoFormCard" value="<?php echo $tipo ?>" type="text" readonly>
                     <p class="price" >$<?php echo $precio ?></p>
-                    <p>Talles Disponibles:<select class="tallesFormCard" name="talle"> 
+                    
+                    <p>Talles Disponibles:</p>
+                    
+                    <?php 
+                        $noTallesDisponibles = true;
+                        foreach($tallesDisponibles as $talle) {
+                            if($talle > 0) {
+                                $noTallesDisponibles = false;
+                                break;
+                            }
+                        }
+                    ?>
+                    
+                    
+                    <select class="tallesFormCard" name="talle" <?php if($noTallesDisponibles){ ?> style="display:none;" <?php }   ?>> 
+                    
                     <?php $isTalle=false; 
+                    
                     if($tallesDisponibles[0]>0){ 
                         $isTalle=true; 
                         ?>
@@ -141,13 +158,14 @@
                         $isTalle=true; 
                         ?>
                         <option value=45>45</option>
-                    <?php } ?>
+                    <?php }
+                    ?>
+                    </select>
                     
-                    </select></p>
                         <?php if($isTalle){ ?>
                     <input type="submit" class="buttomFormCard" value="Reservar" >
                         <?php }  else{
-                            echo "<h4>No Disponible</h4>";
+                            echo "<br><h4 style=color:red;>Sin Stock</h4>";
                         }?> 
 
                     </form>

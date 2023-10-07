@@ -14,6 +14,7 @@ $tiposMartriz = mysqli_query($c, $sql);
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -177,27 +178,42 @@ body{
 
 
     </style>
+    
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/logout.css">
+    
 </head>
 
 <body style="overflow-x:hidden;">
-    <div id="testElement"  style="position:fixed;visibility: visible;height: 100vh; width: 100vw;  display: flex; justify-content: center;align-items: center;background-color:black;z-index:9;">
+    
+    <div id="testElement"  style="position:fixed;visibility: visible;
+    height: 100vh; width: 100vw;  display: flex; justify-content: center
+    ;align-items: center;background-color:black;z-index:9;">
+        
         <div style="width: 30%;height: 50%; background-image:url('../img/load.gif'); background-position: 100%; background-repeat: no-repeat; border: 1px solid black;position:relative;right:20%;">
 
         </div>
+        
     </div> 
+    
     <div id="cabecera">
             <div id="elementoUno" class="elementCabecera"><a id="botonAtras" title="Home" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;background-image: url('../img/prueba-logo4.png');
                         background-size: 100% 100%;
                         background-repeat: no-repeat;
-                        z-index:2;position:relative;left:30%;" href="./admin.php"></a></div>
+                        z-index:2;position:relative;left:30%;" href="./admin.php"></a>
+                        </div>
+                        
             <div class="elementCabecera"><h1>Administrador</h1></div>
-            <div id="elementoTres" class="elementCabecera"><a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a></div>
+            
+            
+            <div id="elementoTres" class="elementCabecera"><a id="botonLogout" title="Cerrar Sesion" style=" width:100px;height:60px;display:flex;justify-content:center;align-items:center;color:white;position:relative;" href="../functions.php/logout.php"></a>
+            </div>
+            
     </div>
     
     
     <main>
+        
     <div style="margin-left:10%;">
      <?php
             if(isset($_GET['stockActualizado'])){
@@ -248,10 +264,16 @@ body{
     
     <div style="display:flex;justify-content:start;width:100%;align-items:center;">
     
-    <form style="border:1px solid black;width:20%;background-color:var(--c4);border-radius:10px;position:relative;top:16px;left:20px;" id="agregarCalzadosGeneralesss"> <br>
+    <form style="border:1px solid black;width:20%;background-color:var(--c4);
+    border-radius:10px;position:relative;top:16px;left:20px;margin: 0 auto"
+    id="agregarCalzadosGeneralesss"> <br>
+    
     <h2 >Agregar Calzados Generales</h2> <br>
+    
         <input type="text" name="agregandoUnCalzadoGeneral" style="display:none;">
+        
         <br>
+        
         TIPO:
         <select required name="tipo_id"> <?php
                                 while ($tipo = mysqli_fetch_assoc($tiposMartriz)) {
@@ -261,22 +283,35 @@ body{
                                                                                                                             ?>
 
 
-        </select> <br>
+        </select> <br><br>
+        
         Genero: <select required name="cal_gen" id="">
             <option value="M">Hombre</option>
             <option value="F">Mujer</option>
         </select>
-        <br>
-        Marca: <input required class="inputBasicsWidther" name="cal_desc" type="text"> <br>
+        
+        <br><br>
+        
+        Marca: <input required class="inputBasicsWidther" name="cal_desc" type="text"> <br><br><br>
 
-        Precio: <input required class="inputBasicsWidther" name="cal_precio" type="number" step=0.01> <br>
+        
+        Precio: <input required class="inputBasicsWidther" name="cal_precio" type="number" min=1.00 step=0.01> <br><br>
+        
+        
         <input class="botonSubmit" formaction="admin.php" formmethod="post" type="submit" value="Subir Calzado General">
+    
     </form>
+    
     </div>
+    
     <!-- Parte 2-->
+    
     <br><br><br><br><br>
+    
     <h2 style="display:none;color:black;text-align:center;" id="tituloCalzadosGenerales">Todos Los Calzados Generales</h2>
+    
     <div id="calzadosGenerales" style="display:none;  flex-wrap:wrap;justify-content:center;">
+    
     <?php
     $conectionCalzadosSelect = conectar();
     $calzadosGenerales = mysqli_query($conectionCalzadosSelect, "select c.cal_id, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, t.tipo_desc from calzados c left join tipos t on c.tipo_id = t.tipo_id;");
@@ -286,12 +321,21 @@ body{
     ?>
     
     <br> <br><br><br>
+    
         <form class="calzadosGenerales border" style="border:1px solid black; width:30%; height:100%; display:flex;flex-direction:column;justify-content:center;align-items:center;background-color:var(--c3);">
             
-            <h3 >id:</h3><input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_id'];   ?>" type="number">
-            <h4>Genero:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_gen'];    ?>" type="text">
-            <h4>Marca:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_desc'];    ?>" type="text">
-            <h4>Tipo:</h4> <input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['tipo_desc']  ?>" type="text">
+            <h3 >id:</h3><input class="inputBasics centrarSacarBorde" readonly value="<?php echo $calzadoGeneral['cal_id'];?>"
+            type="number">
+            
+            <h4>Genero:</h4> <input class="inputBasics centrarSacarBorde"
+            readonly value="<?php echo $calzadoGeneral['cal_gen'];?>" type="text">
+            
+            <h4>Marca:</h4> <input class="inputBasics centrarSacarBorde"
+            readonly value="<?php echo $calzadoGeneral['cal_desc'];    ?>" type="text">
+            
+            <h4>Tipo:</h4> <input class="inputBasics centrarSacarBorde"
+            readonly value="<?php echo $calzadoGeneral['tipo_desc']  ?>" type="text">
+            
 
         </form> 
         
@@ -309,9 +353,13 @@ body{
 
 
 
-    <form style="border:1px solid black;width:25%;background-color:var(--c4);border-radius:10px;position:relative;left:20px;bottom:20px;" id="formSubirStock">
+    <form style="border:1px solid black;width:25%;background-color:var(--c4);
+    border-radius:10px;position:relative;left:20px;bottom:20px;" id="formSubirStock">
+        
         <h2>Agregar Nuevo Stock</h2>
+        
         <br><br>
+        
         <h4>Calzado General</h4>
         <select name="cal_id2" id="">
             <?php
@@ -325,6 +373,8 @@ body{
             }           ?>
 
         </select> <br>
+        
+        
         Color
         <select required name="color_id" id="">
             <option style="color:red" value=1>Rojo</option>
@@ -347,20 +397,29 @@ body{
         talle 44:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_44" min=0 id=""><br>
         talle 45:<input max=99 required class="inputBasicsMinWidther" value=0 type="number" name="n_45" min=0 id=""><br>
         Imagen Url: <input id="inputUrlStock" placeholder="URL de la imagen" required class="inputBasicsWidther" name="stock_img" type="text">
+    
         <input class="botonSubmit" type="submit" value="Subir Stock" formaction="admin.php" formmethod="post">
+    
     </form>
     
+    
     <div id="contenedorImagenesUrlStock" style="display:none;">
+    
         <button class="botonUrl" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuEFhdLgJ4ey9Dc4-9M4kOl73JUv6EV-qDBRD1o20M4niebPmlenVzEjlZwwq3e8s7Vg8&usqp=CAU')">
         
+    
         <button class="botonUrl" style="background-image:url('https://media.revistagq.com/photos/615dbcc7fb06b6008a72732b/1:1/w_800,h_800,c_limit/air-jordan-1-mid-green-yellow-.jpeg')">
         
+    
         <button class="botonUrl" style="background-image:url('https://us.123rf.com/450wm/doomu/doomu1707/doomu170700057/83274882-nuevas-zapatillas-de-deporte-azules-sin-marca-de-f%C3%A1brica-del-dril-de-algod%C3%B3n-en-un-fondo-blanco.jpg')">
         
+    
         <button class="botonUrl" style="background-image:url('https://imagenes.elpais.com/resizer/FtqCfBrZH71Wr63XFX9FN8FvEwo=/1960x0/cloudfront-eu-central-1.images.arcpublishing.com/prisa/S3H73SQL7BDJDDJYFKFMJKJLLQ.png')">
         
+    
         <button class="botonUrl" style="background-image:url('https://http2.mlstatic.com/D_NQ_NP_769262-MLA49482431641_032022-W.jpg')">
         
+    
         <button class="botonUrl" style="background-image:url('https://acdn.mitiendanube.com/stores/001/165/935/products/zapatillas-ringo-got-suela1-76c0c2b576fd15892615980187125103-640-0.jpg')">
     </div>
 
@@ -368,30 +427,42 @@ body{
     <?php
 
     
-
-
-
     //PARTE 4 ABAJO
 
-
-
+    
     $conexionMostrarStock= conectar();
+    
     $sqlMostrarStock="select  s.stock_img, c.cal_desc, c.cal_precio, c.cal_gen, c.tipo_id, s.stock_id,s.estado_id,s.cal_id,s.color_id,s.n_35,s.n_36,s.n_37,s.n_38,s.n_39,s.n_40,s.n_41,s.n_42,s.n_43,s.n_44,s.n_45 from calzados c right join stock s on c.cal_id = s.cal_id where s.estado_id=1;";
+    
     $matrizStock=mysqli_query($conexionMostrarStock,$sqlMostrarStock); ?>
+    
     <div style="display: none; " id="todosLosStocks">
+    
     <h2 style="position:relative;left:48%;color:black;font-size:40px;">Stocks</h2>
+    
         <div style="display:flex; flex-wrap:wrap;justify-content:center;">
         
     <?php
+    
     while($stockIndividual=mysqli_fetch_assoc($matrizStock)){
+    
         ?>
-        <div   class="border " style="background-color:var(--c3);display:flex;flex-direction:row; width:35%; justify-content:center; align-items:center;height:250px;">
+    
+        <div   class="border " style="background-color:var(--c3);display:flex;
+        flex-direction:row; width:35%; justify-content:center; align-items:center;height:250px;">
+        
         <br><br><br><br>
+        
         <div style="margen-left:4px;margin-right:4px;:border:1px solid black;background-color:yellow;">
+        
         <h5>Id del stock:<?php echo $stockIndividual['stock_id'] ?> </h5>
+        
         <h5>Marca:<?php echo $stockIndividual['cal_desc'] ?> </h5>
+        
         <?php
+        
         switch($stockIndividual['color_id']){
+        
             case 1:
                 echo "<h5>Color: Rojo</h5>";
             break;
@@ -431,12 +502,19 @@ body{
             
         }
         ?>
+        
         <h5>Precio:<?php echo $stockIndividual['cal_precio']  ?></h5>
+        
         <h5>Genero:<?php echo $stockIndividual['cal_gen']  ?></h5>
+        
         </div>
+        
         <img style="order:-1" class="border" src='<?php echo $stockIndividual['stock_img'];?>' alt="Imagen de zapatos">
+        
         <div style="border:1px solid black;background-color:yellow;margin-left:3px;" >
+        
         <h5>STOCK DISPONIBLE</h6>
+        
         <?php
             $haveTalle=false;
             if($stockIndividual['n_35']!=0){
@@ -454,7 +532,7 @@ body{
         ?>
 
 
-<?php
+        <?php
             if($stockIndividual['n_37']!=0){
                 $haveTalle=true;
                 ?>
@@ -463,7 +541,7 @@ body{
         ?>
 
 
-<?php
+        <?php
             if($stockIndividual['n_38']!=0){
                 $haveTalle=true;
                 ?>
@@ -480,7 +558,7 @@ body{
         ?>
 
 
-<?php
+        <?php
             if($stockIndividual['n_40']!=0){
                 $haveTalle=true;
                 ?>
@@ -488,7 +566,7 @@ body{
            <?php }
         ?>
 
-<?php
+        <?php
             if($stockIndividual['n_41']!=0){
                 $haveTalle=true;
                 ?>
@@ -496,7 +574,7 @@ body{
            <?php }
         ?>
 
-<?php
+        <?php
             if($stockIndividual['n_42']!=0){
                 $haveTalle=true;
                 ?>
@@ -505,7 +583,7 @@ body{
         ?>
 
 
-<?php
+        <?php
             if($stockIndividual['n_43']!=0){
                 $haveTalle=true;
                 ?>
@@ -514,7 +592,7 @@ body{
         ?>
 
 
-<?php
+        <?php
             if($stockIndividual['n_44']!=0){
                 $haveTalle=true;
                 ?>
@@ -522,7 +600,7 @@ body{
            <?php }
         ?>
 
-<?php
+        <?php
             if($stockIndividual['n_45']!=0){ $haveTalle=true;?>
             
                 <h5>Talle 45: <?php echo $stockIndividual['n_45']?></h6>
@@ -533,7 +611,9 @@ body{
         ?>
         </div>
 
+        
         <form >
+        
             <input style="display: none;" type="number" value="<?php echo $stockIndividual['stock_id'] ?>" name="stock_id">
 
             <input style="display: none;" type="text" value="<?php echo $stockIndividual['stock_img'] ?>" name="stock_img">
@@ -570,10 +650,15 @@ body{
             
             <input style="display: none;" type="number" value="<?php echo $stockIndividual['n_45'] ?>" name="n_45">
             
+        
             <input class="stockEsconder" type="submit"  formaction="./admin2.php" formmethod="post"  value="Editar Stock">
+        
             <input class="stockEsconder" type="submit"  formaction="../functions.php/deleteStock.php" formmethod="post"  value="Eliminar">
+        
         </form>
+        
         </div>
+        
         <br><br>
 
         <?php 
@@ -591,6 +676,8 @@ body{
 <script src="./../js/admin4.js"></script>
 <script src="../js/chargeFile.js"></script>
 </main>
+
+
 <br><br><br> <br><br>
 <br><br><br> <br><br>
 <br><br><br> <br><br><br> <br><br>
@@ -598,6 +685,7 @@ body{
 <br><br><br> <br><br><br> <br><br>
 <br><br><br> <br><br>
 <br><br><br> 
+
 </body>
 
 </html>

@@ -122,6 +122,7 @@ function eliminarReservaHecha($c,$id){
     //DE ACA PARA ABAJO ESTA EL CODIGO PARA QUE SE BORRE LA RESERVA
     
     $sqlEliminarReservaHecha="delete from reserva where reser_id=$id;";
+    
     mysqli_query($c,$sqlEliminarReservaHecha);
     
     

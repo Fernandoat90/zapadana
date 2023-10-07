@@ -128,13 +128,21 @@
                 </div>
                 <div class="bigCardShoeInfo">
                     <form class="bigCardShoeForm" action="./updateStock.php" method="post">
+                       
                         <input type="number" name="id" value=<?php echo $id; ?> style="display:none;">
+                       
                         <p class="bigCardShoePTexto" >Marca: <input class="bigCardShoeFormText" type="text" name="marca" readonly value="<?php echo $marca ?>"></p>
+                       
                         <p class="bigCardShoePTexto" >Tipo: <input class="bigCardShoeFormText" type="text" name="tipo" readonly value="<?php echo $tipo ?>"></p>
+                       
                         <p class="bigCardShoePTexto" >Genero: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $genero ?>"></p>
+                       
                         <p class="bigCardShoePTexto" >Talle: <input name="talle" class="bigCardShoeFormText" type="number"  step=1 readonly value="<?php echo $talle ?>"></p>
+                       
                         <p class="bigCardShoePTexto" >Color: <input class="bigCardShoeFormText" type="text" readonly value="<?php echo $color ?>"></p>
+                       
                         <p class="bigCardShoePPrice" >$<input class="bigCardShoeFormPrice"  type="number" readonly name="precio" value=<?php echo $precio ?> step=0.01 id=""></p>
+                       
                         <div class="bigCardShoeTarjetasContainer">
                                 <p class="bigCardShoePTexto"> Numero de Tarjeta: <br><input class="bigCardShoeTarjetasInputs" min=1000000000000000 max=9999999999999999 type="number" placeholder="Numero de la tarjeta" step=1 required></p> <br>
                                 <p class="bigCardShoePTexto"> Codigo de seguridad: <br><input  class="bigCardShoeTarjetasInputs" max=999 type="number" maxlength=4 placeholder="Codigo de seguridad" required></p>
